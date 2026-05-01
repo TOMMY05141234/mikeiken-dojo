@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>プライバシーポリシー｜未経験道場</title>
+  <meta name="description" content="未経験道場のプライバシーポリシーページです。個人情報の取り扱い・Cookieの使用・アフィリエイトについて説明しています。">
+  <meta name="robots" content="noindex,nofollow">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,700;1,9..144,700&family=DM+Sans:wght@400;500;700&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --black: #0a0a0a;
+      --off-white: #f7f6f4;
+      --green: #00C896;
+      --mid: #666;
+      --border: rgba(0,0,0,0.08);
+    }
+    body {
+      font-family: 'Noto Sans JP', sans-serif;
+      background: var(--off-white);
+      color: var(--black);
+      -webkit-font-smoothing: antialiased;
+      line-height: 1.85;
+      font-size: 15px;
+    }
+    a { color: var(--green); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    /* Header */
+    .site-header {
+      background: rgba(10,10,10,0.95);
+      backdrop-filter: blur(12px);
+      padding: 0 48px;
+      height: 64px;
+      display: flex; align-items: center; justify-content: space-between;
+      position: sticky; top: 0; z-index: 100;
+    }
+    .site-logo {
+      display: flex; align-items: center; gap: 10px;
+      text-decoration: none;
+    }
+    .logo-mark {
+      width: 32px; height: 32px;
+      border: 1.5px solid var(--green);
+      display: flex; align-items: center; justify-content: center;
+      font-family: 'Fraunces', serif;
+      font-size: 10px; font-weight: 900; line-height: 1.1;
+      color: var(--green); border-radius: 6px;
+      letter-spacing: 0;
+    }
+    .logo-text {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 12px; font-weight: 700;
+      color: #fff; line-height: 1.3;
+    }
+    .header-back {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 13px; color: rgba(255,255,255,0.5);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .header-back:hover { color: #fff; }
+    @media (max-width: 767px) {
+      .site-header { padding: 0 20px; }
+    }
+
+    /* Page layout */
+    .page-wrap {
+      max-width: 780px;
+      margin: 0 auto;
+      padding: 72px 48px 120px;
+    }
+    @media (max-width: 767px) { .page-wrap { padding: 48px 24px 80px; } }
+
+    /* Page header */
+    .page-label {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 11px; font-weight: 700;
+      letter-spacing: 0.14em; text-transform: uppercase;
+      color: var(--green);
+      margin-bottom: 16px;
+    }
+    .page-h1 {
+      font-family: 'Fraunces', serif;
+      font-size: clamp(32px, 5vw, 48px);
+      font-weight: 700;
+      letter-spacing: -0.03em;
+      line-height: 1.1;
+      margin-bottom: 24px;
+    }
+    .page-updated {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 13px; color: var(--mid);
+      padding-bottom: 40px;
+      border-bottom: 1px solid var(--border);
+      margin-bottom: 56px;
+    }
+
+    /* Article */
+    .policy-section {
+      margin-bottom: 56px;
+    }
+    .policy-section h2 {
+      font-family: 'Fraunces', serif;
+      font-size: 22px; font-weight: 700;
+      letter-spacing: -0.02em;
+      margin-bottom: 16px;
+      padding-left: 14px;
+      border-left: 3px solid var(--green);
+    }
+    .policy-section h3 {
+      font-size: 15px; font-weight: 700;
+      margin: 20px 0 8px;
+    }
+    .policy-section p {
+      margin-bottom: 12px;
+      color: #333;
+    }
+    .policy-section ul {
+      list-style: none;
+      margin: 8px 0 16px;
+    }
+    .policy-section ul li {
+      padding: 6px 0 6px 20px;
+      position: relative;
+      color: #333;
+    }
+    .policy-section ul li::before {
+      content: '';
+      position: absolute; left: 0; top: 16px;
+      width: 6px; height: 6px;
+      background: var(--green); border-radius: 50%;
+    }
+    .notice-box {
+      background: rgba(0,200,150,0.06);
+      border: 1px solid rgba(0,200,150,0.2);
+      border-radius: 8px;
+      padding: 20px 24px;
+      margin: 20px 0;
+      font-size: 14px;
+      color: #333;
+    }
+
+    /* Footer */
+    .page-footer {
+      background: #060606;
+      padding: 40px 48px;
+      text-align: center;
+      border-top: 1px solid rgba(255,255,255,0.06);
+    }
+    .page-footer-links {
+      display: flex; justify-content: center; gap: 24px; flex-wrap: wrap;
+      margin-bottom: 16px;
+    }
+    .page-footer-links a {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 12px; color: rgba(255,255,255,0.3);
+      transition: color 0.2s;
+    }
+    .page-footer-links a:hover { color: #fff; }
+    .page-footer-copy {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 11px; color: rgba(255,255,255,0.2);
+    }
+    @media (max-width: 767px) { .page-footer { padding: 32px 24px; } }
+  </style>
+</head>
+<body>
+
+  <header class="site-header">
+    <a href="index.html" class="site-logo">
+      <div class="logo-mark">道場</div>
+      <div class="logo-text">未経験道場</div>
+    </a>
+    <a href="index.html" class="header-back">← トップへ戻る</a>
+  </header>
+
+  <main class="page-wrap">
+    <p class="page-label">Legal</p>
+    <h1 class="page-h1">プライバシーポリシー</h1>
+    <p class="page-updated">最終更新日：2026年1月1日</p>
+
+    <div class="policy-section">
+      <h2>基本方針</h2>
+      <p>未経験道場（以下「当サイト」）は、ユーザーの個人情報を適切に取り扱うことを重要な責務と認識し、以下のプライバシーポリシーを定め、これを遵守します。</p>
+      <p>当サイトは、個人情報保護法をはじめとする関連法令を遵守し、ユーザーのプライバシーを尊重した運営を行います。</p>
+    </div>
+
+    <div class="policy-section">
+      <h2>収集する情報</h2>
+      <h3>お問い合わせフォームを通じた情報</h3>
+      <p>当サイトのお問い合わせフォームをご利用の際、以下の情報をご提供いただく場合があります。</p>
+      <ul>
+        <li>お名前</li>
+        <li>メールアドレス</li>
+        <li>お問い合わせ内容</li>
+      </ul>
+      <p>収集した情報はお問い合わせへの返答のみに使用し、第三者への提供は行いません。</p>
+
+      <h3>アクセス解析により収集される情報</h3>
+      <p>当サイトでは、Googleが提供するアクセス解析ツール「Google Analytics」を利用しています。Google Analyticsは、Cookieを使用して以下の情報を収集します。</p>
+      <ul>
+        <li>IPアドレス（匿名化済み）</li>
+        <li>ブラウザの種類・バージョン</li>
+        <li>閲覧したページのURL・滞在時間</li>
+        <li>流入元（検索エンジン・SNS等）</li>
+        <li>デバイスの種類・OS</li>
+      </ul>
+      <p>これらのデータは個人を特定するものではなく、サイト改善を目的として使用します。Google Analyticsのデータ収集を無効化したい場合は、<a href="https://tools.google.com/dlpage/gaoptout" target="_blank" rel="noopener">Google Analytics オプトアウトアドオン</a>をご利用ください。</p>
+    </div>
+
+    <div class="policy-section">
+      <h2>Cookieの使用について</h2>
+      <p>当サイトでは、ユーザーエクスペリエンスの向上および利用状況の分析を目的として、Cookieを使用しています。Cookieとは、ウェブサイトがブラウザに保存する小さなデータファイルです。</p>
+      <p>当サイトが使用するCookieには以下が含まれます。</p>
+      <ul>
+        <li><strong>Google Analytics Cookie</strong>：アクセス解析のため</li>
+        <li><strong>アフィリエイトトラッキングCookie</strong>：成果計測のため（詳細は後述）</li>
+      </ul>
+      <p>ブラウザの設定からCookieを無効化することが可能ですが、その場合、当サイトの一部機能が正常に動作しない場合があります。</p>
+    </div>
+
+    <div class="policy-section">
+      <h2>アフィリエイトプログラムについて</h2>
+      <div class="notice-box">
+        <strong>【広告・PRに関する表記】</strong><br>
+        当サイトはアフィリエイトプログラムに参加しており、転職エージェント各社の広告リンク（PRリンク）を掲載しています。ユーザーがリンクをクリックして各社に登録・成約された場合、当サイトは掲載先企業から報酬を受け取ることがあります。
+      </div>
+      <p>当サイトが参加しているアフィリエイトプログラムは以下を含みます。</p>
+      <ul>
+        <li>バリューコマース株式会社のアフィリエイトサービス</li>
+        <li>株式会社アフィリエイトB（A8.net）</li>
+        <li>LinkShare Japan合同会社</li>
+        <li>各転職エージェント会社の独自アフィリエイトプログラム</li>
+      </ul>
+      <p>報酬の有無にかかわらず、当サイトのランキングおよびコンテンツは編集部の独自調査・評価基準に基づいて作成しています。報酬が掲載順位や評価内容に影響することはありません。</p>
+    </div>
+
+    <div class="policy-section">
+      <h2>第三者への情報提供</h2>
+      <p>当サイトは、以下の場合を除き、収集した個人情報を第三者に提供することはありません。</p>
+      <ul>
+        <li>ユーザー本人の同意がある場合</li>
+        <li>法令に基づき開示が必要な場合</li>
+        <li>人の生命・身体または財産の保護のために必要がある場合</li>
+        <li>公衆衛生の向上または児童の健全な育成のために必要がある場合</li>
+      </ul>
+    </div>
+
+    <div class="policy-section">
+      <h2>外部リンクについて</h2>
+      <p>当サイトには転職エージェント各社への外部リンクが含まれます。リンク先の各サービスのプライバシーポリシーは、各社が定めるものが適用されます。当サイトはリンク先のコンテンツや個人情報の取り扱いについて責任を負いません。</p>
+    </div>
+
+    <div class="policy-section">
+      <h2>個人情報の管理・安全対策</h2>
+      <p>当サイトは、収集した個人情報への不正アクセス・漏えい・紛失・改ざんを防止するため、適切な安全管理措置を講じます。SSL（https）通信を採用し、情報の暗号化を行っています。</p>
+    </div>
+
+    <div class="policy-section">
+      <h2>個人情報の開示・訂正・削除</h2>
+      <p>ユーザーは当サイトが保有する自己の個人情報について、開示・訂正・削除を要請する権利を有します。ご要望の場合は、下記お問い合わせ先までご連絡ください。ご本人確認の上、合理的な期間内に対応いたします。</p>
+    </div>
+
+    <div class="policy-section">
+      <h2>未成年者の個人情報</h2>
+      <p>当サイトは18歳未満の方を対象としていません。18歳未満の方がお問い合わせ等をご利用になる場合は、保護者の同意を得てからご利用ください。</p>
+    </div>
+
+    <div class="policy-section">
+      <h2>プライバシーポリシーの変更</h2>
+      <p>当サイトは、必要に応じて本プライバシーポリシーを変更することがあります。変更後のポリシーは、当ページに掲載した時点から効力を生じるものとします。重要な変更がある場合はサイト上でお知らせします。</p>
+    </div>
+
+    <div class="policy-section">
+      <h2>お問い合わせ</h2>
+      <p>本プライバシーポリシーに関するお問い合わせは、以下までご連絡ください。</p>
+      <p>
+        サイト名：未経験道場<br>
+        運営者：未経験道場 編集部<br>
+        お問い合わせ：<a href="contact.html">お問い合わせフォーム</a>
+      </p>
+    </div>
+
+  </main>
+
+  <footer class="page-footer">
+    <nav class="page-footer-links">
+      <a href="index.html">トップ</a>
+      <a href="privacy.html">プライバシーポリシー</a>
+      <a href="disclaimer.html">免責事項</a>
+      <a href="contact.html">お問い合わせ</a>
+    </nav>
+    <p class="page-footer-copy">© 2026 未経験道場</p>
+  </footer>
+
+</body>
+</html>

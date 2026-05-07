@@ -202,7 +202,14 @@ img { display: block; max-width: 100%; }
   color: rgba(255,255,255,0.35);
 }
 @media (max-width: 767px) {
-  .hero-inner { padding: 64px 0 80px; }
+  .hero-inner { padding: 56px 0 72px; }
+  .hero-label { flex-wrap: wrap; gap: 6px; }
+  .hero-h1 { font-size: 26px; letter-spacing: -0.02em; margin-bottom: 24px; }
+  .hero-sub { font-size: 14px; line-height: 1.8; margin-bottom: 36px; }
+  .hero-cta-group { gap: 16px; }
+  .hero-cta-note { font-size: 11px; }
+  .section-h2 { font-size: 26px; }
+  .cta-final-h { font-size: 34px; }
   .btn-primary { width: 100%; justify-content: center; }
 }
 

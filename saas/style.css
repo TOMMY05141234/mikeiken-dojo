@@ -99,8 +99,11 @@ img { display: block; max-width: 100%; }
 }
 .hd-cta:hover { background: var(--green-dark); color: #fff; }
 @media (max-width: 767px) {
-  .hd-inner { padding: 0 20px; }
-  .hd-cta { font-size: 12px; padding: 8px 16px; }
+  .hd-inner { padding: 0 16px; }
+  .hd-logo-text br,
+  .hd-logo-text span { display: none; }
+  .hd-logo-text { font-size: 14px; }
+  .hd-cta { font-size: 11px; padding: 7px 12px; white-space: nowrap; }
 }
 
 /* =========================================

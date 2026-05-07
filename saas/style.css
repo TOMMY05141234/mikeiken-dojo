@@ -119,7 +119,7 @@ img { display: block; max-width: 100%; }
   right: -40px; bottom: -20px;
   width: min(560px, 52vw);
   height: auto;
-  opacity: 0.07;
+  opacity: 0.22;
   pointer-events: none;
   z-index: 0;
 }
@@ -128,7 +128,7 @@ img { display: block; max-width: 100%; }
     width: 90vw;
     right: 50%; bottom: -10px;
     transform: translateX(50%);
-    opacity: 0.05;
+    opacity: 0.15;
   }
 }
 #hero::before {

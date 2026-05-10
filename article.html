@@ -1,0 +1,1128 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>22歳から28歳の「漠然とした不安」の正体 | 未経験道場</title>
+<meta name="description" content="AIによる雇用減少、30歳の壁、スキルへの焦り。社会人3〜5年目が感じる「このままでいいのか」という不安の正体を、データとともに解説します。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,700;0,9..144,900;1,9..144,700&family=DM+Sans:wght@400;500;700&family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-5M4MMZRL4E"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-5M4MMZRL4E');
+  gtag('config', 'AW-18146496318');
+</script>
+<style>
+  :root {
+    --black:      #0a0a0a;
+    --off-white:  #f7f6f4;
+    --white:      #ffffff;
+    --green:      #00C896;
+    --green-dark: #00a87e;
+    --green-dim:  rgba(0,200,150,0.12);
+    --mid:        #888;
+    --border-d:   rgba(255,255,255,0.1);
+    --border-l:   rgba(0,0,0,0.08);
+  }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; font-size: 16px; }
+  body {
+    font-family: 'Noto Sans JP', sans-serif;
+    background: var(--black);
+    color: var(--white);
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+  }
+  a { text-decoration: none; color: inherit; }
+  img { display: block; max-width: 100%; }
+
+  /* ── Header ── */
+  #hd {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 200;
+    height: 64px;
+    background: rgba(10,10,10,0.92);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border-d);
+  }
+  .hd-inner {
+    max-width: 1120px; margin: 0 auto; padding: 0 48px;
+    height: 100%; display: flex; align-items: center; justify-content: space-between;
+  }
+  .hd-logo { display: flex; align-items: center; gap: 10px; }
+  .hd-logo-mark {
+    width: 42px; height: 42px;
+    background: var(--green);
+    display: flex; align-items: center; justify-content: center;
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 18px; font-weight: 900;
+    color: var(--black);
+    border-radius: 9px;
+    letter-spacing: -0.03em;
+    flex-shrink: 0;
+  }
+  .hd-logo-text {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 16px; font-weight: 700;
+    color: rgba(255,255,255,0.92); line-height: 1.35;
+  }
+  .hd-nav {
+    display: flex; align-items: center; gap: 8px;
+  }
+  .hd-nav-link {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 12px; color: rgba(255,255,255,0.45);
+    padding: 6px 14px;
+    border: 1px solid rgba(255,255,255,0.12);
+    border-radius: 100px;
+    transition: color 0.2s, border-color 0.2s;
+  }
+  .hd-nav-link:hover { color: var(--white); border-color: rgba(255,255,255,0.35); }
+  .hd-cta {
+    display: inline-flex; align-items: center; gap: 8px;
+    background: var(--green); color: var(--black);
+    font-family: 'DM Sans', sans-serif;
+    font-size: 13px; font-weight: 700;
+    padding: 9px 22px; border-radius: 100px;
+    transition: background 0.2s;
+    margin-left: 8px;
+  }
+  .hd-cta:hover { background: var(--green-dark); color: #fff; }
+  @media (max-width: 767px) {
+    .hd-inner { padding: 0 16px; }
+    .hd-nav { display: none; }
+    .hd-logo-text br, .hd-logo-text span { display: none; }
+    .hd-logo-text { font-size: 14px; }
+    .hd-cta { font-size: 11px; padding: 7px 12px; }
+  }
+
+  /* ── Hero ── */
+  #hero {
+    padding-top: 64px;
+    background: var(--black);
+    position: relative; overflow: hidden;
+    border-bottom: 1px solid var(--border-d);
+  }
+  #hero::before {
+    content: '';
+    position: absolute; inset: 0;
+    background-image:
+      linear-gradient(rgba(255,255,255,0.022) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255,255,255,0.022) 1px, transparent 1px);
+    background-size: 80px 80px;
+    pointer-events: none;
+  }
+  #hero::after {
+    content: '';
+    position: absolute; top: -20%; right: -10%;
+    width: min(600px, 80vw); height: min(600px, 80vw);
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(0,200,150,0.12) 0%, transparent 68%);
+    pointer-events: none;
+  }
+  .hero-inner {
+    position: relative; z-index: 1;
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 80px 48px 72px;
+  }
+  .hero-eyebrow {
+    display: inline-flex; align-items: center; gap: 10px;
+    margin-bottom: 28px;
+  }
+  .hero-eyebrow-line { width: 24px; height: 1px; background: var(--green); }
+  .hero-eyebrow-text {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 12px; font-weight: 500; letter-spacing: 0.16em;
+    text-transform: uppercase; color: var(--green);
+  }
+  .hero-title {
+    font-family: 'Fraunces', serif;
+    font-weight: 700;
+    font-size: clamp(32px, 5.5vw, 60px);
+    line-height: 1.1;
+    letter-spacing: -0.03em;
+    margin-bottom: 28px;
+  }
+  .hero-title em { font-style: italic; color: var(--green); }
+  .hero-lead {
+    font-size: 16px;
+    color: rgba(255,255,255,0.5);
+    line-height: 1.9;
+    margin-bottom: 40px;
+    max-width: 560px;
+  }
+  .hero-meta {
+    display: flex; gap: 24px; flex-wrap: wrap;
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    color: rgba(255,255,255,0.28);
+    letter-spacing: .08em;
+    border-top: 1px solid var(--border-d);
+    padding-top: 20px;
+  }
+  @media (max-width: 767px) {
+    .hero-inner { padding: 48px 24px 56px; }
+    .hero-title { font-size: 28px; }
+  }
+
+  /* ── Article body ── */
+  .article-body {
+    background: var(--off-white);
+    color: #1a1714;
+  }
+  .article-wrap {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 0 48px 96px;
+  }
+  @media (max-width: 767px) {
+    .article-wrap { padding: 0 24px 72px; }
+  }
+
+  /* ── Section ── */
+  .a-section {
+    padding-top: 64px;
+    padding-bottom: 0;
+    border-bottom: 1px solid rgba(0,0,0,0.08);
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity .6s ease, transform .6s ease;
+  }
+  .a-section.visible { opacity: 1; transform: none; }
+  .a-section:last-child { border-bottom: none; }
+
+  .a-section-num {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 11px; font-weight: 700;
+    letter-spacing: 0.2em; text-transform: uppercase;
+    color: var(--green);
+    margin-bottom: 10px;
+    display: block;
+  }
+  .a-section-title {
+    font-family: 'Fraunces', serif;
+    font-weight: 700;
+    font-size: clamp(20px, 3.5vw, 30px);
+    line-height: 1.3;
+    letter-spacing: -0.02em;
+    color: #0a0a0a;
+    margin-bottom: 24px;
+  }
+  .a-body {
+    font-size: 15.5px;
+    color: #2d2926;
+    line-height: 2.0;
+    margin-bottom: 28px;
+  }
+  .a-body p { margin-bottom: 18px; }
+  .a-body p:last-child { margin-bottom: 0; }
+
+  /* ── Stat block ── */
+  .stat-block {
+    background: var(--black);
+    color: var(--white);
+    padding: 36px 40px;
+    margin: 32px 0;
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px;
+  }
+  .stat-block::before {
+    content: '';
+    position: absolute; top: 0; left: 0;
+    width: 4px; height: 100%;
+    background: var(--green);
+  }
+  .stat-block::after {
+    content: '';
+    position: absolute; top: -40%; right: -10%;
+    width: 200px; height: 200px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(0,200,150,0.12) 0%, transparent 70%);
+    pointer-events: none;
+  }
+  .stat-number {
+    font-family: 'Fraunces', serif;
+    font-size: clamp(44px, 8vw, 72px);
+    font-weight: 900;
+    color: var(--green);
+    line-height: 1;
+    margin-bottom: 10px;
+    position: relative; z-index: 1;
+  }
+  .stat-label {
+    font-size: 14px; color: rgba(255,255,255,0.6);
+    line-height: 1.7;
+    position: relative; z-index: 1;
+  }
+  .stat-source {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px; color: rgba(255,255,255,0.25);
+    margin-top: 14px;
+    letter-spacing: .08em;
+    position: relative; z-index: 1;
+  }
+
+  /* ── Pullquote ── */
+  .pullquote {
+    border-left: 3px solid var(--green);
+    padding: 20px 28px;
+    margin: 32px 0;
+    background: rgba(0,200,150,0.04);
+    border-radius: 0 8px 8px 0;
+  }
+  .pullquote p {
+    font-family: 'Fraunces', serif;
+    font-size: 18px; font-weight: 700;
+    line-height: 1.65;
+    color: #0a0a0a;
+    margin: 0;
+  }
+  .pullquote cite {
+    display: block; margin-top: 10px;
+    font-size: 12px; font-family: 'DM Mono', monospace;
+    color: var(--mid); font-style: normal;
+    letter-spacing: .06em;
+  }
+
+  /* ── Warning box ── */
+  .warning-box {
+    border: 1px solid rgba(0,200,150,0.35);
+    padding: 24px 28px;
+    margin: 32px 0;
+    background: rgba(0,200,150,0.04);
+    border-radius: 8px;
+  }
+  .warning-box-title {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 14px; font-weight: 700;
+    color: var(--green);
+    margin-bottom: 10px;
+    letter-spacing: 0.02em;
+  }
+  .warning-box p { font-size: 14px; color: #3d4840; line-height: 1.9; margin: 0; }
+
+  /* ── Timeline ── */
+  .timeline { margin: 32px 0; position: relative; padding-left: 28px; }
+  .timeline::before {
+    content: ''; position: absolute;
+    left: 8px; top: 0; bottom: 0;
+    width: 1px; background: rgba(0,0,0,0.12);
+  }
+  .timeline-item { position: relative; padding-bottom: 28px; }
+  .timeline-item::before {
+    content: ''; position: absolute;
+    left: -24px; top: 6px;
+    width: 8px; height: 8px;
+    border-radius: 50%; background: var(--green);
+  }
+  .timeline-age {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 12px; font-weight: 700;
+    color: var(--green); letter-spacing: .1em;
+    margin-bottom: 4px;
+  }
+  .timeline-text { font-size: 15px; line-height: 1.75; color: #2d2926; }
+
+  /* ── Divider ── */
+  .a-divider {
+    text-align: center;
+    padding: 36px 0 0;
+    color: rgba(0,0,0,0.2);
+    font-family: 'DM Mono', monospace;
+    font-size: 18px;
+    letter-spacing: .4em;
+  }
+
+  /* ── Voice / Speech bubbles ── */
+  .voice-block { margin: 32px 0 0; display: flex; flex-direction: column; gap: 14px; }
+  .voice-row { display: flex; gap: 12px; align-items: flex-start; }
+  .voice-row.editor { flex-direction: row-reverse; }
+  .voice-icon {
+    width: 48px; height: 48px;
+    border-radius: 50%;
+    flex-shrink: 0;
+    display: flex; align-items: center; justify-content: center;
+    position: relative;
+  }
+  .young-icon {
+    background: rgba(255,255,255,0.9);
+    border: 1.5px solid rgba(0,0,0,0.12);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  }
+  .editor-icon {
+    background: var(--black);
+    border: 1.5px solid var(--green);
+    box-shadow: 0 2px 8px rgba(0,200,150,0.15);
+  }
+  .voice-bubble-wrap { max-width: calc(100% - 60px); }
+  .voice-name {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 10px; font-weight: 700;
+    letter-spacing: .12em; text-transform: uppercase;
+    color: var(--mid);
+    margin-bottom: 5px;
+  }
+  .voice-row.editor .voice-name { text-align: right; color: var(--green); }
+  .voice-bubble {
+    padding: 14px 18px;
+    font-size: 14px; line-height: 1.8;
+    position: relative;
+  }
+  .young-bubble {
+    background: var(--white);
+    border: 1px solid rgba(0,0,0,0.1);
+    border-radius: 0 12px 12px 12px;
+    color: #2d2926;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  }
+  .young-bubble::before {
+    content: '';
+    position: absolute; top: 0; left: -8px;
+    border-width: 0 8px 8px 0; border-style: solid;
+    border-color: transparent rgba(0,0,0,0.1) transparent transparent;
+  }
+  .young-bubble::after {
+    content: '';
+    position: absolute; top: 1px; left: -6px;
+    border-width: 0 7px 7px 0; border-style: solid;
+    border-color: transparent var(--white) transparent transparent;
+  }
+  .editor-bubble {
+    background: var(--black);
+    border: 1px solid rgba(0,200,150,0.2);
+    border-radius: 12px 0 12px 12px;
+    color: rgba(255,255,255,0.85);
+    box-shadow: 0 2px 8px rgba(0,200,150,0.1);
+  }
+  .editor-bubble::before {
+    content: '';
+    position: absolute; top: 0; right: -8px;
+    border-width: 0 0 8px 8px; border-style: solid;
+    border-color: transparent transparent transparent rgba(0,200,150,0.2);
+  }
+  .editor-bubble::after {
+    content: '';
+    position: absolute; top: 1px; right: -6px;
+    border-width: 0 0 7px 7px; border-style: solid;
+    border-color: transparent transparent transparent var(--black);
+  }
+  .voice-bubble strong { color: var(--green); font-weight: 700; }
+  .young-bubble strong { color: #1a1714; }
+
+  /* ── Insight list ── */
+  .insight-list { list-style: none; margin: 24px 0; }
+  .insight-list li {
+    display: flex; gap: 16px;
+    padding: 16px 0;
+    border-bottom: 1px solid rgba(0,0,0,0.07);
+    font-size: 15px; color: #2d2926; align-items: flex-start;
+  }
+  .insight-list li:last-child { border-bottom: none; }
+  .insight-num {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 12px; font-weight: 700;
+    color: var(--green); min-width: 28px;
+    padding-top: 2px;
+  }
+
+  /* ── Ranking CTA ── */
+  .cta-section {
+    background: var(--black);
+    padding: 80px 0;
+    position: relative; overflow: hidden;
+  }
+  .cta-section::before {
+    content: '';
+    position: absolute; top: -20%; left: -10%;
+    width: 500px; height: 500px; border-radius: 50%;
+    background: radial-gradient(circle, rgba(0,200,150,0.1) 0%, transparent 70%);
+    pointer-events: none;
+  }
+  .cta-inner {
+    max-width: 760px; margin: 0 auto; padding: 0 48px;
+    position: relative; z-index: 1;
+  }
+  .cta-eyebrow {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 11px; font-weight: 700;
+    letter-spacing: .2em; text-transform: uppercase;
+    color: var(--green); margin-bottom: 20px;
+  }
+  .cta-title {
+    font-family: 'Fraunces', serif;
+    font-size: clamp(24px, 4vw, 40px);
+    font-weight: 700;
+    color: var(--white);
+    line-height: 1.25;
+    letter-spacing: -0.02em;
+    margin-bottom: 14px;
+  }
+  .cta-title em { font-style: italic; color: var(--green); }
+  .cta-sub { font-size: 14px; color: rgba(255,255,255,0.4); line-height: 1.8; margin-bottom: 48px; }
+  .pr-notice {
+    display: inline-block;
+    background: rgba(0,200,150,0.08);
+    border: 1px solid rgba(0,200,150,0.2);
+    border-radius: 4px;
+    padding: 6px 14px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 11px; color: var(--mid);
+    letter-spacing: 0.04em;
+    margin-bottom: 36px;
+  }
+  .ranking-cards { display: flex; flex-direction: column; gap: 16px; margin-bottom: 40px; }
+  .ranking-card {
+    background: rgba(255,255,255,0.04);
+    border: 1px solid var(--border-d);
+    padding: 20px 28px;
+    display: flex; gap: 20px; align-items: center;
+    text-decoration: none;
+    border-radius: 12px;
+    transition: border-color .2s, background .2s;
+  }
+  .ranking-card:hover {
+    border-color: rgba(0,200,150,0.4);
+    background: rgba(0,200,150,0.05);
+  }
+  .ranking-card-rank {
+    font-family: 'Fraunces', serif;
+    font-size: 30px; font-weight: 900;
+    color: var(--green); min-width: 36px;
+  }
+  .ranking-card-info { flex: 1; }
+  .ranking-card-name {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 15px; font-weight: 700;
+    color: var(--white); margin-bottom: 4px;
+  }
+  .ranking-card-desc { font-size: 12px; color: rgba(255,255,255,0.4); line-height: 1.5; }
+  .ranking-card-cta {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 12px; font-weight: 700;
+    color: var(--green); text-align: right; white-space: nowrap;
+  }
+  .cta-btn {
+    display: flex; align-items: center; justify-content: center; gap: 10px;
+    background: var(--green); color: var(--black);
+    font-family: 'DM Sans', sans-serif;
+    font-size: 15px; font-weight: 700;
+    padding: 18px 40px;
+    border-radius: 100px;
+    letter-spacing: .02em;
+    transition: background .2s, transform .2s;
+    margin-bottom: 12px;
+  }
+  .cta-btn:hover { background: var(--green-dark); color: #fff; transform: translateY(-2px); }
+  .cta-note {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 12px; color: rgba(255,255,255,0.25);
+    letter-spacing: .04em; text-align: center;
+  }
+  @media (max-width: 767px) {
+    .cta-inner { padding: 0 24px; }
+    .ranking-card { flex-wrap: wrap; gap: 12px; }
+    .ranking-card-cta { width: 100%; text-align: left; }
+  }
+
+  /* ── Navigation strip (article → LP links) ── */
+  .nav-strip {
+    background: rgba(255,255,255,0.03);
+    border-top: 1px solid var(--border-d);
+    padding: 28px 48px;
+  }
+  .nav-strip-inner {
+    max-width: 760px; margin: 0 auto;
+    display: flex; gap: 12px; flex-wrap: wrap; align-items: center;
+  }
+  .nav-strip-label {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 11px; font-weight: 700;
+    letter-spacing: .14em; text-transform: uppercase;
+    color: rgba(255,255,255,0.25);
+    margin-right: 4px;
+  }
+  .nav-strip-link {
+    display: inline-flex; align-items: center; gap: 6px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 12px; font-weight: 700;
+    color: rgba(255,255,255,0.55);
+    padding: 7px 16px;
+    border: 1px solid rgba(255,255,255,0.12);
+    border-radius: 100px;
+    transition: color .2s, border-color .2s;
+  }
+  .nav-strip-link:hover { color: var(--green); border-color: rgba(0,200,150,0.4); }
+  .nav-strip-link.featured {
+    background: var(--green); color: var(--black);
+    border-color: var(--green);
+  }
+  .nav-strip-link.featured:hover { background: var(--green-dark); color: #fff; }
+  @media (max-width: 767px) { .nav-strip { padding: 20px 24px; } }
+
+  /* ── Footer ── */
+  footer {
+    background: #060606;
+    padding: 48px 0;
+    border-top: 1px solid var(--border-d);
+  }
+  .footer-inner {
+    max-width: 1120px; margin: 0 auto; padding: 0 48px;
+    display: flex; justify-content: space-between; align-items: center;
+    flex-wrap: wrap; gap: 20px;
+  }
+  .footer-logo {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 12px; color: rgba(255,255,255,0.3); line-height: 1.6;
+  }
+  .footer-links { display: flex; gap: 24px; flex-wrap: wrap; }
+  .footer-link {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 12px; color: rgba(255,255,255,0.3);
+    transition: color 0.2s;
+  }
+  .footer-link:hover { color: var(--white); }
+  .footer-copy {
+    width: 100%;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 11px; color: rgba(255,255,255,0.2);
+    padding-top: 24px;
+    border-top: 1px solid rgba(255,255,255,0.05);
+    margin-top: 12px; line-height: 1.7;
+  }
+  @media (max-width: 767px) { .footer-inner { padding: 0 24px; } }
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header id="hd">
+  <div class="hd-inner">
+    <a href="/" class="hd-logo">
+      <div class="hd-logo-mark">道</div>
+      <div class="hd-logo-text">未経験道場<br><span style="opacity:0.55;font-size:12px;font-weight:400;letter-spacing:0.02em">IT転職エージェント比較</span></div>
+    </a>
+    <div class="hd-nav">
+      <a href="/general/" class="hd-nav-link">IT転職 全般</a>
+      <a href="/saas/" class="hd-nav-link">SaaS・AI特化</a>
+    </div>
+    <a href="/general/#ranking" class="hd-cta">
+      エージェントを比較する
+      <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7h10M8 4l3 3-3 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </a>
+  </div>
+</header>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-inner">
+    <div class="hero-eyebrow">
+      <span class="hero-eyebrow-line"></span>
+      <span class="hero-eyebrow-text">Career Insight — 2026</span>
+    </div>
+    <h1 class="hero-title">
+      「このままでいいのか」<br>
+      ――<em>22歳から28歳</em>の<br>
+      漠然とした不安の正体
+    </h1>
+    <p class="hero-lead">
+      スキルへの焦り、AIへの恐怖、30歳という壁。<br>
+      社会人3〜5年目が感じる「なんとなくまずい」という感覚には、ちゃんとデータがあった。
+    </p>
+    <div class="hero-meta">
+      <span>READ — 8 MIN</span>
+      <span>未経験道場 編集部</span>
+      <span>2026.05</span>
+    </div>
+  </div>
+</section>
+
+<!-- ARTICLE BODY -->
+<div class="article-body">
+<div class="article-wrap">
+
+  <!-- S01 -->
+  <div class="a-section">
+    <span class="a-section-num">01 — 最大の危機</span>
+    <h2 class="a-section-title">AIはすでに、若者の仕事を奪い始めている</h2>
+    <div class="a-body">
+      <p>「AIに仕事が奪われる」という話を聞いて、「まだ先の話だろう」と思っている人は多い。だがデータはそう言っていない。</p>
+    </div>
+    <div class="stat-block">
+      <div class="stat-number">13%</div>
+      <div class="stat-label">AIの影響を受けやすい職種に就く<br>22〜25歳の雇用が相対的に減少</div>
+      <div class="stat-source">SOURCE — STANFORD UNIVERSITY DIGITAL ECONOMY LAB, 2025</div>
+    </div>
+    <div class="a-body">
+      <p>スタンフォード大学デジタル経済研究所が2,500万人以上の雇用データを分析した結果、AIが若者の仕事を奪っていることが初めてデータで裏付けられた。特にAI導入が進む産業では、新卒者向けの求人が2022年以降、大幅に減少している。</p>
+      <p>問題は「AIに置き換えられるかどうか」ではない。「置き換えられる側」にいるか、「使いこなす側」にいるかだ。</p>
+    </div>
+    <div class="pullquote">
+      <p>「AIを脅威と捉えるか、道具と捉えるか。その認識の差が、5年後のキャリア格差を生む。」</p>
+      <cite>— WEF Future of Jobs Report 2025</cite>
+    </div>
+    <div class="voice-block">
+      <div class="voice-row">
+        <div class="voice-icon young-icon">
+          <svg width="28" height="28" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="16" cy="10" r="6" fill="#9b8e86"/>
+            <path d="M10 8.5 Q16 5 22 8.5" stroke="#6e6460" stroke-width="2" fill="none" stroke-linecap="round"/>
+            <path d="M4 31C4 24.373 9.373 19 16 19C22.627 19 28 24.373 28 31" fill="#9b8e86"/>
+            <path d="M12.5 19.5 Q16 17.5 19.5 19.5" stroke="#8a7e78" stroke-width="1.2" fill="none" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <div class="voice-bubble-wrap">
+          <div class="voice-name">Kさん・25歳・営業職</div>
+          <div class="voice-bubble young-bubble">正直、AIとか関係ないと思ってたんですよね。でもこのデータ見て、<strong>「自分の仕事、いつ消えてもおかしくないじゃん」</strong>って急に怖くなってきました。しかも若い人の方が影響受けてるって……。</div>
+        </div>
+      </div>
+      <div class="voice-row editor">
+        <div class="voice-icon editor-icon">
+          <svg width="28" height="28" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="16" cy="10" r="6" fill="#00C896"/>
+            <path d="M4 31C4 24.373 9.373 19 16 19C22.627 19 28 24.373 28 31" fill="#00C896"/>
+            <path d="M16 19 L12.5 24 L16 22.5 L19.5 24 Z" fill="#0a0a0a" opacity="0.8"/>
+            <path d="M14.5 23.5 L16 22.5 L17.5 23.5 L16.8 28 L16 30 L15.2 28 Z" fill="#0a0a0a" opacity="0.8"/>
+          </svg>
+        </div>
+        <div class="voice-bubble-wrap">
+          <div class="voice-name">編集部</div>
+          <div class="voice-bubble editor-bubble">その感覚は正しいです。重要なのは「AIに使われる側」か「AIを使う側」かという立場の違いです。<strong>IT業界への転職はまさに「使う側」に移る最短ルート</strong>のひとつ。20代のうちに動ける人は、この差を理解した人たちです。</div>
+        </div>
+      </div>
+    </div>
+    <div class="a-divider">· · ·</div>
+  </div>
+
+  <!-- S02 -->
+  <div class="a-section">
+    <span class="a-section-num">02 — タイムリミット</span>
+    <h2 class="a-section-title">28歳と30歳では、見える求人の数がまったく違う</h2>
+    <div class="a-body"><p>転職市場には「30歳の壁」が存在する。これは感覚の話ではなく、採用市場の構造的な問題だ。</p></div>
+    <div class="timeline">
+      <div class="timeline-item"><div class="timeline-age">22〜25歳</div><div class="timeline-text">ポテンシャル採用が最も活発。スキルより「学ぶ姿勢」「成長意欲」が評価される。未経験可求人が最も多い時期。</div></div>
+      <div class="timeline-item"><div class="timeline-age">26〜28歳</div><div class="timeline-text">まだ動ける。ポテンシャル採用と即戦力採用の境界線。この時期が「未経験転職の実質的なラストチャンス」になるケースが多い。</div></div>
+      <div class="timeline-item"><div class="timeline-age">29〜30歳</div><div class="timeline-text">「何ができますか？」が問われ始める。未経験可求人が急減。ポテンシャルより実績・スキルで判断される年齢に。</div></div>
+    </div>
+    <div class="warning-box">
+      <div class="warning-box-title">⚠ 知識だけでは何も変わらない</div>
+      <p>「30歳までに転職しないと」と知っていても、動かなければ意味がない。この記事を読んでいる今が、行動の最適タイミングかもしれない。</p>
+    </div>
+    <div class="voice-block">
+      <div class="voice-row">
+        <div class="voice-icon young-icon">
+          <svg width="28" height="28" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="16" cy="10" r="6" fill="#9b8e86"/><path d="M10 8.5 Q16 5 22 8.5" stroke="#6e6460" stroke-width="2" fill="none" stroke-linecap="round"/><path d="M4 31C4 24.373 9.373 19 16 19C22.627 19 28 24.373 28 31" fill="#9b8e86"/><path d="M12.5 19.5 Q16 17.5 19.5 19.5" stroke="#8a7e78" stroke-width="1.2" fill="none" stroke-linecap="round"/></svg>
+        </div>
+        <div class="voice-bubble-wrap">
+          <div class="voice-name">Tさん・27歳・事務職</div>
+          <div class="voice-bubble young-bubble">来年で28歳なんですけど、<strong>「もうすぐ手遅れになる」って焦りが止まらない</strong>んですよ。でも今の仕事辞めるのも怖くて……。結局ずっとぐるぐるしてます。</div>
+        </div>
+      </div>
+      <div class="voice-row editor">
+        <div class="voice-icon editor-icon">
+          <svg width="28" height="28" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="16" cy="10" r="6" fill="#00C896"/><path d="M4 31C4 24.373 9.373 19 16 19C22.627 19 28 24.373 28 31" fill="#00C896"/><path d="M16 19 L12.5 24 L16 22.5 L19.5 24 Z" fill="#0a0a0a" opacity="0.8"/><path d="M14.5 23.5 L16 22.5 L17.5 23.5 L16.8 28 L16 30 L15.2 28 Z" fill="#0a0a0a" opacity="0.8"/></svg>
+        </div>
+        <div class="voice-bubble-wrap">
+          <div class="voice-name">編集部</div>
+          <div class="voice-bubble editor-bubble">その「ぐるぐる」している時間が一番もったいないです。転職エージェントへの相談は無料で、<strong>「情報収集だけ」でも全然OKです</strong>。まず現状を知るだけで、焦りが「行動」に変わることが多いですよ。</div>
+        </div>
+      </div>
+    </div>
+    <div class="a-divider">· · ·</div>
+  </div>
+
+  <!-- S03 -->
+  <div class="a-section">
+    <span class="a-section-num">03 — スキル不足</span>
+    <h2 class="a-section-title">「何ができますか？」に答えられない焦りの正体</h2>
+    <div class="a-body"><p>社会人3〜5年目になると、ふと気づく瞬間がある。「自分、何ができるようになったんだろう？」毎日同じ業務をこなし、会社に言われた通りに動いてきた結果、市場で通用するスキルが何もない――そんな焦りを感じている人は多い。</p></div>
+    <div class="stat-block">
+      <div class="stat-number">79万人</div>
+      <div class="stat-label">2030年に不足するIT人材数（経済産業省試算）<br>裏を返せば、今動けば確実に需要がある</div>
+      <div class="stat-source">SOURCE — 経済産業省 IT人材需給に関する調査</div>
+    </div>
+    <div class="voice-block">
+      <div class="voice-row">
+        <div class="voice-icon young-icon">
+          <svg width="28" height="28" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="16" cy="10" r="6" fill="#9b8e86"/><path d="M10 8.5 Q16 5 22 8.5" stroke="#6e6460" stroke-width="2" fill="none" stroke-linecap="round"/><path d="M4 31C4 24.373 9.373 19 16 19C22.627 19 28 24.373 28 31" fill="#9b8e86"/><path d="M12.5 19.5 Q16 17.5 19.5 19.5" stroke="#8a7e78" stroke-width="1.2" fill="none" stroke-linecap="round"/></svg>
+        </div>
+        <div class="voice-bubble-wrap">
+          <div class="voice-name">Rさん・26歳・販売職</div>
+          <div class="voice-bubble young-bubble">「あなたのスキルを教えてください」って言われると、<strong>何も答えられないんですよね</strong>。3年働いてきたのに……。IT転職したくても、スキルゼロじゃ無理でしょって思ってあきらめてました。</div>
+        </div>
+      </div>
+      <div class="voice-row editor">
+        <div class="voice-icon editor-icon">
+          <svg width="28" height="28" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="16" cy="10" r="6" fill="#00C896"/><path d="M4 31C4 24.373 9.373 19 16 19C22.627 19 28 24.373 28 31" fill="#00C896"/><path d="M16 19 L12.5 24 L16 22.5 L19.5 24 Z" fill="#0a0a0a" opacity="0.8"/><path d="M14.5 23.5 L16 22.5 L17.5 23.5 L16.8 28 L16 30 L15.2 28 Z" fill="#0a0a0a" opacity="0.8"/></svg>
+        </div>
+        <div class="voice-bubble-wrap">
+          <div class="voice-name">編集部</div>
+          <div class="voice-bubble editor-bubble">スキルゼロは、IT転職においてはむしろ「あるある」です。<strong>2030年に79万人不足する市場では、企業側が育てることを前提に採用します</strong>。「スキルがないから無理」ではなく「スキルがないから今がチャンス」という市場の実態を知ることが最初の一歩です。</div>
+        </div>
+      </div>
+    </div>
+    <div class="a-divider">· · ·</div>
+  </div>
+
+  <!-- S04 -->
+  <div class="a-section">
+    <span class="a-section-num">04 — キャリアの視界</span>
+    <h2 class="a-section-title">今の仕事を10年続けた自分が、想像できない</h2>
+    <div class="pullquote">
+      <p>WEFの予測では、44%の労働者のコアスキルが今後5年以内に変化する。「このままでいい仕事」は、もう存在しない。</p>
+      <cite>— World Economic Forum, Future of Jobs Report 2025</cite>
+    </div>
+    <div class="a-body"><p>変化が避けられないなら、自分から変化を選ぶ方が有利だ。IT業界への転職は、「逃げ」ではなく「先手を打つ」選択肢として、今の20代に広まっている。</p></div>
+    <div class="voice-block">
+      <div class="voice-row">
+        <div class="voice-icon young-icon">
+          <svg width="28" height="28" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="16" cy="10" r="6" fill="#9b8e86"/><path d="M10 8.5 Q16 5 22 8.5" stroke="#6e6460" stroke-width="2" fill="none" stroke-linecap="round"/><path d="M4 31C4 24.373 9.373 19 16 19C22.627 19 28 24.373 28 31" fill="#9b8e86"/><path d="M12.5 19.5 Q16 17.5 19.5 19.5" stroke="#8a7e78" stroke-width="1.2" fill="none" stroke-linecap="round"/></svg>
+        </div>
+        <div class="voice-bubble-wrap">
+          <div class="voice-name">Mさん・24歳・金融事務</div>
+          <div class="voice-bubble young-bubble">10年後の自分を想像しようとしたら、<strong>全然イメージできなくて逆に怖くなりました</strong>。今の仕事、続けていてもどこに向かってるのか全然わからないんですよね。</div>
+        </div>
+      </div>
+      <div class="voice-row editor">
+        <div class="voice-icon editor-icon">
+          <svg width="28" height="28" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="16" cy="10" r="6" fill="#00C896"/><path d="M4 31C4 24.373 9.373 19 16 19C22.627 19 28 24.373 28 31" fill="#00C896"/><path d="M16 19 L12.5 24 L16 22.5 L19.5 24 Z" fill="#0a0a0a" opacity="0.8"/><path d="M14.5 23.5 L16 22.5 L17.5 23.5 L16.8 28 L16 30 L15.2 28 Z" fill="#0a0a0a" opacity="0.8"/></svg>
+        </div>
+        <div class="voice-bubble-wrap">
+          <div class="voice-name">編集部</div>
+          <div class="voice-bubble editor-bubble">「将来が見えない」という感覚は、実はキャリアチェンジの一番のシグナルです。<strong>IT業界は数少ない「10年後も成長が見えている」業界</strong>のひとつ。「逃げの転職」じゃなく、先を読んだ合理的な選択として捉えている人が増えています。</div>
+        </div>
+      </div>
+    </div>
+    <div class="a-divider">· · ·</div>
+  </div>
+
+  <!-- S05 -->
+  <div class="a-section">
+    <span class="a-section-num">05 — 働き方</span>
+    <h2 class="a-section-title">「場所を選べる仕事」は、IT転職の最大のメリットのひとつ</h2>
+    <div class="a-body"><p>毎朝の満員電車、固定された席、決まった時間に始まり決まった時間に終わる仕事。それを「仕方ない」と思って続けている人は多い。IT業界では、リモートワーク・フルフレックスを標準とする企業が増えた。</p></div>
+    <div class="warning-box">
+      <div class="warning-box-title">リモート求人は競争率が高い</div>
+      <p>リモート可の求人は人気が高く、特に未経験での応募では「エージェント経由」が内定率を上げる最大のポイントになる。一般公開されていない非公開求人へのアクセスが鍵。</p>
+    </div>
+    <div class="voice-block">
+      <div class="voice-row">
+        <div class="voice-icon young-icon">
+          <svg width="28" height="28" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="16" cy="10" r="6" fill="#9b8e86"/><path d="M10 8.5 Q16 5 22 8.5" stroke="#6e6460" stroke-width="2" fill="none" stroke-linecap="round"/><path d="M4 31C4 24.373 9.373 19 16 19C22.627 19 28 24.373 28 31" fill="#9b8e86"/><path d="M12.5 19.5 Q16 17.5 19.5 19.5" stroke="#8a7e78" stroke-width="1.2" fill="none" stroke-linecap="round"/></svg>
+        </div>
+        <div class="voice-bubble-wrap">
+          <div class="voice-name">Yさん・23歳・営業職</div>
+          <div class="voice-bubble young-bubble">毎朝1時間かけて満員電車で通ってるんですけど、<strong>IT系に転職した友達がフルリモートで羨ましすぎて</strong>。「自分は仕方ない」って思いながら乗ってるのがしんどいです……。</div>
+        </div>
+      </div>
+      <div class="voice-row editor">
+        <div class="voice-icon editor-icon">
+          <svg width="28" height="28" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="16" cy="10" r="6" fill="#00C896"/><path d="M4 31C4 24.373 9.373 19 16 19C22.627 19 28 24.373 28 31" fill="#00C896"/><path d="M16 19 L12.5 24 L16 22.5 L19.5 24 Z" fill="#0a0a0a" opacity="0.8"/><path d="M14.5 23.5 L16 22.5 L17.5 23.5 L16.8 28 L16 30 L15.2 28 Z" fill="#0a0a0a" opacity="0.8"/></svg>
+        </div>
+        <div class="voice-bubble-wrap">
+          <div class="voice-name">編集部</div>
+          <div class="voice-bubble editor-bubble">「仕方ない」と思い続けることが、一番のリスクです。リモート求人は確かに競争率が高いですが、<strong>エージェント経由なら非公開のリモート求人にもアクセスできます</strong>。一般公開されていない好条件の求人は、エージェントを使った人だけが知ることができます。</div>
+        </div>
+      </div>
+    </div>
+    <div class="a-divider">· · ·</div>
+  </div>
+
+  <!-- S06 -->
+  <div class="a-section">
+    <span class="a-section-num">06 — 誤解を解く</span>
+    <h2 class="a-section-title">「文系だから無理」は、採用市場では通用しない言い訳になった</h2>
+    <div class="a-body"><p>IT企業が20代に求めるのは、現時点の技術力よりも「学ぶ姿勢」「論理的思考力」「コミュニケーション力」だ。これは文系・理系を問わない能力だ。</p></div>
+    <div class="stat-block">
+      <div class="stat-number">50%超</div>
+      <div class="stat-label">IT企業の転職者に占める異業種からの転職者の割合<br>文系・未経験は「特別」ではなくなった</div>
+      <div class="stat-source">SOURCE — 株式会社アイティークロス 採用実績データ, 2026</div>
+    </div>
+    <div class="voice-block">
+      <div class="voice-row">
+        <div class="voice-icon young-icon">
+          <svg width="28" height="28" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="16" cy="10" r="6" fill="#9b8e86"/><path d="M10 8.5 Q16 5 22 8.5" stroke="#6e6460" stroke-width="2" fill="none" stroke-linecap="round"/><path d="M4 31C4 24.373 9.373 19 16 19C22.627 19 28 24.373 28 31" fill="#9b8e86"/><path d="M12.5 19.5 Q16 17.5 19.5 19.5" stroke="#8a7e78" stroke-width="1.2" fill="none" stroke-linecap="round"/></svg>
+        </div>
+        <div class="voice-bubble-wrap">
+          <div class="voice-name">Hさん・28歳・文系出身・接客業</div>
+          <div class="voice-bubble young-bubble">文系でプログラミングも全然わからないんですけど、<strong>本当に転職できるんですか？</strong> 正直「未経験歓迎」って書いてあっても、実際は無理なんじゃないかと思ってしまって……。</div>
+        </div>
+      </div>
+      <div class="voice-row editor">
+        <div class="voice-icon editor-icon">
+          <svg width="28" height="28" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="16" cy="10" r="6" fill="#00C896"/><path d="M4 31C4 24.373 9.373 19 16 19C22.627 19 28 24.373 28 31" fill="#00C896"/><path d="M16 19 L12.5 24 L16 22.5 L19.5 24 Z" fill="#0a0a0a" opacity="0.8"/><path d="M14.5 23.5 L16 22.5 L17.5 23.5 L16.8 28 L16 30 L15.2 28 Z" fill="#0a0a0a" opacity="0.8"/></svg>
+        </div>
+        <div class="voice-bubble-wrap">
+          <div class="voice-name">編集部</div>
+          <div class="voice-bubble editor-bubble">転職者の50%超が異業種出身というデータが示す通り、<strong>「文系・未経験」はもはや珍しくないです</strong>。特にカスタマーサクセスやITコンサル・インサイドセールスは、コミュニケーション力の方がプログラミングより重視される職種。文系の強みが活きます。</div>
+        </div>
+      </div>
+    </div>
+    <div class="a-divider">· · ·</div>
+  </div>
+
+  <!-- S07 -->
+  <div class="a-section">
+    <span class="a-section-num">07 — エージェントの現実</span>
+    <h2 class="a-section-title">「登録したら電話が鬼のようにかかってきた」という時代は終わった</h2>
+    <div class="a-body"><p>転職エージェントへの不信感は根強い。ただ、エージェントにも種類がある。大手総合型と、特定の業界・ターゲットに特化した個人起点型では、支援の質がまったく異なる。</p></div>
+    <div class="pullquote">
+      <p>「担当者が自分のキャリアを一緒に考えてくれた感じが、これまでのエージェントと全然違った。」</p>
+      <cite>— ミライフ利用者の声（27歳・元法人営業）</cite>
+    </div>
+    <div class="voice-block">
+      <div class="voice-row">
+        <div class="voice-icon young-icon">
+          <svg width="28" height="28" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="16" cy="10" r="6" fill="#9b8e86"/><path d="M10 8.5 Q16 5 22 8.5" stroke="#6e6460" stroke-width="2" fill="none" stroke-linecap="round"/><path d="M4 31C4 24.373 9.373 19 16 19C22.627 19 28 24.373 28 31" fill="#9b8e86"/><path d="M12.5 19.5 Q16 17.5 19.5 19.5" stroke="#8a7e78" stroke-width="1.2" fill="none" stroke-linecap="round"/></svg>
+        </div>
+        <div class="voice-bubble-wrap">
+          <div class="voice-name">Nさん・25歳・小売業</div>
+          <div class="voice-bubble young-bubble">一回エージェントに登録したとき、<strong>毎日電話きて正直引きました</strong>。紹介される求人も全然ピンとこないし、もうエージェントはいいかなって思ってたんですよね。</div>
+        </div>
+      </div>
+      <div class="voice-row editor">
+        <div class="voice-icon editor-icon">
+          <svg width="28" height="28" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="16" cy="10" r="6" fill="#00C896"/><path d="M4 31C4 24.373 9.373 19 16 19C22.627 19 28 24.373 28 31" fill="#00C896"/><path d="M16 19 L12.5 24 L16 22.5 L19.5 24 Z" fill="#0a0a0a" opacity="0.8"/><path d="M14.5 23.5 L16 22.5 L17.5 23.5 L16.8 28 L16 30 L15.2 28 Z" fill="#0a0a0a" opacity="0.8"/></svg>
+        </div>
+        <div class="voice-bubble-wrap">
+          <div class="voice-name">編集部</div>
+          <div class="voice-bubble editor-bubble">それは大手総合型エージェントあるあるです。一方で<strong>特化型エージェントは担当者1人が少数精鋭で向き合う</strong>ので、電話攻撃もなく、押し付けも少ない。エージェントを「変える」という選択肢が、転職の結果を大きく変えます。</div>
+        </div>
+      </div>
+    </div>
+    <div class="a-divider">· · ·</div>
+  </div>
+
+  <!-- S08 -->
+  <div class="a-section">
+    <span class="a-section-num">08 — 相対的剥奪</span>
+    <h2 class="a-section-title">同期の転職報告に、何も感じなくなった日が怖い</h2>
+    <div class="stat-block">
+      <div class="stat-number">No.1</div>
+      <div class="stat-label">20代の転職理由調査で「スキル・経験を積めなかった」が最多<br>現状維持こそが、最大のリスク</div>
+      <div class="stat-source">SOURCE — 20代476人への転職調査, 2026</div>
+    </div>
+    <div class="voice-block">
+      <div class="voice-row">
+        <div class="voice-icon young-icon">
+          <svg width="28" height="28" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="16" cy="10" r="6" fill="#9b8e86"/><path d="M10 8.5 Q16 5 22 8.5" stroke="#6e6460" stroke-width="2" fill="none" stroke-linecap="round"/><path d="M4 31C4 24.373 9.373 19 16 19C22.627 19 28 24.373 28 31" fill="#9b8e86"/><path d="M12.5 19.5 Q16 17.5 19.5 19.5" stroke="#8a7e78" stroke-width="1.2" fill="none" stroke-linecap="round"/></svg>
+        </div>
+        <div class="voice-bubble-wrap">
+          <div class="voice-name">Sさん・27歳・総務</div>
+          <div class="voice-bubble young-bubble">同期がSaaSの会社に転職して年収100万上がったって聞いて、<strong>最近なんか何も感じなくなってきて</strong>。それが逆に怖いんですよね。</div>
+        </div>
+      </div>
+      <div class="voice-row editor">
+        <div class="voice-icon editor-icon">
+          <svg width="28" height="28" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="16" cy="10" r="6" fill="#00C896"/><path d="M4 31C4 24.373 9.373 19 16 19C22.627 19 28 24.373 28 31" fill="#00C896"/><path d="M16 19 L12.5 24 L16 22.5 L19.5 24 Z" fill="#0a0a0a" opacity="0.8"/><path d="M14.5 23.5 L16 22.5 L17.5 23.5 L16.8 28 L16 30 L15.2 28 Z" fill="#0a0a0a" opacity="0.8"/></svg>
+        </div>
+        <div class="voice-bubble-wrap">
+          <div class="voice-name">編集部</div>
+          <div class="voice-bubble editor-bubble">「何も感じなくなった」は諦めのサインです。でも今この記事を読んでいるということは、<strong>まだ「変わりたい」という気持ちがある証拠</strong>です。「悔しい」「羨ましい」という感情は、行動のエネルギーになります。それが消える前に、一歩だけ動いてみてください。</div>
+        </div>
+      </div>
+    </div>
+    <div class="a-divider">· · ·</div>
+  </div>
+
+  <!-- S09 -->
+  <div class="a-section">
+    <span class="a-section-num">09 — スキルの価値</span>
+    <h2 class="a-section-title">「手に職」とは、会社に依存しない力を持つことだ</h2>
+    <div class="pullquote"><p>IT系スキルは、持ち運べる。会社が変わっても、業界が変わっても、自分の市場価値として残る。</p></div>
+    <div class="voice-block">
+      <div class="voice-row">
+        <div class="voice-icon young-icon">
+          <svg width="28" height="28" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="16" cy="10" r="6" fill="#9b8e86"/><path d="M10 8.5 Q16 5 22 8.5" stroke="#6e6460" stroke-width="2" fill="none" stroke-linecap="round"/><path d="M4 31C4 24.373 9.373 19 16 19C22.627 19 28 24.373 28 31" fill="#9b8e86"/><path d="M12.5 19.5 Q16 17.5 19.5 19.5" stroke="#8a7e78" stroke-width="1.2" fill="none" stroke-linecap="round"/></svg>
+        </div>
+        <div class="voice-bubble-wrap">
+          <div class="voice-name">Aさん・26歳・製造業</div>
+          <div class="voice-bubble young-bubble">「手に職」って職人さんとかのイメージだったんですけど、<strong>ITスキルも「手に職」になるんですか？</strong> 会社に依存せずに働けるようになりたいんですが……。</div>
+        </div>
+      </div>
+      <div class="voice-row editor">
+        <div class="voice-icon editor-icon">
+          <svg width="28" height="28" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="16" cy="10" r="6" fill="#00C896"/><path d="M4 31C4 24.373 9.373 19 16 19C22.627 19 28 24.373 28 31" fill="#00C896"/><path d="M16 19 L12.5 24 L16 22.5 L19.5 24 Z" fill="#0a0a0a" opacity="0.8"/><path d="M14.5 23.5 L16 22.5 L17.5 23.5 L16.8 28 L16 30 L15.2 28 Z" fill="#0a0a0a" opacity="0.8"/></svg>
+        </div>
+        <div class="voice-bubble-wrap">
+          <div class="voice-name">編集部</div>
+          <div class="voice-bubble editor-bubble">ITスキルは現代の最強の「手に職」です。<strong>会社が変わっても、業界が変わっても、市場価値として持ち運べる</strong>。将来フリーランスや副業、独立の選択肢も広がります。まずどんな職種が自分に合うか、エージェントに相談するのが最も早い方法です。</div>
+        </div>
+      </div>
+    </div>
+    <div class="a-divider">· · ·</div>
+  </div>
+
+  <!-- S10 -->
+  <div class="a-section">
+    <span class="a-section-num">10 — 経済的現実</span>
+    <h2 class="a-section-title">年収の話をするのは、浅いことじゃない</h2>
+    <div class="stat-block">
+      <div class="stat-number">457万円</div>
+      <div class="stat-label">IT業界全体の平均年収（doda調査, 2023年）<br>エージェント経由の転職成功者の多くが年収アップを実現</div>
+      <div class="stat-source">SOURCE — doda 平均年収調査</div>
+    </div>
+    <div class="voice-block">
+      <div class="voice-row">
+        <div class="voice-icon young-icon">
+          <svg width="28" height="28" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="16" cy="10" r="6" fill="#9b8e86"/><path d="M10 8.5 Q16 5 22 8.5" stroke="#6e6460" stroke-width="2" fill="none" stroke-linecap="round"/><path d="M4 31C4 24.373 9.373 19 16 19C22.627 19 28 24.373 28 31" fill="#9b8e86"/><path d="M12.5 19.5 Q16 17.5 19.5 19.5" stroke="#8a7e78" stroke-width="1.2" fill="none" stroke-linecap="round"/></svg>
+        </div>
+        <div class="voice-bubble-wrap">
+          <div class="voice-name">Oさん・28歳・営業職</div>
+          <div class="voice-bubble young-bubble">来年結婚予定なんですけど、今の年収だと正直厳しくて。<strong>「年収上げたい」って理由で転職するのって、なんか浅い気がして言いにくい</strong>んですよね。でも現実問題、お金は必要で……。</div>
+        </div>
+      </div>
+      <div class="voice-row editor">
+        <div class="voice-icon editor-icon">
+          <svg width="28" height="28" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="16" cy="10" r="6" fill="#00C896"/><path d="M4 31C4 24.373 9.373 19 16 19C22.627 19 28 24.373 28 31" fill="#00C896"/><path d="M16 19 L12.5 24 L16 22.5 L19.5 24 Z" fill="#0a0a0a" opacity="0.8"/><path d="M14.5 23.5 L16 22.5 L17.5 23.5 L16.8 28 L16 30 L15.2 28 Z" fill="#0a0a0a" opacity="0.8"/></svg>
+        </div>
+        <div class="voice-bubble-wrap">
+          <div class="voice-name">編集部</div>
+          <div class="voice-bubble editor-bubble">年収アップは立派な転職理由です。むしろ<strong>「生活を良くしたい」という動機の明確な人の方が、転職活動は成功しやすい</strong>。IT業界の平均457万円は、未経験転職でも十分に目指せる水準です。エージェントへの年収交渉サポートを活用すれば、さらに上を狙えます。</div>
+        </div>
+      </div>
+    </div>
+    <div class="a-divider">· · ·</div>
+  </div>
+
+  <!-- まとめ -->
+  <div class="a-section">
+    <span class="a-section-num">まとめ</span>
+    <h2 class="a-section-title">10の不安は、すべて「情報不足」から来ている</h2>
+    <div class="a-body">
+      <p>AIへの恐怖、30歳の壁、スキルへの焦り、将来への不安、同期との差、エージェントへの不信感――。これらは別々の悩みに見えて、根っこは同じだ。「正しい情報を持っていないから、動けない」。</p>
+      <p>正しいエージェントと出会い、正しい情報を得た人は、すでに動いている。この記事を読み終えた今、あなたに必要なのは「もう少し考えること」ではなく、「一歩動くこと」かもしれない。</p>
+    </div>
+    <ul class="insight-list">
+      <li><span class="insight-num">01</span>AIはすでに22〜25歳の雇用を13%減らしている（スタンフォード大）</li>
+      <li><span class="insight-num">02</span>28歳と30歳では見える求人の数がまったく違う</li>
+      <li><span class="insight-num">03</span>2030年にIT人材は79万人不足する（経産省）</li>
+      <li><span class="insight-num">04</span>44%の労働者のスキルが5年以内に変化する（WEF）</li>
+      <li><span class="insight-num">05</span>リモート求人はエージェント経由が内定率を上げる</li>
+      <li><span class="insight-num">06</span>IT転職者の50%超が異業種出身</li>
+      <li><span class="insight-num">07</span>エージェントの質は種類によってまったく異なる</li>
+      <li><span class="insight-num">08</span>転職理由No.1は「スキル・経験を積めなかった」（20代調査）</li>
+      <li><span class="insight-num">09</span>ITスキルは会社が変わっても持ち運べる</li>
+      <li><span class="insight-num">10</span>IT業界の平均年収は457万円（doda）</li>
+    </ul>
+  </div>
+
+</div><!-- /article-wrap -->
+</div><!-- /article-body -->
+
+<!-- CTA / Ranking -->
+<div class="cta-section" id="ranking">
+  <div class="cta-inner">
+    <p class="pr-notice">本ページにはPR広告（アフィリエイト）が含まれます</p>
+    <div class="cta-eyebrow">RANKING — 2026年版</div>
+    <h2 class="cta-title">未経験からIT転職<br><em>編集部おすすめエージェント</em></h2>
+    <p class="cta-sub">20代・未経験・文系歓迎。完全無料で利用できます。</p>
+
+    <div class="ranking-cards">
+      <a href="https://px.a8.net/svt/ejp?a8mat=4B3G6L+25EE6Y+5S0C+BWVTE"
+         target="_blank" rel="nofollow noopener"
+         class="ranking-card"
+         onclick="gtag('event','click',{event_category:'affiliate',event_label:'milife',event_campaign:'article'})">
+        <div class="ranking-card-rank">1</div>
+        <div class="ranking-card-info">
+          <div class="ranking-card-name">ミライフ</div>
+          <div class="ranking-card-desc">SaaS・AI業界特化。個人起点のキャリア支援で年収アップ実績多数。</div>
+        </div>
+        <div class="ranking-card-cta">無料面談 →</div>
+      </a>
+      <a href="https://px.a8.net/svt/ejp?a8mat=4B3G6L+2DQGNU+5SN4+5YJRM"
+         target="_blank" rel="nofollow noopener"
+         class="ranking-card"
+         onclick="gtag('event','click',{event_category:'affiliate',event_label:'rakus',event_campaign:'article'})">
+        <div class="ranking-card-rank">2</div>
+        <div class="ranking-card-info">
+          <div class="ranking-card-name">ラクスパートナーズ</div>
+          <div class="ranking-card-desc">未経験エンジニア転職特化。書類〜面接まで徹底サポート。</div>
+        </div>
+        <div class="ranking-card-cta">無料相談 →</div>
+      </a>
+      <a href="https://px.a8.net/svt/ejp?a8mat=4B3G6L+29KFFE+4RIG+BWVTE"
+         target="_blank" rel="nofollow noopener"
+         class="ranking-card"
+         onclick="gtag('event','click',{event_category:'affiliate',event_label:'engishukan',event_campaign:'article'})">
+        <div class="ranking-card-rank">3</div>
+        <div class="ranking-card-info">
+          <div class="ranking-card-name">エンジニア就活</div>
+          <div class="ranking-card-desc">ITエンジニア求人を一括比較。まず情報収集したい人に。</div>
+        </div>
+        <div class="ranking-card-cta">無料登録 →</div>
+      </a>
+    </div>
+
+    <a href="https://px.a8.net/svt/ejp?a8mat=4B3G6L+25EE6Y+5S0C+BWVTE"
+       target="_blank" rel="nofollow noopener"
+       class="cta-btn"
+       onclick="gtag('event','click',{event_category:'affiliate',event_label:'milife-main-cta',event_campaign:'article'})">
+      1位：ミライフに無料で相談する
+      <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </a>
+    <div class="cta-note">登録2分 · 完全無料 · 強引な勧誘なし</div>
+  </div>
+</div>
+
+<!-- A8 tracking pixels -->
+<img border="0" width="1" height="1" src="https://www15.a8.net/0.gif?a8mat=4B3G6L+25EE6Y+5S0C+BWVTE" alt="" style="display:none">
+<img border="0" width="1" height="1" src="https://www15.a8.net/0.gif?a8mat=4B3G6L+2DQGNU+5SN4+5YJRM" alt="" style="display:none">
+<img border="0" width="1" height="1" src="https://www15.a8.net/0.gif?a8mat=4B3G6L+29KFFE+4RIG+BWVTE" alt="" style="display:none">
+
+<!-- Internal navigation strip -->
+<div class="nav-strip">
+  <div class="nav-strip-inner">
+    <span class="nav-strip-label">関連ページ</span>
+    <a href="/" class="nav-strip-link">
+      <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M6 1L1 6h3v4h4V6h3L6 1z" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      トップ
+    </a>
+    <a href="/general/" class="nav-strip-link featured">
+      IT転職 全般
+      <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 6h8M7 3l3 3-3 3" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </a>
+    <a href="/saas/" class="nav-strip-link featured">
+      SaaS・AI特化
+      <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 6h8M7 3l3 3-3 3" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </a>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-logo">未経験道場<br>IT転職エージェント比較メディア</div>
+    <nav class="footer-links">
+      <a href="/privacy.html" class="footer-link">プライバシーポリシー</a>
+      <a href="/disclaimer.html" class="footer-link">免責事項</a>
+      <a href="/general/" class="footer-link">IT転職 全般</a>
+      <a href="/saas/" class="footer-link">SaaS・AI特化</a>
+    </nav>
+    <div class="footer-copy">
+      © 2026 未経験道場 — mikeikendojo.com
+      本サイトはアフィリエイト広告（PRリンク）を掲載しています。掲載情報は2026年編集部調査によるものです。
+    </div>
+  </div>
+</footer>
+
+<script>
+  (function() {
+    var els = document.querySelectorAll('.a-section');
+    var obs = new IntersectionObserver(function(entries) {
+      entries.forEach(function(e) {
+        if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); }
+      });
+    }, { threshold: 0.07 });
+    els.forEach(function(el) { obs.observe(el); });
+  })();
+</script>
+
+</body>
+</html>

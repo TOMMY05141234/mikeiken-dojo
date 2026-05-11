@@ -25,6 +25,20 @@
   gtag('config', 'G-5M4MMZRL4E');
   gtag('config', 'AW-18146496318');
 </script>
+<script>
+  function gtag_report_conversion(url) {
+    var callback = function () {
+      if (typeof(url) != 'undefined') {
+        window.location = url;
+      }
+    };
+    gtag('event', 'conversion', {
+        'send_to': 'AW-18146496318/OzaLCO7aq6scEL6e9sxD',
+        'event_callback': callback
+    });
+    return false;
+  }
+</script>
 <style>
   :root {
     --black:      #0a0a0a;
@@ -1036,7 +1050,7 @@
       <a href="https://px.a8.net/svt/ejp?a8mat=4B3G6L+25EE6Y+5S0C+BWVTE"
          target="_blank" rel="nofollow noopener"
          class="ranking-card"
-         onclick="gtag('event','click',{event_category:'affiliate',event_label:'milife',event_campaign:'article'})">
+         onclick="gtag('event','click',{event_category:'affiliate',event_label:'milife',event_campaign:'article'}); gtag_report_conversion();">
         <div class="ranking-card-rank">1</div>
         <div class="ranking-card-info">
           <div class="ranking-card-name">ミライフ</div>
@@ -1047,7 +1061,7 @@
       <a href="https://px.a8.net/svt/ejp?a8mat=4B3G6L+2DQGNU+5SN4+5YJRM"
          target="_blank" rel="nofollow noopener"
          class="ranking-card"
-         onclick="gtag('event','click',{event_category:'affiliate',event_label:'rakus',event_campaign:'article'})">
+         onclick="gtag('event','click',{event_category:'affiliate',event_label:'rakus',event_campaign:'article'}); gtag_report_conversion();">
         <div class="ranking-card-rank">2</div>
         <div class="ranking-card-info">
           <div class="ranking-card-name">ラクスパートナーズ</div>
@@ -1058,7 +1072,7 @@
       <a href="https://px.a8.net/svt/ejp?a8mat=4B3G6L+29KFFE+4RIG+BWVTE"
          target="_blank" rel="nofollow noopener"
          class="ranking-card"
-         onclick="gtag('event','click',{event_category:'affiliate',event_label:'engishukan',event_campaign:'article'})">
+         onclick="gtag('event','click',{event_category:'affiliate',event_label:'engishukan',event_campaign:'article'}); gtag_report_conversion();">
         <div class="ranking-card-rank">3</div>
         <div class="ranking-card-info">
           <div class="ranking-card-name">エンジニア就活</div>
@@ -1071,7 +1085,7 @@
     <a href="https://px.a8.net/svt/ejp?a8mat=4B3G6L+25EE6Y+5S0C+BWVTE"
        target="_blank" rel="nofollow noopener"
        class="cta-btn"
-       onclick="gtag('event','click',{event_category:'affiliate',event_label:'milife-main-cta',event_campaign:'article'})">
+       onclick="gtag('event','click',{event_category:'affiliate',event_label:'milife-main-cta',event_campaign:'article'}); gtag_report_conversion();">
       1位：ミライフに無料で相談する
       <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
     </a>

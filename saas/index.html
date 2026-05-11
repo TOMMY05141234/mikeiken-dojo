@@ -28,6 +28,20 @@
     gtag('config', 'G-5M4MMZRL4E');
     gtag('config', 'AW-18146496318');
   </script>
+  <script>
+    function gtag_report_conversion(url) {
+      var callback = function () {
+        if (typeof(url) != 'undefined') {
+          window.location = url;
+        }
+      };
+      gtag('event', 'conversion', {
+          'send_to': 'AW-18146496318/pIk3CPPzqqscEL6e9sxD',
+          'event_callback': callback
+      });
+      return false;
+    }
+  </script>
 </head>
 <body>
 
@@ -245,7 +259,7 @@
                 <a href="https://px.a8.net/svt/ejp?a8mat=4B3G6L+25EE6Y+5S0C+BWVTE"
                    target="_blank"
                    rel="nofollow noopener"
-                   onclick="gtag('event','click',{event_category:'affiliate',event_label:'milife',event_campaign:'saas'})"
+                   onclick="gtag('event','click',{event_category:'affiliate',event_label:'milife',event_campaign:'saas'}); gtag_report_conversion();"
                    class="r-btn">無料で面談を申し込む →</a>
                 <span class="r-note">登録2分・完全無料</span>
               </div>
@@ -289,7 +303,7 @@
                 <a href="https://px.a8.net/svt/ejp?a8mat=4B3G6L+2DQGNU+5SN4+5YJRM"
                    target="_blank"
                    rel="nofollow noopener"
-                   onclick="gtag('event','click',{event_category:'affiliate',event_label:'rakus',event_campaign:'saas'})"
+                   onclick="gtag('event','click',{event_category:'affiliate',event_label:'rakus',event_campaign:'saas'}); gtag_report_conversion();"
                    class="r-btn">無料で相談する →</a>
                 <span class="r-note">登録2分・完全無料</span>
               </div>
@@ -333,7 +347,7 @@
                 <a href="https://px.a8.net/svt/ejp?a8mat=4B3G6L+29KFFE+4RIG+BWVTE"
                    target="_blank"
                    rel="nofollow noopener"
-                   onclick="gtag('event','click',{event_category:'affiliate',event_label:'engishukan',event_campaign:'saas'})"
+                   onclick="gtag('event','click',{event_category:'affiliate',event_label:'engishukan',event_campaign:'saas'}); gtag_report_conversion();"
                    class="r-btn">無料で求人を見る →</a>
                 <span class="r-note">登録無料</span>
               </div>

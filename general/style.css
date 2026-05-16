@@ -703,6 +703,76 @@ img { display: block; max-width: 100%; }
 }
 .t-dot.active { background: var(--green); width: 20px; border-radius: 3px; }
 
+/* ── ARTICLE LINKS ── */
+.article-links-block {
+  margin-top: 56px;
+  padding-top: 48px;
+  border-top: 1px solid rgba(255,255,255,0.08);
+}
+.article-links-label {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.35);
+  margin-bottom: 20px;
+}
+.article-links-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+.article-link-card {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 10px;
+  padding: 14px 16px;
+  transition: border-color 0.2s, background 0.2s;
+  text-decoration: none;
+  color: inherit;
+}
+.article-link-card:hover {
+  border-color: rgba(0,200,150,0.3);
+  background: rgba(0,200,150,0.04);
+}
+.article-link-tag {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--green);
+  background: rgba(0,200,150,0.1);
+  border-radius: 100px;
+  padding: 3px 10px;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.article-link-title {
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  color: rgba(255,255,255,0.7);
+  line-height: 1.45;
+  flex: 1;
+}
+.article-link-arrow {
+  color: rgba(255,255,255,0.25);
+  flex-shrink: 0;
+  transition: color 0.2s, transform 0.2s;
+}
+.article-link-card:hover .article-link-arrow {
+  color: var(--green);
+  transform: translateX(3px);
+}
+@media (max-width: 640px) {
+  .article-links-grid { grid-template-columns: 1fr; }
+}
+
 /* =========================================
    FAQ
 ========================================= */

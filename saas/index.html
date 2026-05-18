@@ -11,13 +11,73 @@
   </script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SaaS・AI業界転職｜個人起点エージェント比較【未経験道場】</title>
-  <meta name="description" content="SaaS・AI業界への転職を目指す20代向け。個人起点のキャリア支援で年収アップを実現。完全無料で相談できます。">
+  <title>SaaS・IT転職で年収アップ｜30歳前後が選ぶエージェント比較【未経験道場】</title>
+  <meta name="description" content="28〜33歳・SaaS・IT業界への転職で年収アップを目指すなら今。平均138〜160万円アップ実績のエージェントを編集部が厳選。完全無料。">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,700;0,9..144,900;1,9..144,300;1,9..144,700&family=DM+Sans:wght@300;400;500;700&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css">
   <link rel="stylesheet" href="style.css">
+  <style>
+/* ── STICKY CTA ── */
+#sticky-cta { position:fixed; bottom:0; left:0; right:0; background:var(--black); border-top:2px solid var(--green); padding:12px 20px; z-index:999; display:none; }
+#sticky-cta-inner { max-width:680px; margin:0 auto; display:flex; align-items:center; justify-content:space-between; gap:16px; flex-wrap:wrap; }
+#sticky-cta-text { font-size:13px; color:rgba(255,255,255,0.7); font-weight:500; }
+#sticky-cta-btn { background:var(--green); color:var(--black); text-decoration:none; font-size:13px; font-weight:700; padding:10px 24px; white-space:nowrap; transition:background .2s; border-radius:4px; }
+#sticky-cta-btn:hover { background:var(--green-dark); color:#fff; }
+
+/* ── CTA PULSE ── */
+@keyframes cta-pulse { 0%,100%{box-shadow:0 0 0 0 rgba(0,200,150,0.4);} 50%{box-shadow:0 0 0 10px rgba(0,200,150,0);} }
+.btn-primary { animation:cta-pulse 2.5s infinite; }
+
+/* ── CTA BADGES ── */
+.cta-badges { display:flex; gap:6px; justify-content:center; margin-top:8px; flex-wrap:wrap; }
+.cta-badge { font-size:10px; font-family:'DM Sans',sans-serif; font-weight:700; letter-spacing:.06em; color:var(--green); border:1px solid rgba(0,200,150,0.4); padding:2px 8px; }
+
+/* ── RANK PROBLEM TABLE ── */
+.r-highlight-tag { display:inline-block; background:rgba(0,200,150,0.12); color:var(--green); font-size:11px; font-weight:700; padding:4px 12px; border-radius:100px; margin-bottom:12px; letter-spacing:0.04em; }
+.r-problem-table { background:rgba(255,255,255,0.03); border:1px solid rgba(255,255,255,0.08); border-radius:10px; padding:14px 16px; margin-bottom:16px; }
+.r-pt-title { font-size:11px; font-weight:700; color:rgba(255,255,255,0.4); letter-spacing:0.1em; text-transform:uppercase; margin-bottom:10px; font-family:'DM Sans',sans-serif; }
+.r-pt-row { display:flex; align-items:baseline; gap:8px; padding:7px 0; border-bottom:1px solid rgba(255,255,255,0.05); font-size:13px; }
+.r-pt-row:last-child { border-bottom:none; }
+.r-pt-problem { color:rgba(255,255,255,0.55); flex:1; min-width:0; }
+.r-pt-arrow { color:var(--green); flex-shrink:0; font-size:11px; }
+.r-pt-solution { color:rgba(255,255,255,0.85); font-weight:700; flex:1.2; min-width:0; }
+
+/* ── CARD REDESIGN ── */
+.hero-cta-group { flex-direction:column; align-items:flex-start; gap:14px; }
+.r-head { display:flex; border-bottom:1px solid rgba(0,0,0,0.08); background:#fff; }
+.r-head-left { flex-shrink:0; width:180px; padding:22px 20px; border-right:1px solid rgba(0,0,0,0.08); display:flex; flex-direction:column; gap:8px; justify-content:center; }
+.r-head-right { flex:1; padding:20px 28px; display:flex; flex-direction:column; gap:10px; justify-content:center; }
+.r-head-right .r-sub { font-family:'Noto Sans JP',sans-serif; font-size:13px; color:#444; line-height:1.8; margin-top:0; font-style:normal; }
+.r-head-right .r-highlight-tag { margin-bottom:2px; align-self:flex-start; }
+.r-body { display:grid; grid-template-columns:1fr 210px; gap:0; }
+.r-body-left { padding:20px 28px; border-right:1px solid rgba(0,0,0,0.08); }
+.r-body-right { padding:22px 18px; display:flex; flex-direction:column; justify-content:center; align-items:center; gap:10px; text-align:center; background:rgba(0,200,150,0.03); }
+.r-body-left .r-features { padding:14px 0 0; border-right:none; justify-content:flex-start; }
+.r-body-right .r-btn { width:100%; font-size:12px; padding:13px 12px; line-height:1.5; }
+.r-cta-badge-row { display:flex; gap:4px; flex-wrap:wrap; justify-content:center; }
+.r-cta-badge { font-family:'DM Sans',sans-serif; font-size:10px; font-weight:700; letter-spacing:0.06em; color:var(--green); border:1px solid rgba(0,200,150,0.35); padding:2px 7px; border-radius:3px; }
+.r-body-left .r-problem-table { background:rgba(0,200,150,0.04); border:1px solid rgba(0,200,150,0.18); margin-bottom:0; padding:12px 14px; }
+.r-body-left .r-pt-title { color:rgba(0,0,0,0.32); }
+.r-body-left .r-pt-row { border-bottom:1px solid rgba(0,0,0,0.05); font-size:12.5px; }
+.r-body-left .r-pt-problem { color:rgba(0,0,0,0.42); }
+.r-body-left .r-pt-arrow { color:var(--green); }
+.r-body-left .r-pt-solution { color:rgba(0,0,0,0.78); }
+@media (max-width:1023px) {
+  .r-head { flex-direction:column; }
+  .r-head-left { width:100%; border-right:none; border-bottom:1px solid rgba(0,0,0,0.08); flex-direction:row; align-items:center; gap:16px; padding:16px 20px; }
+  .r-body { grid-template-columns:1fr; }
+  .r-body-left { border-right:none; border-bottom:1px solid rgba(0,0,0,0.08); padding:16px 20px; }
+  .r-body-right { padding:18px 20px; flex-direction:row; flex-wrap:wrap; justify-content:space-between; }
+  .r-body-right .r-btn { flex:1 1 auto; }
+}
+@media (max-width:767px) {
+  .r-head-left { flex-wrap:wrap; }
+  .r-body-right { flex-direction:column; }
+  .r-body-right .r-btn { width:100%; }
+}
+  </style>
   <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js" defer></script>
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-5M4MMZRL4E"></script>
@@ -53,7 +113,7 @@
         <div class="hd-logo-text">未経験道場<br><span style="opacity:0.55;font-size:12px;font-weight:400;letter-spacing:0.02em">SaaS・AI転職エージェント比較</span></div>
       </a>
       <a href="#ranking" class="hd-cta">
-        無料でエージェントを比較する
+        年収アップ転職を無料相談（在職中OK）
         <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7h10M8 4l3 3-3 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
       </a>
     </div>
@@ -109,17 +169,22 @@
           <span class="label" style="color:rgba(255,255,255,0.4)">未経験道場 — SaaS・AI転職エージェント比較</span>
         </div>
         <h1 class="hero-h1">
-          <em>SaaS・AI業界</em>への転職。本気で目指すなら、個人起点のエージェントを。
+          今の会社で、<br><em>正当に評価されていますか？</em>
         </h1>
         <p class="hero-sub">
-          SaaS・AIスタートアップへの転職は、業界知識のあるエージェント選びが全て。完全無料で相談できます。
+          SaaS・IT業界には、同じスキルでも年収が100〜200万円高い求人が存在する。エージェントを変えるだけで、それに辿り着ける。完全無料・在職中でもすぐ相談できます。
         </p>
         <div class="hero-cta-group">
           <a href="#ranking" class="btn-primary">
-            無料でエージェントを比較する
+            今の年収が適正かを無料で確認する
             <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </a>
-          <span class="hero-cta-note">登録2分・完全無料・強引な勧誘なし</span>
+          <div class="cta-badges">
+            <span class="cta-badge">在職中OK</span>
+            <span class="cta-badge">登録2分</span>
+            <span class="cta-badge">完全無料</span>
+            <span class="cta-badge">話を聞くだけでもOK</span>
+          </div>
         </div>
       </div>
     </div>
@@ -134,37 +199,37 @@
           <span class="section-num">01</span>
           <span class="label">こんな悩み、ありませんか</span>
         </div>
-        <h2 class="section-h2">SaaS・AI転職は<br><em>エージェント選び</em>が全て。</h2>
+        <h2 class="section-h2">SaaS・IT転職を考えている<br>30歳前後が、<em>みんな感じていること</em></h2>
       </div>
       <div class="pain-grid reveal d1">
         <div class="pain-item">
           <span class="pain-num">悩み 01</span>
-          <p class="pain-text">「SaaSって何から転職すればいいの？」</p>
+          <p class="pain-text">「スキルに自信はあるが、今の会社では年収が上がる気がしない」</p>
         </div>
         <div class="pain-item">
           <span class="pain-num">悩み 02</span>
-          <p class="pain-text">「カスタマーサクセスに転職したいが未経験でいけるか」</p>
+          <p class="pain-text">「SaaS・ITコンサルに転職したいが、自分のスキルが通用するか不安」</p>
         </div>
         <div class="pain-item">
           <span class="pain-num">悩み 03</span>
-          <p class="pain-text">「SaaS業界は理系・エンジニア経験者しか無理では」</p>
+          <p class="pain-text">「転職エージェントに登録したが、的外れな求人しか紹介されなかった」</p>
         </div>
         <div class="pain-item">
           <span class="pain-num">悩み 04</span>
-          <p class="pain-text">「エージェントがSaaSに詳しくなく的外れな求人ばかり」</p>
+          <p class="pain-text">「メガベンチャー・大手事業会社の求人を探しているがどこにあるかわからない」</p>
         </div>
         <div class="pain-item">
           <span class="pain-num">悩み 05</span>
-          <p class="pain-text">「どのSaaS企業が成長していて将来性があるかわからない」</p>
+          <p class="pain-text">「年収交渉のやり方がわからず、内定後の条件を言われるがままにしてしまった」</p>
         </div>
         <div class="pain-item">
           <span class="pain-num">悩み 06</span>
-          <p class="pain-text">「SaaS転職で本当に年収が上がるのか不安」</p>
+          <p class="pain-text">「忙しくて転職活動に時間を割けない。土日しか動けない」</p>
         </div>
       </div>
       <div class="pain-cta reveal d2">
         <a href="#ranking" class="btn-primary">
-          エージェントで解決する
+          SaaS・IT転職を今すぐ無料相談する
           <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </a>
       </div>
@@ -180,34 +245,34 @@
           <span class="section-num">02</span>
           <span class="label on-dark">SaaS特化エージェントが必要な理由</span>
         </div>
-        <h2 class="section-h2 light">業界知識があるかで、<em>結果</em>が変わる。</h2>
+        <h2 class="section-h2 light">30歳前後のSaaS・IT転職は、<br><em>エージェントの専門性</em>で年収が変わる</h2>
       </div>
       <div class="why-list reveal d1">
         <div class="why-item">
           <div class="why-num-cell"><span class="why-num">01</span></div>
           <div class="why-title-cell">
-            <h3 class="why-title">SaaS非公開求人に<br>アクセスできる</h3>
+            <h3 class="why-title">開発現場を知るアドバイザーだから、ミスマッチが起きない</h3>
           </div>
           <div class="why-desc-cell">
-            <p class="why-desc">SaaS企業の優良ポジションの多くはエージェント経由のみで公開されます。特にカスタマーサクセス・インサイドセールスは競争率が高く、エージェントとの関係性が鍵になります。</p>
+            <p class="why-desc">一般的なエージェントのアドバイザーは、IT業界の技術スタックや開発現場の実態を知らないことが多い。元エンジニア・元ITコンサル出身のアドバイザーは、あなたのスキルレベルと求人の技術要件を正確に照合できるため、「面接に行ってみたら全然違った」というミスマッチが起きない。</p>
           </div>
         </div>
         <div class="why-item">
           <div class="why-num-cell"><span class="why-num">02</span></div>
           <div class="why-title-cell">
-            <h3 class="why-title">企業の内情まで<br>教えてくれる</h3>
+            <h3 class="why-title">独占求人・面接確約ルートには、個人では辿り着けない</h3>
           </div>
           <div class="why-desc-cell">
-            <p class="why-desc">SaaS業界に精通したエージェントなら、ARR成長率・組織の実態・評価制度まで把握しています。「伸びている会社」と「伸び悩んでいる会社」を見極める目利きが違います。</p>
+            <p class="why-desc">メガベンチャーや大手事業会社・ITコンサルの競争率が高いポジションは、一般公開せずエージェント経由のみで採用しているケースが多い。TechGOの独占選考ルートや面接確約求人は、エージェントを介してのみアクセスできる特別ルートだ。</p>
           </div>
         </div>
         <div class="why-item">
           <div class="why-num-cell"><span class="why-num">03</span></div>
           <div class="why-title-cell">
-            <h3 class="why-title">年収交渉まで<br>代わりに動く</h3>
+            <h3 class="why-title">年収交渉は、相場を知る専門家に任せると100万円変わる</h3>
           </div>
           <div class="why-desc-cell">
-            <p class="why-desc">SaaS業界の年収相場を熟知しているエージェントは、交渉の余地を正確に把握しています。「言い値で受け入れる」のと「エージェントが交渉する」のでは、結果が大きく変わります。</p>
+            <p class="why-desc">SaaS・IT業界の年収レンジは、企業規模・フェーズ・職種によって大きく異なる。相場を知らずに内定承諾してしまうと、本来もらえるはずの年収より大幅に低い条件で入社することになる。TechGOは年収交渉成功率100%・30代平均160万円アップを実現している。</p>
           </div>
         </div>
       </div>
@@ -229,8 +294,8 @@
           <span class="section-num">03</span>
           <span class="label">編集部おすすめ</span>
         </div>
-        <h2 class="section-h2">20代・未経験 SaaS・AI転職<br><em>おすすめエージェント</em>ランキング</h2>
-        <p class="section-intro" style="margin-top:16px">登録・利用は完全無料 ／ 2026年編集部調査（最新版）</p>
+        <h2 class="section-h2">30歳前後のSaaS・IT転職<br><em>編集部おすすめエージェントランキング</em></h2>
+        <p class="section-intro" style="margin-top:16px">年収交渉実績・業界専門性・選考サポート力で厳選。同世代の転職成功者が選んだ2社。完全無料・在職中OK。</p>
         <p class="pr-notice">本ページにはPR広告（アフィリエイト）が含まれます</p>
       </div>
 
@@ -240,35 +305,71 @@
         <div class="r-card reveal">
           <div class="r-bar r-bar-1"></div>
           <div class="r-card-main">
-            <div class="r-body">
-              <div class="r-meta">
+            <div class="r-head">
+              <div class="r-head-left">
                 <div class="r-badge">
                   <span class="r-medal">🥇</span> 第1位
                   <span class="r-pr-badge">PR</span>
                 </div>
-                <div class="r-name">TechGO<br><span style="font-size:13px">テックゴー</span></div>
-                <div class="r-sub">ITエンジニア転職に特化した<br>求人・転職支援サービス</div>
+                <div class="r-name">TechGO</div>
                 <div class="r-stars">★★★★★</div>
               </div>
-              <div class="r-features">
-                <div class="r-feature">ITエンジニア職種に特化した求人を多数保有</div>
-                <div class="r-feature">SaaS・AI系エンジニア求人も豊富に対応</div>
-                <div class="r-feature">専任エージェントによる個別キャリアサポート</div>
+              <div class="r-head-right">
+                <div class="r-highlight-tag">IT営業・ITコンサル求人 業界最大級</div>
+                <p class="r-sub">営業・企画・コンサルの経験は、IT業界ではもっと高く評価される。TechGOはIT営業・SaaS営業・ITコンサル・プリセールス等のビジネス系IT職求人を業界最大級に保有。元コンサル・エンジニア出身のアドバイザーが業界の実態を詳細に共有し、年収交渉まで代行する。ビジネス職への転職でも30代平均160万円アップ。</p>
               </div>
-              <div class="r-cta">
+            </div>
+            <div class="r-body">
+              <div class="r-body-left">
+                <div class="r-problem-table">
+                  <div class="r-pt-title">あなたの悩みを解決します</div>
+                  <div class="r-pt-row">
+                    <span class="r-pt-problem">営業スキルがIT業界で通用するか不安</span>
+                    <span class="r-pt-arrow">→</span>
+                    <span class="r-pt-solution">IT営業・コンサル系求人を大量保有</span>
+                  </div>
+                  <div class="r-pt-row">
+                    <span class="r-pt-problem">SaaS・IT企業のポジションの違いがわからない</span>
+                    <span class="r-pt-arrow">→</span>
+                    <span class="r-pt-solution">職種別の年収・実態を詳細共有</span>
+                  </div>
+                  <div class="r-pt-row">
+                    <span class="r-pt-problem">年収交渉のやり方がわからない</span>
+                    <span class="r-pt-arrow">→</span>
+                    <span class="r-pt-solution">交渉成功率100%・平均138万円アップ</span>
+                  </div>
+                  <div class="r-pt-row">
+                    <span class="r-pt-problem">忙しくて転職活動できない</span>
+                    <span class="r-pt-arrow">→</span>
+                    <span class="r-pt-solution">土日夜間対応・1Day選考会</span>
+                  </div>
+                </div>
+                <div class="r-features">
+                  <div class="r-feature">IT営業・SaaS営業・ITコンサル・プリセールス求人を業界最大級に保有</div>
+                  <div class="r-feature">非エンジニア職（営業・コンサル・PM・CS）への転職実績が豊富</div>
+                  <div class="r-feature">年収交渉成功率100%・ビジネス職30代平均160万円アップ</div>
+                  <div class="r-feature">元コンサル・エンジニア出身アドバイザーが業界実態を共有</div>
+                  <div class="r-feature">メガベンチャー・大手SaaS企業への独占求人あり</div>
+                </div>
+              </div>
+              <div class="r-body-right">
                 <a href="https://px.a8.net/svt/ejp?a8mat=4B3N6R+DTQFA2+5B0Y+HV7V6"
-                   target="_blank"
-                   rel="nofollow noopener"
+                   target="_blank" rel="nofollow noopener"
                    onclick="gtag('event','click',{event_category:'affiliate',event_label:'techgo',event_campaign:'saas'}); gtag_report_conversion();"
-                   class="r-btn">無料で転職相談をする →</a>
-                <span class="r-note">登録2分・完全無料</span>
+                   class="r-btn">IT営業・ITコンサル転職を<br>今すぐ無料相談する →</a>
+                <div class="r-cta-badge-row">
+                  <span class="r-cta-badge">在職中OK</span>
+                  <span class="r-cta-badge">登録2分</span>
+                  <span class="r-cta-badge">完全無料</span>
+                </div>
+                <span class="r-note">強引な勧誘なし</span>
               </div>
             </div>
             <div class="r-testimonial">
               <span class="r-t-icon">"</span>
               <div class="r-t-inner">
-                <p class="r-t-text">「SaaS系のエンジニアポジションを探していてTechGOに相談しました。業界知識のある担当者が的確な求人を紹介してくれて、スムーズに内定まで進めました。年収も大幅にアップしました。」</p>
-                <span class="r-t-author">― Hさん（27歳・元SIerエンジニア）</span>
+                <p class="r-t-text">「SIerで5年働いたが年収が低すぎた。TechGOの担当者は元エンジニアで、自分のスキルを正確に評価してくれた。大手事業会社に転職して年収160万円アップ。交渉も全部やってくれたので自分では何もしていない。」</p>
+                <span class="r-t-author">― Hさん（31歳・元SIerエンジニア → 大手事業会社）</span>
               </div>
             </div>
             <div class="r-banner">
@@ -287,32 +388,59 @@
         <div class="r-card reveal d1">
           <div class="r-bar r-bar-2"></div>
           <div class="r-card-main">
-            <div class="r-body">
-              <div class="r-meta">
+            <div class="r-head">
+              <div class="r-head-left">
                 <div class="r-badge"><span class="r-medal">🥈</span> 第2位</div>
                 <div class="r-name">ミライフ</div>
-                <div class="r-sub">SaaS・AI業界への転職支援に強い<br>個人起点型エージェント</div>
                 <div class="r-stars">★★★★★</div>
               </div>
-              <div class="r-features">
-                <div class="r-feature">大手にはない「あなたの人生から逆算する」キャリア支援</div>
-                <div class="r-feature">SaaS・AI・スタートアップへの転職実績が豊富</div>
-                <div class="r-feature">面談1回で求人紹介まで進む、スピード感ある支援</div>
+              <div class="r-head-right">
+                <p class="r-sub">SaaS営業・カスタマーサクセス・ITコンサルへの転職なら、ミライフが際立っている。担当者がSaaS企業のARR成長率・組織体制・ポジションの実態まで共有してくれるから、「行ってみたら話が違った」を防げる。IT営業・コンサル職からのキャリアチェンジ実績が豊富で、「本当に行きたい場所」から逆算する個人起点の支援。</p>
               </div>
-              <div class="r-cta">
+            </div>
+            <div class="r-body">
+              <div class="r-body-left">
+                <div class="r-problem-table">
+                  <div class="r-pt-title">あなたの悩みを解決します</div>
+                  <div class="r-pt-row">
+                    <span class="r-pt-problem">SaaS企業の内部環境がわからない</span>
+                    <span class="r-pt-arrow">→</span>
+                    <span class="r-pt-solution">ARR成長率・組織実態まで詳細共有</span>
+                  </div>
+                  <div class="r-pt-row">
+                    <span class="r-pt-problem">CS・インサイドセールスに転職したい</span>
+                    <span class="r-pt-arrow">→</span>
+                    <span class="r-pt-solution">SaaS営業・CS職種への転職実績多数</span>
+                  </div>
+                  <div class="r-pt-row">
+                    <span class="r-pt-problem">転職先を間違えたくない</span>
+                    <span class="r-pt-arrow">→</span>
+                    <span class="r-pt-solution">人生から逆算するキャリア設計</span>
+                  </div>
+                </div>
+                <div class="r-features">
+                  <div class="r-feature">SaaS営業・CS・ITコンサルへの転職支援実績が豊富</div>
+                  <div class="r-feature">IT営業・コンサル職からのキャリアチェンジに特に強い</div>
+                  <div class="r-feature">面談1回で求人紹介まで進む、スピード感ある支援</div>
+                </div>
+              </div>
+              <div class="r-body-right">
                 <a href="https://px.a8.net/svt/ejp?a8mat=4B3G6L+25EE6Y+5S0C+BWVTE"
-                   target="_blank"
-                   rel="nofollow noopener"
+                   target="_blank" rel="nofollow noopener"
                    onclick="gtag('event','click',{event_category:'affiliate',event_label:'milife',event_campaign:'saas'}); gtag_report_conversion();"
-                   class="r-btn">無料で面談を申し込む →</a>
-                <span class="r-note">登録2分・完全無料</span>
+                   class="r-btn">SaaS・IT転職の方向性を<br>今すぐ無料相談する →</a>
+                <div class="r-cta-badge-row">
+                  <span class="r-cta-badge">在職中OK</span>
+                  <span class="r-cta-badge">完全無料</span>
+                </div>
+                <span class="r-note">電話攻撃なし・押しつけなし</span>
               </div>
             </div>
             <div class="r-testimonial">
               <span class="r-t-icon">"</span>
               <div class="r-t-inner">
-                <p class="r-t-text">「AIスタートアップに転職したくて相談しました。担当者がSaaS・AI業界に本当に詳しくて、企業の内情まで教えてくれた。3社受けて2社内定、年収120万アップしました。」</p>
-                <span class="r-t-author">― Tさん（25歳・元SIer）</span>
+                <p class="r-t-text">「29歳でSaaSに転職したくて相談。担当者が企業のARR成長率や組織の実態まで教えてくれた。3社受けて2社内定、年収130万円アップ。TechGOとミライフ、両方使ったのが正解だった。」</p>
+                <span class="r-t-author">― Tさん（29歳・元法人営業 → SaaSカスタマーサクセス）</span>
               </div>
             </div>
             <div class="r-banner">
@@ -331,25 +459,52 @@
         <div class="r-card reveal d2">
           <div class="r-bar r-bar-3"></div>
           <div class="r-card-main">
-            <div class="r-body">
-              <div class="r-meta">
+            <div class="r-head">
+              <div class="r-head-left">
                 <div class="r-badge"><span class="r-medal">🥉</span> 第3位</div>
-                <div class="r-name">ラクス<br>パートナーズ</div>
-                <div class="r-sub">未経験エンジニア転職に特化。<br>選考参加まで徹底サポート</div>
+                <div class="r-name">ラクスパートナーズ</div>
                 <div class="r-stars">★★★★☆</div>
               </div>
-              <div class="r-features">
-                <div class="r-feature">未経験からエンジニアへの転職実績が豊富</div>
-                <div class="r-feature">書類作成・面接練習まで個別サポート</div>
-                <div class="r-feature">IT・Web・SIer系求人を幅広く保有</div>
+              <div class="r-head-right">
+                <p class="r-sub">IT知識は少ないが、IT業界の営業・サポート職・事務職でキャリアをスタートしたい——そういう28〜33歳には、ラクスパートナーズが最適だ。非エンジニア系のIT職求人も幅広くカバーし、書類の書き方からIT業界の面接対策まで個別サポート。スキルなしでも確実に一歩踏み出せる。</p>
               </div>
-              <div class="r-cta">
+            </div>
+            <div class="r-body">
+              <div class="r-body-left">
+                <div class="r-problem-table">
+                  <div class="r-pt-title">あなたの悩みを解決します</div>
+                  <div class="r-pt-row">
+                    <span class="r-pt-problem">IT知識なしでIT業界に入れるか不安</span>
+                    <span class="r-pt-arrow">→</span>
+                    <span class="r-pt-solution">非エンジニア職・IT営業系求人を幅広く保有</span>
+                  </div>
+                  <div class="r-pt-row">
+                    <span class="r-pt-problem">IT系の職務経歴書の書き方がわからない</span>
+                    <span class="r-pt-arrow">→</span>
+                    <span class="r-pt-solution">書類作成を個別サポート</span>
+                  </div>
+                  <div class="r-pt-row">
+                    <span class="r-pt-problem">面接でIT知識を問われたら不安</span>
+                    <span class="r-pt-arrow">→</span>
+                    <span class="r-pt-solution">業界知識・面接対策まで丁寧にサポート</span>
+                  </div>
+                </div>
+                <div class="r-features">
+                  <div class="r-feature">IT営業・サポート・事務など非エンジニア職の求人も保有</div>
+                  <div class="r-feature">書類作成・面接練習まで個別サポート</div>
+                  <div class="r-feature">IT・Web・SIer系求人を幅広く保有</div>
+                </div>
+              </div>
+              <div class="r-body-right">
                 <a href="https://px.a8.net/svt/ejp?a8mat=4B3G6L+2DQGNU+5SN4+5YJRM"
-                   target="_blank"
-                   rel="nofollow noopener"
+                   target="_blank" rel="nofollow noopener"
                    onclick="gtag('event','click',{event_category:'affiliate',event_label:'rakus',event_campaign:'saas'}); gtag_report_conversion();"
-                   class="r-btn">無料で相談する →</a>
-                <span class="r-note">登録2分・完全無料</span>
+                   class="r-btn">IT業界の営業・サポート職を<br>今すぐ無料相談する →</a>
+                <div class="r-cta-badge-row">
+                  <span class="r-cta-badge">在職中OK</span>
+                  <span class="r-cta-badge">完全無料</span>
+                </div>
+                <span class="r-note">登録2分・強引な勧誘なし</span>
               </div>
             </div>
             <div class="r-testimonial">
@@ -652,19 +807,21 @@
       <div class="cta-final-inner reveal">
         <div class="cta-final-left">
           <h2 class="cta-final-h">
-            今すぐ<br>
-            <em>動こう</em>。
+            あなたのスキルは、<br>
+            <em>もっと高く評価される場所がある。</em>
           </h2>
         </div>
         <div class="cta-final-right">
           <p class="cta-final-desc">
-            まずは気軽に登録するだけ。<br>
-            2分で完了、完全無料、強引な勧誘一切なし。
+            同じスキルでも、転職先によって年収が100〜200万円変わる。エージェントを変えるだけで、それに辿り着ける。今日、話を聞くだけでいい。
           </p>
           <a href="#ranking" class="btn-primary full">
-            無料でエージェントを比較する
+            今すぐ年収アップ転職を無料で相談する →
             <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </a>
+          <p style="font-family:'DM Sans',sans-serif;font-size:11px;color:rgba(255,255,255,0.5);margin-top:8px">
+            登録2分・完全無料・在職中OK・強引な勧誘なし
+          </p>
           <p style="font-family:'DM Sans',sans-serif;font-size:11px;color:rgba(255,255,255,0.25)">
             本ページにはPRリンク（アフィリエイト広告）が含まれます
           </p>
@@ -739,6 +896,24 @@
       }, { threshold: 0.07 });
       els.forEach(function(el) { obs.observe(el); });
     })();
+
+    // Sticky CTA
+    window.addEventListener('scroll', function() {
+      var el = document.getElementById('sticky-cta');
+      if (el) el.style.display = window.scrollY > 300 ? 'block' : 'none';
+    }, {passive: true});
   </script>
+
+  <div id="sticky-cta">
+    <div id="sticky-cta-inner">
+      <div id="sticky-cta-text">あなたのスキルは、もっと高く評価される。</div>
+      <a href="https://px.a8.net/svt/ejp?a8mat=4B3N6R+DTQFA2+5B0Y+HV7V6"
+         target="_blank" rel="noopener nofollow"
+         id="sticky-cta-btn"
+         onclick="gtag('event','click',{event_category:'affiliate',event_label:'techgo',event_campaign:'sticky'}); gtag_report_conversion();">
+        無料で確認する →
+      </a>
+    </div>
+  </div>
 </body>
 </html>

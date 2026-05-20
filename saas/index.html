@@ -19,6 +19,10 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css">
   <link rel="stylesheet" href="style.css">
   <style>
+/* ── GHOST BUTTON (診断導線サブCTA) ── */
+.btn-ghost { display:inline-flex; align-items:center; gap:8px; background:transparent; color:rgba(255,255,255,0.6); font-family:'DM Sans',sans-serif; font-size:13px; font-weight:600; padding:12px 24px; border-radius:100px; border:1px solid rgba(255,255,255,0.15); cursor:pointer; transition:all 0.2s; text-decoration:none; }
+.btn-ghost:hover { border-color:rgba(0,200,150,0.4); color:var(--white); background:rgba(0,200,150,0.08); }
+
 /* ── STICKY CTA ── */
 #sticky-cta { position:fixed; bottom:0; left:0; right:0; background:var(--black); border-top:2px solid var(--green); padding:12px 20px; z-index:999; display:none; }
 #sticky-cta-inner { max-width:680px; margin:0 auto; display:flex; align-items:center; justify-content:space-between; gap:16px; flex-wrap:wrap; }
@@ -175,15 +179,20 @@
           SaaS・IT業界には、同じスキルでも年収が100〜200万円高い求人が存在する。エージェントを変えるだけで、それに辿り着ける。完全無料・在職中でもすぐ相談できます。
         </p>
         <div class="hero-cta-group">
-          <a href="#ranking" class="btn-primary">
-            今の年収が適正かを無料で確認する
+          <a href="/diagnosis/" class="btn-primary">
+            30秒でSaaS転職での年収を診断する →
             <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </a>
+          <a href="https://px.a8.net/svt/ejp?a8mat=4B3N6R+DTQFA2+5B0Y+HV7V6"
+             target="_blank" rel="nofollow noopener"
+             class="btn-ghost"
+             onclick="gtag('event','click',{event_category:'affiliate',event_label:'techgo',event_campaign:'saas-fv'}); gtag_report_conversion();">
+            すぐSaaS転職を相談する（TechGO）
+          </a>
           <div class="cta-badges">
-            <span class="cta-badge">在職中OK</span>
-            <span class="cta-badge">登録2分</span>
+            <span class="cta-badge">30秒で完了</span>
+            <span class="cta-badge">登録不要</span>
             <span class="cta-badge">完全無料</span>
-            <span class="cta-badge">話を聞くだけでもOK</span>
           </div>
         </div>
       </div>
@@ -228,8 +237,8 @@
         </div>
       </div>
       <div class="pain-cta reveal d2">
-        <a href="#ranking" class="btn-primary">
-          SaaS・IT転職を今すぐ無料相談する
+        <a href="/diagnosis/" class="btn-primary">
+          あなたのSaaS適性を30秒で診断する →
           <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </a>
       </div>
@@ -815,9 +824,15 @@
           <p class="cta-final-desc">
             同じスキルでも、転職先によって年収が100〜200万円変わる。エージェントを変えるだけで、それに辿り着ける。今日、話を聞くだけでいい。
           </p>
-          <a href="#ranking" class="btn-primary full">
-            今すぐ年収アップ転職を無料で相談する →
+          <a href="/diagnosis/" class="btn-primary full">
+            30秒で、SaaS業界での年収を診断する →
             <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+          <a href="https://px.a8.net/svt/ejp?a8mat=4B3N6R+DTQFA2+5B0Y+HV7V6"
+             target="_blank" rel="nofollow noopener"
+             style="font-family:'DM Sans',sans-serif;font-size:12px;color:rgba(255,255,255,0.4);text-decoration:underline;text-underline-offset:3px;margin-top:8px;display:block;"
+             onclick="gtag('event','click',{event_category:'affiliate',event_label:'techgo',event_campaign:'saas-final'}); gtag_report_conversion();">
+            診断せず、TechGOに直接登録する
           </a>
           <p style="font-family:'DM Sans',sans-serif;font-size:11px;color:rgba(255,255,255,0.5);margin-top:8px">
             登録2分・完全無料・在職中OK・強引な勧誘なし

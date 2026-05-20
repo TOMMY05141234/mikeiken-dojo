@@ -1,0 +1,1023 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>30秒で年収診断｜あなたの市場価値を確認【未経験道場】</title>
+  <meta name="description" content="5つの質問に答えるだけで、あなたの市場価値とおすすめの転職エージェントがわかります。完全無料・登録不要。">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,700;0,9..144,900;1,9..144,700&family=DM+Sans:wght@300;400;500;700&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <!-- Google tag -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18146496318"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'AW-18146496318');
+    gtag('config', 'G-5M4MMZRL4E');
+    function gtag_report_conversion(label) {
+      gtag('event', 'conversion', {'send_to': 'AW-18146496318/iVstCNOmp6scEL6e9sxD', 'event_label': label || 'diagnosis'});
+      gtag('event', 'click', {'event_category': 'affiliate', 'event_label': label || 'diagnosis'});
+    }
+  </script>
+
+  <style>
+    :root {
+      --black:     #0a0a0a;
+      --green:     #00C896;
+      --green-dark:#00a87e;
+      --green-dim: rgba(0,200,150,0.12);
+      --white:     #ffffff;
+      --mid:       #888;
+      --border-d:  rgba(255,255,255,0.08);
+      --border-l:  rgba(0,0,0,0.08);
+      --r: 680px;
+    }
+    *,*::before,*::after { box-sizing:border-box; margin:0; padding:0; }
+    html { scroll-behavior:smooth; font-size:16px; }
+    body {
+      font-family:'Noto Sans JP',sans-serif;
+      background:var(--black);
+      color:var(--white);
+      -webkit-font-smoothing:antialiased;
+      overflow-x:hidden;
+      min-height:100vh;
+    }
+    a { text-decoration:none; color:inherit; }
+
+    /* ── GRID TEXTURE ── */
+    body::before {
+      content:'';
+      position:fixed; inset:0; z-index:0; pointer-events:none;
+      background-image:
+        linear-gradient(rgba(255,255,255,0.018) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.018) 1px, transparent 1px);
+      background-size:72px 72px;
+    }
+
+    /* ── GLOW ── */
+    .glow-orb {
+      position:fixed; top:-20%; left:50%; transform:translateX(-50%);
+      width:700px; height:700px; border-radius:50%;
+      background:radial-gradient(circle, rgba(0,200,150,0.13) 0%, transparent 65%);
+      pointer-events:none; z-index:0;
+    }
+
+    /* ── HEADER ── */
+    #hd {
+      position:fixed; top:0; left:0; right:0; z-index:200;
+      height:56px;
+      background:rgba(10,10,10,0.9);
+      backdrop-filter:blur(16px);
+      border-bottom:1px solid var(--border-d);
+      display:flex; align-items:center;
+    }
+    .hd-inner {
+      max-width:var(--r); margin:0 auto; padding:0 24px;
+      width:100%; display:flex; align-items:center; justify-content:space-between;
+    }
+    .hd-logo {
+      display:flex; align-items:center; gap:8px;
+    }
+    .hd-logo-mark {
+      width:32px; height:32px;
+      background:var(--green); border-radius:7px;
+      display:flex; align-items:center; justify-content:center;
+      font-family:'Noto Sans JP',sans-serif; font-size:14px; font-weight:900;
+      color:var(--black);
+    }
+    .hd-logo-text {
+      font-family:'DM Sans',sans-serif; font-size:13px; font-weight:700;
+      color:rgba(255,255,255,0.85);
+    }
+
+    /* ── PROGRESS BAR ── */
+    .progress-wrap {
+      display:flex; gap:5px; align-items:center;
+    }
+    .progress-seg {
+      width:28px; height:3px; border-radius:2px;
+      background:rgba(255,255,255,0.12);
+      transition:background 0.4s ease;
+    }
+    .progress-seg.done { background:var(--green); }
+    .progress-seg.active { background:rgba(0,200,150,0.5); }
+
+    /* ── LAYOUT ── */
+    .page {
+      position:relative; z-index:1;
+      min-height:100vh;
+      padding-top:56px;
+      display:flex; flex-direction:column; align-items:center;
+      justify-content:center;
+    }
+    .inner {
+      max-width:var(--r); width:100%; margin:0 auto;
+      padding:48px 24px;
+    }
+
+    /* ── SCREENS ── */
+    .screen { display:none; width:100%; }
+    .screen.active { display:block; animation:fadeUp 0.38s cubic-bezier(.16,1,.3,1) both; }
+    @keyframes fadeUp {
+      from { opacity:0; transform:translateY(22px); }
+      to   { opacity:1; transform:translateY(0); }
+    }
+
+    /* ── START SCREEN ── */
+    .start-label {
+      font-family:'DM Sans',sans-serif; font-size:11px; font-weight:700;
+      letter-spacing:0.14em; text-transform:uppercase;
+      color:var(--green); margin-bottom:18px;
+      display:flex; align-items:center; gap:8px;
+    }
+    .start-label::before {
+      content:''; display:inline-block; width:20px; height:1px; background:var(--green);
+    }
+    .start-h1 {
+      font-family:'Fraunces',serif;
+      font-size:clamp(34px,7vw,58px);
+      font-weight:700; line-height:1.05; letter-spacing:-0.03em;
+      margin-bottom:24px;
+    }
+    .start-h1 em { font-style:italic; color:var(--green); }
+    .start-sub {
+      font-size:14px; color:rgba(255,255,255,0.5);
+      line-height:1.9; max-width:420px; margin-bottom:40px;
+    }
+    .steps-row {
+      display:flex; align-items:center; gap:0;
+      margin-bottom:40px; flex-wrap:wrap; gap:4px 0;
+    }
+    .step-item {
+      font-family:'DM Sans',sans-serif; font-size:11px; font-weight:700;
+      color:rgba(255,255,255,0.35); letter-spacing:0.04em;
+      padding:5px 10px;
+      border:1px solid rgba(255,255,255,0.1);
+      border-radius:100px;
+    }
+    .step-item.hl { color:var(--green); border-color:rgba(0,200,150,0.3); background:var(--green-dim); }
+    .step-arrow {
+      font-size:10px; color:rgba(255,255,255,0.2);
+      padding:0 4px;
+    }
+
+    /* ── PRIMARY BUTTON ── */
+    .btn-primary {
+      display:inline-flex; align-items:center; gap:10px;
+      background:var(--green); color:var(--black);
+      font-family:'DM Sans',sans-serif;
+      font-size:15px; font-weight:700;
+      padding:16px 36px; border-radius:100px; border:none; cursor:pointer;
+      transition:background 0.2s, transform 0.18s;
+      animation:pulse 2.8s infinite;
+    }
+    @keyframes pulse {
+      0%,100%{ box-shadow:0 0 0 0 rgba(0,200,150,0.35); }
+      50%    { box-shadow:0 0 0 10px rgba(0,200,150,0); }
+    }
+    .btn-primary:hover { background:var(--green-dark); color:#fff; transform:translateY(-2px); }
+    .btn-primary svg { transition:transform 0.18s; }
+    .btn-primary:hover svg { transform:translateX(4px); }
+
+    .btn-ghost {
+      display:inline-flex; align-items:center; gap:8px;
+      background:transparent; color:rgba(255,255,255,0.65);
+      font-family:'DM Sans',sans-serif;
+      font-size:13px; font-weight:600;
+      padding:12px 24px; border-radius:100px; border:1px solid rgba(255,255,255,0.15);
+      cursor:pointer; transition:all 0.2s; text-decoration:none;
+    }
+    .btn-ghost:hover { border-color:rgba(0,200,150,0.4); color:var(--white); background:var(--green-dim); }
+
+    .badge-row {
+      display:flex; gap:6px; flex-wrap:wrap; margin-top:14px;
+    }
+    .badge {
+      font-family:'DM Sans',sans-serif; font-size:10px; font-weight:700;
+      letter-spacing:0.06em; color:var(--green);
+      border:1px solid rgba(0,200,150,0.3); padding:3px 10px; border-radius:3px;
+    }
+
+    /* ── QUESTION SCREEN ── */
+    .q-meta {
+      display:flex; align-items:center; gap:12px; margin-bottom:28px;
+    }
+    .q-num {
+      font-family:'Fraunces',serif; font-size:11px; font-weight:700;
+      color:var(--green); letter-spacing:0.12em; text-transform:uppercase;
+    }
+    .q-bar {
+      flex:1; height:2px; background:rgba(255,255,255,0.08); border-radius:1px; overflow:hidden;
+    }
+    .q-bar-fill {
+      height:100%; background:var(--green); border-radius:1px;
+      transition:width 0.45s cubic-bezier(.16,1,.3,1);
+    }
+    .q-text {
+      font-family:'Fraunces',serif;
+      font-size:clamp(22px,4.5vw,32px);
+      font-weight:700; line-height:1.25; letter-spacing:-0.02em;
+      margin-bottom:32px;
+    }
+    .q-grid {
+      display:grid; grid-template-columns:1fr 1fr;
+      gap:10px;
+    }
+    .q-grid.single-col { grid-template-columns:1fr; }
+    .q-option {
+      background:rgba(255,255,255,0.03);
+      border:1px solid rgba(255,255,255,0.09);
+      border-radius:12px;
+      padding:16px 20px;
+      cursor:pointer;
+      transition:border-color 0.18s, background 0.18s, transform 0.15s;
+      display:flex; align-items:center; gap:13px;
+      min-height:52px;
+      text-align:left;
+    }
+    .q-option:hover {
+      border-color:rgba(0,200,150,0.5);
+      background:rgba(0,200,150,0.06);
+      transform:translateY(-1px);
+    }
+    .q-option.selected {
+      border-color:var(--green);
+      background:rgba(0,200,150,0.1);
+    }
+    .q-option-key {
+      font-family:'DM Sans',sans-serif; font-size:11px; font-weight:700;
+      color:rgba(255,255,255,0.3); letter-spacing:0.08em;
+      flex-shrink:0; width:16px;
+    }
+    .q-option.selected .q-option-key { color:var(--green); }
+    .q-option-text {
+      font-size:13.5px; font-weight:500; line-height:1.45;
+      color:rgba(255,255,255,0.82);
+    }
+
+    /* ── LOADING SCREEN ── */
+    .loading-wrap {
+      text-align:center; padding:40px 0;
+    }
+    .loading-label {
+      font-family:'DM Sans',sans-serif; font-size:11px; font-weight:700;
+      letter-spacing:0.14em; text-transform:uppercase;
+      color:var(--green); margin-bottom:32px;
+    }
+    .loading-h {
+      font-family:'Fraunces',serif;
+      font-size:clamp(26px,5vw,36px);
+      font-weight:700; line-height:1.2; letter-spacing:-0.02em;
+      margin-bottom:8px;
+    }
+    .loading-sub {
+      font-size:13px; color:rgba(255,255,255,0.38); margin-bottom:40px;
+    }
+    .loading-bar-wrap {
+      max-width:320px; margin:0 auto;
+      height:3px; background:rgba(255,255,255,0.08);
+      border-radius:2px; overflow:hidden;
+    }
+    .loading-bar-fill {
+      height:100%; width:0; background:var(--green); border-radius:2px;
+      animation:loadFill 2.0s cubic-bezier(.3,.8,.6,1) forwards;
+    }
+    @keyframes loadFill { to { width:100%; } }
+    .loading-items {
+      margin-top:32px; display:flex; flex-direction:column; gap:10px;
+      max-width:280px; margin:32px auto 0;
+    }
+    .loading-item {
+      display:flex; align-items:center; gap:10px;
+      font-family:'DM Sans',sans-serif; font-size:12px;
+      color:rgba(255,255,255,0.28); letter-spacing:0.03em;
+      opacity:0; animation:fadeIn 0.4s ease forwards;
+    }
+    .loading-item:nth-child(1) { animation-delay:0.3s; }
+    .loading-item:nth-child(2) { animation-delay:0.8s; }
+    .loading-item:nth-child(3) { animation-delay:1.3s; }
+    @keyframes fadeIn { to { opacity:1; } }
+    .loading-dot {
+      width:5px; height:5px; border-radius:50%; background:var(--green); flex-shrink:0;
+    }
+
+    /* ── RESULT SCREEN ── */
+    .result-label {
+      font-family:'DM Sans',sans-serif; font-size:11px; font-weight:700;
+      letter-spacing:0.14em; text-transform:uppercase;
+      color:var(--green); margin-bottom:8px;
+    }
+    .result-type-badge {
+      display:inline-block;
+      background:rgba(0,200,150,0.12);
+      border:1px solid rgba(0,200,150,0.3);
+      border-radius:100px;
+      padding:6px 18px;
+      font-family:'DM Sans',sans-serif;
+      font-size:12px; font-weight:700; letter-spacing:0.05em;
+      color:var(--green); margin-bottom:16px;
+    }
+    .result-h {
+      font-family:'Fraunces',serif;
+      font-size:clamp(24px,5vw,34px);
+      font-weight:700; line-height:1.2; letter-spacing:-0.025em;
+      margin-bottom:16px;
+    }
+    .result-h em { font-style:italic; color:var(--green); }
+    .result-desc {
+      font-size:14px; color:rgba(255,255,255,0.5);
+      line-height:1.9; margin-bottom:24px;
+    }
+    .income-chip {
+      display:inline-flex; align-items:center; gap:8px;
+      background:rgba(0,200,150,0.08);
+      border:1px solid rgba(0,200,150,0.25);
+      border-radius:10px; padding:14px 20px;
+      margin-bottom:32px;
+    }
+    .income-label {
+      font-family:'DM Sans',sans-serif; font-size:11px;
+      color:rgba(255,255,255,0.35); letter-spacing:0.06em;
+    }
+    .income-value {
+      font-family:'Fraunces',serif;
+      font-size:clamp(22px,4vw,28px);
+      font-weight:700; color:var(--green); letter-spacing:-0.02em;
+    }
+
+    /* ── RESULT AGENT CARD (matches general/saas style) ── */
+    .r-card {
+      border:1px solid var(--border-l);
+      border-radius:16px; overflow:hidden;
+      background:#fff; color:var(--black);
+      margin-bottom:16px;
+      transition:box-shadow 0.25s, transform 0.2s;
+    }
+    .r-card:hover { box-shadow:0 16px 48px rgba(0,0,0,0.12); transform:translateY(-2px); }
+    .r-card.primary { border-color:rgba(0,200,150,0.3); box-shadow:0 4px 24px rgba(0,200,150,0.1); }
+    .r-card-top {
+      background:var(--green); padding:10px 20px;
+      display:flex; align-items:center; gap:8px;
+    }
+    .r-card-top-text {
+      font-family:'DM Sans',sans-serif; font-size:12px; font-weight:700;
+      color:var(--black); letter-spacing:0.05em;
+    }
+    .r-card-top-medal { font-size:16px; }
+    .r-head {
+      display:flex; border-bottom:1px solid rgba(0,0,0,0.07);
+    }
+    .r-head-left {
+      flex-shrink:0; width:150px; padding:20px 18px;
+      border-right:1px solid rgba(0,0,0,0.07);
+      display:flex; flex-direction:column; gap:7px; justify-content:center;
+    }
+    .r-head-right {
+      flex:1; padding:18px 22px;
+      display:flex; flex-direction:column; gap:8px; justify-content:center;
+    }
+    .r-badge {
+      font-family:'DM Sans',sans-serif; font-size:10px; font-weight:700;
+      letter-spacing:0.1em; text-transform:uppercase; color:#888;
+      display:flex; align-items:center; gap:5px;
+    }
+    .r-pr-badge {
+      background:rgba(0,200,150,0.1); color:var(--green);
+      font-size:9px; font-weight:700; padding:1px 5px; border-radius:3px;
+    }
+    .r-name {
+      font-family:'Fraunces',serif;
+      font-size:22px; font-weight:700; letter-spacing:-0.03em; line-height:1.1;
+    }
+    .r-stars { color:#f59e0b; font-size:12px; }
+    .r-sub {
+      font-size:12px; color:#555; line-height:1.75;
+    }
+    .r-body {
+      display:grid; grid-template-columns:1fr 180px;
+    }
+    .r-body-left { padding:18px 22px; border-right:1px solid rgba(0,0,0,0.07); }
+    .r-body-right {
+      padding:20px 16px;
+      display:flex; flex-direction:column; justify-content:center;
+      align-items:center; gap:10px; text-align:center;
+      background:rgba(0,200,150,0.03);
+    }
+    .r-pt-title {
+      font-family:'DM Sans',sans-serif; font-size:10px; font-weight:700;
+      letter-spacing:0.1em; text-transform:uppercase;
+      color:rgba(0,0,0,0.3); margin-bottom:10px;
+    }
+    .r-pt-row {
+      display:flex; align-items:baseline; gap:7px;
+      padding:6px 0; border-bottom:1px solid rgba(0,0,0,0.05);
+      font-size:12px;
+    }
+    .r-pt-row:last-child { border-bottom:none; }
+    .r-pt-problem { color:rgba(0,0,0,0.42); flex:1; }
+    .r-pt-arrow { color:var(--green); font-size:10px; flex-shrink:0; }
+    .r-pt-solution { color:rgba(0,0,0,0.78); font-weight:700; flex:1.3; }
+    .r-features {
+      padding:10px 0 0; display:flex; flex-direction:column; gap:0;
+    }
+    .r-feature {
+      display:flex; align-items:flex-start; gap:8px;
+      padding:7px 0; border-bottom:1px solid #f5f5f5;
+      font-size:12.5px; line-height:1.55; color:#333;
+    }
+    .r-feature:last-child { border-bottom:none; }
+    .r-feature::before {
+      content:''; width:5px; height:5px; background:var(--green);
+      border-radius:50%; margin-top:7px; flex-shrink:0;
+    }
+    .r-btn {
+      display:block; width:100%;
+      background:var(--green); color:var(--black);
+      font-family:'DM Sans',sans-serif;
+      font-size:12px; font-weight:700;
+      padding:13px 12px; border-radius:10px;
+      border:none; cursor:pointer;
+      transition:background 0.2s;
+      text-align:center; text-decoration:none; line-height:1.5;
+    }
+    .r-btn:hover { background:var(--green-dark); color:#fff; }
+    .r-note { font-family:'DM Sans',sans-serif; font-size:10px; color:#888; }
+    .r-cta-badges { display:flex; gap:4px; flex-wrap:wrap; justify-content:center; }
+    .r-cta-badge {
+      font-family:'DM Sans',sans-serif; font-size:9px; font-weight:700;
+      letter-spacing:0.06em; color:var(--green);
+      border:1px solid rgba(0,200,150,0.35); padding:2px 7px; border-radius:3px;
+    }
+    .r-testimonial {
+      border-top:1px solid rgba(0,0,0,0.07);
+      padding:16px 22px; background:#fafafa;
+      display:flex; gap:10px; align-items:flex-start;
+    }
+    .r-t-icon {
+      font-family:'Fraunces',serif; font-size:28px; font-weight:700;
+      color:var(--green); opacity:0.4; line-height:1; flex-shrink:0; margin-top:-2px;
+    }
+    .r-t-text { font-size:12px; font-style:italic; color:#666; line-height:1.85; margin-bottom:4px; }
+    .r-t-author { font-family:'DM Sans',sans-serif; font-size:10px; color:#aaa; }
+    .r-banner {
+      border-top:1px solid rgba(0,0,0,0.07);
+      padding:16px; background:#f5f5f5;
+      display:flex; justify-content:center;
+    }
+    .r-banner a { display:block; border-radius:8px; overflow:hidden; line-height:0; }
+    .r-banner img { max-width:300px; width:100%; height:auto; border-radius:8px; }
+
+    /* Secondary card (ミライフ) */
+    .r-card.secondary { border-color:rgba(0,0,0,0.12); }
+    .r-card.secondary .r-card-top { background:#1a1a1a; }
+    .r-card.secondary .r-card-top-text { color:rgba(255,255,255,0.8); }
+
+    /* ── FINAL CTA SECTION ── */
+    .final-section {
+      background:rgba(0,200,150,0.04);
+      border:1px solid rgba(0,200,150,0.15);
+      border-radius:16px; padding:28px 24px;
+      margin-top:24px; text-align:center;
+    }
+    .final-h {
+      font-family:'Fraunces',serif;
+      font-size:20px; font-weight:700; letter-spacing:-0.02em;
+      margin-bottom:10px;
+    }
+    .final-desc { font-size:13px; color:rgba(255,255,255,0.45); line-height:1.8; margin-bottom:20px; }
+
+    /* ── SECTION DIVIDER ── */
+    .section-tag {
+      font-family:'DM Sans',sans-serif; font-size:10px; font-weight:700;
+      letter-spacing:0.12em; text-transform:uppercase;
+      color:rgba(255,255,255,0.3); margin-bottom:12px;
+      display:flex; align-items:center; gap:8px;
+    }
+    .section-tag::before { content:''; flex:1; height:1px; background:rgba(255,255,255,0.07); }
+    .section-tag::after  { content:''; flex:1; height:1px; background:rgba(255,255,255,0.07); }
+
+    /* ── PR NOTICE ── */
+    .pr-notice {
+      display:inline-block;
+      background:rgba(0,200,150,0.06); border:1px solid rgba(0,200,150,0.15);
+      border-radius:4px; padding:5px 12px;
+      font-family:'DM Sans',sans-serif; font-size:10px; color:#666;
+      letter-spacing:0.04em; margin-bottom:20px;
+    }
+
+    /* ── BACK LINK ── */
+    .back-link {
+      display:inline-flex; align-items:center; gap:6px;
+      font-family:'DM Sans',sans-serif; font-size:12px;
+      color:rgba(255,255,255,0.3); margin-bottom:32px;
+      transition:color 0.2s;
+    }
+    .back-link:hover { color:rgba(255,255,255,0.7); }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width:640px) {
+      .q-grid { grid-template-columns:1fr; }
+      .r-body  { grid-template-columns:1fr; }
+      .r-head  { flex-direction:column; }
+      .r-head-left { width:100%; border-right:none; border-bottom:1px solid rgba(0,0,0,0.07); flex-direction:row; align-items:center; gap:14px; padding:14px 18px; }
+      .r-body-left  { border-right:none; border-bottom:1px solid rgba(0,0,0,0.07); }
+      .r-body-right { padding:16px; }
+      .income-chip { flex-direction:column; text-align:center; gap:4px; }
+    }
+  </style>
+</head>
+<body>
+
+<div class="glow-orb"></div>
+
+<!-- HEADER -->
+<header id="hd">
+  <div class="hd-inner">
+    <a href="../" class="hd-logo">
+      <div class="hd-logo-mark">道</div>
+      <div class="hd-logo-text">未経験道場</div>
+    </a>
+    <div class="progress-wrap" id="progressBar">
+      <div class="progress-seg" id="ps1"></div>
+      <div class="progress-seg" id="ps2"></div>
+      <div class="progress-seg" id="ps3"></div>
+      <div class="progress-seg" id="ps4"></div>
+      <div class="progress-seg" id="ps5"></div>
+    </div>
+  </div>
+</header>
+
+<main class="page">
+  <div class="inner">
+
+    <!-- ===== SCREEN: START ===== -->
+    <div class="screen active" id="screen-start">
+      <div class="start-label">未経験道場 — 年収診断</div>
+      <h1 class="start-h1">
+        30秒で<br>あなたの市場価値、<br><em>わかります。</em>
+      </h1>
+      <p class="start-sub">
+        5つの質問に答えるだけ。<br>
+        あなたに合う転職エージェントもおすすめします。<br>
+        登録不要・完全無料・所要時間30秒。
+      </p>
+      <div class="steps-row">
+        <span class="step-item hl">Q1</span>
+        <span class="step-arrow">→</span>
+        <span class="step-item">Q2</span>
+        <span class="step-arrow">→</span>
+        <span class="step-item">Q3</span>
+        <span class="step-arrow">→</span>
+        <span class="step-item">Q4</span>
+        <span class="step-arrow">→</span>
+        <span class="step-item">Q5</span>
+        <span class="step-arrow">→</span>
+        <span class="step-item">結果</span>
+      </div>
+      <button class="btn-primary" onclick="startDiagnosis()">
+        診断スタート
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+      <div class="badge-row">
+        <span class="badge">30秒で完了</span>
+        <span class="badge">登録不要</span>
+        <span class="badge">完全無料</span>
+      </div>
+    </div>
+
+    <!-- ===== SCREEN: Q1 ===== -->
+    <div class="screen" id="screen-q1">
+      <div class="q-meta">
+        <span class="q-num">Q1 / 5</span>
+        <div class="q-bar"><div class="q-bar-fill" style="width:20%"></div></div>
+      </div>
+      <div class="q-text">現在の年齢を<br>教えてください</div>
+      <div class="q-grid">
+        <div class="q-option" onclick="answer('q1','A',this)">
+          <span class="q-option-key">A</span>
+          <span class="q-option-text">22〜26歳</span>
+        </div>
+        <div class="q-option" onclick="answer('q1','B',this)">
+          <span class="q-option-key">B</span>
+          <span class="q-option-text">27〜30歳</span>
+        </div>
+        <div class="q-option" onclick="answer('q1','C',this)">
+          <span class="q-option-key">C</span>
+          <span class="q-option-text">31〜34歳</span>
+        </div>
+        <div class="q-option" onclick="answer('q1','D',this)">
+          <span class="q-option-key">D</span>
+          <span class="q-option-text">35歳以上</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== SCREEN: Q2 ===== -->
+    <div class="screen" id="screen-q2">
+      <div class="q-meta">
+        <span class="q-num">Q2 / 5</span>
+        <div class="q-bar"><div class="q-bar-fill" style="width:40%"></div></div>
+      </div>
+      <div class="q-text">現在の年収レンジは？</div>
+      <div class="q-grid">
+        <div class="q-option" onclick="answer('q2','A',this)">
+          <span class="q-option-key">A</span>
+          <span class="q-option-text">〜400万円</span>
+        </div>
+        <div class="q-option" onclick="answer('q2','B',this)">
+          <span class="q-option-key">B</span>
+          <span class="q-option-text">400〜500万円</span>
+        </div>
+        <div class="q-option" onclick="answer('q2','C',this)">
+          <span class="q-option-key">C</span>
+          <span class="q-option-text">500〜600万円</span>
+        </div>
+        <div class="q-option" onclick="answer('q2','D',this)">
+          <span class="q-option-key">D</span>
+          <span class="q-option-text">600万円以上</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== SCREEN: Q3 ===== -->
+    <div class="screen" id="screen-q3">
+      <div class="q-meta">
+        <span class="q-num">Q3 / 5</span>
+        <div class="q-bar"><div class="q-bar-fill" style="width:60%"></div></div>
+      </div>
+      <div class="q-text">転職で最も<br>重視するものは？</div>
+      <div class="q-grid single-col">
+        <div class="q-option" onclick="answer('q3','A',this)">
+          <span class="q-option-key">A</span>
+          <span class="q-option-text">とにかく年収を上げたい</span>
+        </div>
+        <div class="q-option" onclick="answer('q3','B',this)">
+          <span class="q-option-key">B</span>
+          <span class="q-option-text">メガベンチャーや大手企業に行きたい</span>
+        </div>
+        <div class="q-option" onclick="answer('q3','C',this)">
+          <span class="q-option-key">C</span>
+          <span class="q-option-text">忙しいので効率的に転職活動したい</span>
+        </div>
+        <div class="q-option" onclick="answer('q3','D',this)">
+          <span class="q-option-key">D</span>
+          <span class="q-option-text">面接や書類が不安なのでサポートが欲しい</span>
+        </div>
+        <div class="q-option" onclick="answer('q3','E',this)">
+          <span class="q-option-key">E</span>
+          <span class="q-option-text">失敗したくないので慎重に選びたい</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== SCREEN: Q4 ===== -->
+    <div class="screen" id="screen-q4">
+      <div class="q-meta">
+        <span class="q-num">Q4 / 5</span>
+        <div class="q-bar"><div class="q-bar-fill" style="width:80%"></div></div>
+      </div>
+      <div class="q-text">今の一番の悩みは？</div>
+      <div class="q-grid single-col">
+        <div class="q-option" onclick="answer('q4','A',this)">
+          <span class="q-option-key">A</span>
+          <span class="q-option-text">給料が上がらない</span>
+        </div>
+        <div class="q-option" onclick="answer('q4','B',this)">
+          <span class="q-option-key">B</span>
+          <span class="q-option-text">自分のスキルが市場でどう評価されるかわからない</span>
+        </div>
+        <div class="q-option" onclick="answer('q4','C',this)">
+          <span class="q-option-key">C</span>
+          <span class="q-option-text">転職活動の時間が取れない</span>
+        </div>
+        <div class="q-option" onclick="answer('q4','D',this)">
+          <span class="q-option-key">D</span>
+          <span class="q-option-text">面接で何を話せばいいかわからない</span>
+        </div>
+        <div class="q-option" onclick="answer('q4','E',this)">
+          <span class="q-option-key">E</span>
+          <span class="q-option-text">エージェントの押しつけが嫌い</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== SCREEN: Q5 ===== -->
+    <div class="screen" id="screen-q5">
+      <div class="q-meta">
+        <span class="q-num">Q5 / 5</span>
+        <div class="q-bar"><div class="q-bar-fill" style="width:100%"></div></div>
+      </div>
+      <div class="q-text">IT/SaaS転職の<br>希望は？</div>
+      <div class="q-grid single-col">
+        <div class="q-option" onclick="answer('q5','A',this)">
+          <span class="q-option-key">A</span>
+          <span class="q-option-text">ITエンジニアとしてキャリアアップしたい</span>
+        </div>
+        <div class="q-option" onclick="answer('q5','B',this)">
+          <span class="q-option-key">B</span>
+          <span class="q-option-text">SaaS・AI業界に行きたい</span>
+        </div>
+        <div class="q-option" onclick="answer('q5','C',this)">
+          <span class="q-option-key">C</span>
+          <span class="q-option-text">ITコンサル・PMなど上流職を目指したい</span>
+        </div>
+        <div class="q-option" onclick="answer('q5','D',this)">
+          <span class="q-option-key">D</span>
+          <span class="q-option-text">まだ業界も職種も決めていない</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== SCREEN: LOADING ===== -->
+    <div class="screen" id="screen-loading">
+      <div class="loading-wrap">
+        <div class="loading-label">分析中</div>
+        <div class="loading-h">あなたの市場価値を<br>分析中...</div>
+        <div class="loading-sub">回答内容と転職市場データを照合しています</div>
+        <div class="loading-bar-wrap">
+          <div class="loading-bar-fill"></div>
+        </div>
+        <div class="loading-items">
+          <div class="loading-item">
+            <span class="loading-dot"></span>現在の市場での評価を計算中
+          </div>
+          <div class="loading-item">
+            <span class="loading-dot"></span>年収アップ可能性を算出中
+          </div>
+          <div class="loading-item">
+            <span class="loading-dot"></span>最適なエージェントを選定中
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== SCREEN: RESULT ===== -->
+    <div class="screen" id="screen-result">
+      <a href="../" class="back-link">
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M9 3L5 7l4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        TOPに戻る
+      </a>
+
+      <div class="result-label">診断結果</div>
+      <div class="result-type-badge" id="resultBadge">—</div>
+      <h2 class="result-h">あなたは<br><em id="resultTypeName">—</em><br>です</h2>
+      <p class="result-desc" id="resultDesc">—</p>
+      <div class="income-chip">
+        <div>
+          <div class="income-label">推定 年収アップ可能性</div>
+          <div class="income-value" id="resultIncome">—</div>
+        </div>
+      </div>
+
+      <p class="pr-notice">本ページにはPR広告（アフィリエイト）が含まれます</p>
+
+      <!-- TechGO Card -->
+      <div class="r-card primary">
+        <div class="r-card-top">
+          <span class="r-card-top-medal">🥇</span>
+          <span class="r-card-top-text">あなたにおすすめ No.1</span>
+          <span style="margin-left:auto;font-family:'DM Sans',sans-serif;font-size:10px;font-weight:700;color:rgba(0,0,0,0.4)">PR</span>
+        </div>
+        <div class="r-head">
+          <div class="r-head-left">
+            <div class="r-badge"><span style="font-size:14px">🥇</span> 第1位 <span class="r-pr-badge">PR</span></div>
+            <div class="r-name">TechGO</div>
+            <div class="r-stars">★★★★★</div>
+          </div>
+          <div class="r-head-right">
+            <p class="r-sub" id="resultTechgoReason">—</p>
+          </div>
+        </div>
+        <div class="r-body">
+          <div class="r-body-left">
+            <div class="r-pt-title">選ばれる理由</div>
+            <div class="r-pt-row"><span class="r-pt-problem">平均年収アップ実績</span><span class="r-pt-arrow">→</span><span class="r-pt-solution">138万円アップ</span></div>
+            <div class="r-pt-row"><span class="r-pt-problem">30代の平均アップ額</span><span class="r-pt-arrow">→</span><span class="r-pt-solution">160万円アップ</span></div>
+            <div class="r-pt-row"><span class="r-pt-problem">年収交渉成功率</span><span class="r-pt-arrow">→</span><span class="r-pt-solution">100%</span></div>
+            <div class="r-pt-row"><span class="r-pt-problem">模擬面接</span><span class="r-pt-arrow">→</span><span class="r-pt-solution">回数無制限</span></div>
+            <div class="r-features">
+              <div class="r-feature">アドバイザーの約8割が元エンジニア・元ITコンサル出身</div>
+              <div class="r-feature">IT向け求人10,000件以上（IT営業・ITコンサルも多数）</div>
+              <div class="r-feature">土曜1日の特別選考会・内定率50%超</div>
+            </div>
+          </div>
+          <div class="r-body-right">
+            <a href="https://px.a8.net/svt/ejp?a8mat=4B3N6R+DTQFA2+5B0Y+HV7V6"
+               target="_blank" rel="nofollow noopener"
+               class="r-btn"
+               id="techgoCta"
+               onclick="gtag_report_conversion('techgo-result-' + (window.diagType||'unknown'));">
+              TechGOに<br>無料登録する →
+            </a>
+            <div class="r-cta-badges">
+              <span class="r-cta-badge">在職中OK</span>
+              <span class="r-cta-badge">登録2分</span>
+              <span class="r-cta-badge">完全無料</span>
+            </div>
+            <span class="r-note">連絡はメールから</span>
+          </div>
+        </div>
+        <div class="r-testimonial">
+          <span class="r-t-icon">"</span>
+          <div>
+            <p class="r-t-text">「TechGOに相談したら担当者が開発現場を熟知していて、『あなたのスキルはもっと高く評価される』と言い切ってくれた。内定後の年収交渉で前職より150万円アップした。」</p>
+            <span class="r-t-author">― Hさん（29歳・元SIerエンジニア → メガベンチャー）</span>
+          </div>
+        </div>
+        <div class="r-banner">
+          <a href="https://px.a8.net/svt/ejp?a8mat=4B3N6R+DTQFA2+5B0Y+HVNAP"
+             target="_blank" rel="nofollow noopener"
+             onclick="gtag_report_conversion('techgo-banner-' + (window.diagType||'unknown'));">
+            <img border="0" width="300" height="250" alt="ITエンジニアの転職なら【TechGO（テックゴー）】" src="https://www22.a8.net/svt/bgt?aid=260510499836&wid=002&eno=01&mid=s00000024757003003000&mc=1">
+          </a>
+          <img border="0" width="1" height="1" src="https://www12.a8.net/0.gif?a8mat=4B3N6R+DTQFA2+5B0Y+HVNAP" alt="" style="display:none">
+        </div>
+      </div>
+      <img border="0" width="1" height="1" src="https://www11.a8.net/0.gif?a8mat=4B3N6R+DTQFA2+5B0Y+HV7V6" alt="" style="display:none">
+
+      <!-- ミライフ Card -->
+      <div class="section-tag">セカンドオピニオンとして併用がおすすめ</div>
+      <div class="r-card secondary">
+        <div class="r-card-top">
+          <span class="r-card-top-medal">🥈</span>
+          <span class="r-card-top-text">キャリア設計から相談したい人へ</span>
+        </div>
+        <div class="r-head">
+          <div class="r-head-left">
+            <div class="r-badge"><span style="font-size:14px">🥈</span> 第2位</div>
+            <div class="r-name">ミライフ</div>
+            <div class="r-stars">★★★★★</div>
+          </div>
+          <div class="r-head-right">
+            <p class="r-sub">TechGOに加えて、もう1社併用するならミライフがおすすめ。TechGOがハイクラス特化なのに対し、ミライフは「キャリア設計から相談したい人」に強い。方向性に迷いがある場合の補完として使えます。</p>
+          </div>
+        </div>
+        <div class="r-body">
+          <div class="r-body-left">
+            <div class="r-features">
+              <div class="r-feature">大手にはない「人生から逆算する」キャリア支援</div>
+              <div class="r-feature">SaaS・AI・スタートアップへの転職実績が豊富</div>
+              <div class="r-feature">少数精鋭・電話攻撃なし</div>
+            </div>
+          </div>
+          <div class="r-body-right">
+            <a href="https://px.a8.net/svt/ejp?a8mat=4B3G6L+25EE6Y+5S0C+BWVTE"
+               target="_blank" rel="nofollow noopener"
+               class="r-btn" style="background:#1a1a1a;color:#fff;"
+               onclick="gtag_report_conversion('milife-result-' + (window.diagType||'unknown'));">
+              ミライフも<br>併用する →
+            </a>
+            <span class="r-note">完全無料・在職中OK</span>
+          </div>
+        </div>
+      </div>
+      <img border="0" width="1" height="1" src="https://www15.a8.net/0.gif?a8mat=4B3G6L+25EE6Y+5S0C+BWVTE" alt="" style="display:none">
+
+      <!-- Final CTA -->
+      <div class="final-section">
+        <div class="final-h">診断は無料、登録も無料。<br>今もらえる年収を、今日確認しませんか？</div>
+        <p class="final-desc">
+          診断結果は参考値です。正確な市場価値は、TechGOに無料登録すれば担当者が具体的に教えてくれます。登録後の連絡はメールから。電話勧誘はありません。
+        </p>
+        <a href="https://px.a8.net/svt/ejp?a8mat=4B3N6R+DTQFA2+5B0Y+HV7V6"
+           target="_blank" rel="nofollow noopener"
+           class="btn-primary"
+           onclick="gtag_report_conversion('techgo-final-' + (window.diagType||'unknown'));">
+          TechGOに無料登録する →
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+        <div class="badge-row" style="justify-content:center;margin-top:12px;">
+          <span class="badge">在職中OK</span>
+          <span class="badge">登録2分</span>
+          <span class="badge">完全無料</span>
+          <span class="badge">電話勧誘なし</span>
+        </div>
+      </div>
+    </div><!-- /screen-result -->
+
+  </div><!-- /inner -->
+</main>
+
+<script>
+// ── STATE ──
+var answers = {};
+var diagType = null;
+window.diagType = null;
+
+var SCREENS = ['start','q1','q2','q3','q4','q5','loading','result'];
+
+function showScreen(id) {
+  SCREENS.forEach(function(s) {
+    var el = document.getElementById('screen-' + s);
+    if (el) { el.classList.remove('active'); }
+  });
+  var target = document.getElementById('screen-' + id);
+  if (target) { target.classList.add('active'); }
+}
+
+// ── PROGRESS BAR ──
+function updateProgress(step) {
+  for (var i = 1; i <= 5; i++) {
+    var seg = document.getElementById('ps' + i);
+    if (!seg) continue;
+    seg.classList.remove('done','active');
+    if (i < step) seg.classList.add('done');
+    else if (i === step) seg.classList.add('active');
+  }
+}
+
+// ── START ──
+function startDiagnosis() {
+  updateProgress(1);
+  showScreen('q1');
+}
+
+// ── ANSWER & ADVANCE ──
+var NEXT = { q1:'q2', q2:'q3', q3:'q4', q4:'q5', q5:'loading' };
+var Q_TO_STEP = { q1:1, q2:2, q3:3, q4:4, q5:5 };
+
+function answer(qKey, value, el) {
+  answers[qKey] = value;
+  // Visual feedback
+  var siblings = el.parentNode.querySelectorAll('.q-option');
+  siblings.forEach(function(o) { o.classList.remove('selected'); });
+  el.classList.add('selected');
+
+  var next = NEXT[qKey];
+  setTimeout(function() {
+    if (next === 'loading') {
+      showScreen('loading');
+      updateProgress(6);
+      setTimeout(showResult, 2200);
+    } else {
+      var step = Q_TO_STEP[next] || 1;
+      updateProgress(step);
+      showScreen(next);
+    }
+  }, 340);
+}
+
+// ── TYPE LOGIC ──
+var TYPES = {
+  income: {
+    badge: '年収アップ余地大タイプ',
+    name:  '年収アップ余地大タイプ',
+    desc:  'あなたは現職での評価と市場での評価にギャップがある可能性が高い層です。正しいエージェントを選ぶだけで、年収100〜200万円のアップが現実的に狙えます。',
+    income: '+100〜200万円の可能性',
+    reason: 'TechGOは平均138万円の年収アップ実績があり、年収交渉成功率100%。あなたのタイプに最も合致します。登録するだけで、現職の年収相場が客観的にわかります。'
+  },
+  highclass: {
+    badge: 'ハイクラス転職適性タイプ',
+    name:  'ハイクラス転職適性タイプ',
+    desc:  'あなたはメガベンチャー・大手事業会社・ITコンサルなどキャリアの上を目指せる層です。ただし優良ポジションの多くは一般公開されていないため、専門エージェント経由でしかアクセスできません。',
+    income: '+150〜250万円の可能性',
+    reason: 'TechGOはメガベンチャー・大手事業会社・ITコンサルの求人を10,000件以上保有。独占選考ルートや面接確約求人など、他のエージェントでは出会えない案件が豊富です。'
+  },
+  efficient: {
+    badge: '効率重視タイプ',
+    name:  '効率重視タイプ',
+    desc:  'あなたは忙しい中でも転職活動を進めたい層です。だらだら半年かける転職ではなく、短期間で内定を取る戦略が合っています。',
+    income: '+100〜180万円の可能性',
+    reason: 'TechGOは土曜1日で書類選考から最終面接まで進む1Day選考会を実施。内定率50%超で、忙しいあなたでも短期決戦で転職可能です。平日夜間・土日対応もあり、現職にバレずに動けます。'
+  },
+  support: {
+    badge: '徹底サポート希望タイプ',
+    name:  '徹底サポート希望タイプ',
+    desc:  'あなたは選考対策に時間をかけたい層です。書類の書き方や面接対応に不安があるなら、回数無制限でサポートしてくれるエージェントが必須です。',
+    income: '+80〜150万円の可能性',
+    reason: 'TechGOは模擬面接が回数無制限。他の大手エージェントは模擬面接1回が標準ですが、TechGOは納得いくまで何度でも対応してくれます。書類添削も担当者が伴走するので、不安を消せます。'
+  },
+  cautious: {
+    badge: '失敗回避・慎重派タイプ',
+    name:  '失敗回避・慎重派タイプ',
+    desc:  'あなたは転職先を間違えたくない層です。担当者の質、企業の内情、業界知識など、信頼できるエージェントを選ぶことが何より大切です。',
+    income: '+100〜200万円の可能性',
+    reason: 'TechGOのアドバイザーは約8割が元エンジニア・元ITコンサル出身。業界・現場を熟知した担当者があなたに付くため、ミスマッチが起きにくく、慎重派のあなたに最適です。'
+  }
+};
+
+var Q3_MAP = { A:'income', B:'highclass', C:'efficient', D:'support', E:'cautious' };
+
+function showResult() {
+  var type = Q3_MAP[answers.q3] || 'income';
+  diagType = type;
+  window.diagType = type;
+
+  var t = TYPES[type];
+  document.getElementById('resultBadge').textContent = t.badge;
+  document.getElementById('resultTypeName').textContent = t.name;
+  document.getElementById('resultDesc').textContent = t.desc;
+  document.getElementById('resultIncome').textContent = t.income;
+  document.getElementById('resultTechgoReason').textContent = t.reason;
+
+  showScreen('result');
+  // Scroll to top of result
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+</script>
+
+</body>
+</html>

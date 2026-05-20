@@ -641,6 +641,107 @@
     margin-top: 12px; line-height: 1.7;
   }
   @media (max-width: 767px) { .footer-inner { padding: 0 24px; } }
+
+  /* ── 診断導線チップ ── */
+  .diag-chip {
+    display: flex; align-items: center; gap: 14px;
+    background: var(--black); color: var(--white);
+    border: 1px solid rgba(0,200,150,0.25);
+    border-radius: 12px; padding: 16px 20px;
+    margin: 32px 0; text-decoration: none;
+    transition: border-color .2s, background .2s;
+  }
+  .diag-chip:hover { border-color: var(--green); background: rgba(0,200,150,0.06); }
+  .diag-chip-icon {
+    width: 36px; height: 36px; border-radius: 8px;
+    background: var(--green); color: var(--black);
+    display: flex; align-items: center; justify-content: center;
+    flex-shrink: 0; font-size: 16px;
+  }
+  .diag-chip-text { flex: 1; }
+  .diag-chip-label {
+    font-family: 'DM Sans', sans-serif; font-size: 10px; font-weight: 700;
+    letter-spacing: .12em; text-transform: uppercase; color: var(--green); margin-bottom: 3px;
+  }
+  .diag-chip-main { font-size: 13.5px; font-weight: 700; color: var(--white); }
+  .diag-chip-arrow { color: rgba(255,255,255,0.3); flex-shrink: 0; }
+
+  /* ── r-card system (matches general/saas) ── */
+  .r-card {
+    border: 1px solid rgba(0,0,0,0.1); border-radius: 16px; overflow: hidden;
+    background: #fff; color: #1a1714; margin-bottom: 16px;
+    transition: box-shadow .25s, transform .2s;
+  }
+  .r-card:hover { box-shadow: 0 16px 48px rgba(0,0,0,0.12); transform: translateY(-2px); }
+  .r-card.primary { border-color: rgba(0,200,150,0.3); box-shadow: 0 4px 24px rgba(0,200,150,0.1); }
+  .r-bar { height: 4px; }
+  .r-bar-1 { background: var(--green); }
+  .r-bar-2 { background: #c0c0c0; }
+  .r-bar-3 { background: #cd7c43; }
+  .r-head { display: flex; border-bottom: 1px solid rgba(0,0,0,0.07); }
+  .r-head-left {
+    flex-shrink: 0; width: 180px; padding: 22px 20px;
+    border-right: 1px solid rgba(0,0,0,0.07);
+    display: flex; flex-direction: column; gap: 8px; justify-content: center;
+  }
+  .r-head-right { flex: 1; padding: 20px 26px; display: flex; flex-direction: column; gap: 9px; justify-content: center; }
+  .r-badge { font-family: 'DM Sans', sans-serif; font-size: 10px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: #888; display: flex; align-items: center; gap: 5px; }
+  .r-pr-badge { background: rgba(0,200,150,0.1); color: var(--green); font-size: 9px; font-weight: 700; padding: 1px 5px; border-radius: 3px; }
+  .r-medal { font-size: 16px; }
+  .r-name { font-family: 'Fraunces', serif; font-size: 22px; font-weight: 700; letter-spacing: -.03em; line-height: 1.1; color: #0a0a0a; }
+  .r-stars { color: #f59e0b; font-size: 12px; }
+  .r-sub-card { font-size: 12.5px; color: #444; line-height: 1.8; }
+  .r-highlight-tag {
+    display: inline-block; background: rgba(0,200,150,0.08);
+    color: var(--green); font-family: 'DM Sans', sans-serif;
+    font-size: 11px; font-weight: 700; padding: 3px 12px; border-radius: 100px;
+    letter-spacing: .04em; margin-bottom: 4px;
+  }
+  .r-body { display: grid; grid-template-columns: 1fr 200px; }
+  .r-body-left { padding: 20px 26px; border-right: 1px solid rgba(0,0,0,0.07); }
+  .r-body-right {
+    padding: 20px 16px; display: flex; flex-direction: column;
+    justify-content: center; align-items: center; gap: 10px; text-align: center;
+    background: rgba(0,200,150,0.03);
+  }
+  .r-pt-title { font-family: 'DM Sans', sans-serif; font-size: 10px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: rgba(0,0,0,0.3); margin-bottom: 10px; }
+  .r-problem-table { background: rgba(0,200,150,0.04); border: 1px solid rgba(0,200,150,0.15); border-radius: 8px; padding: 12px 14px; margin-bottom: 14px; }
+  .r-pt-row { display: flex; align-items: baseline; gap: 7px; padding: 6px 0; border-bottom: 1px solid rgba(0,0,0,0.05); font-size: 12px; }
+  .r-pt-row:last-child { border-bottom: none; }
+  .r-pt-problem { color: rgba(0,0,0,0.42); flex: 1; }
+  .r-pt-arrow { color: var(--green); font-size: 10px; flex-shrink: 0; }
+  .r-pt-solution { color: rgba(0,0,0,0.78); font-weight: 700; flex: 1.3; }
+  .r-features { padding: 2px 0 0; display: flex; flex-direction: column; }
+  .r-feature { display: flex; align-items: flex-start; gap: 8px; padding: 7px 0; border-bottom: 1px solid #f5f5f5; font-size: 12.5px; line-height: 1.55; color: #333; }
+  .r-feature:last-child { border-bottom: none; }
+  .r-feature::before { content: ''; width: 5px; height: 5px; background: var(--green); border-radius: 50%; margin-top: 7px; flex-shrink: 0; }
+  .r-btn {
+    display: block; width: 100%; background: var(--green); color: var(--black);
+    font-family: 'DM Sans', sans-serif; font-size: 12px; font-weight: 700;
+    padding: 12px 10px; border-radius: 10px; border: none; cursor: pointer;
+    transition: background .2s; text-align: center; text-decoration: none; line-height: 1.5;
+  }
+  .r-btn:hover { background: var(--green-dark); color: #fff; }
+  .r-btn.dark { background: #1a1a1a; color: #fff; }
+  .r-btn.dark:hover { background: var(--green); color: var(--black); }
+  .r-note { font-family: 'DM Sans', sans-serif; font-size: 10px; color: #888; }
+  .r-cta-badge-row { display: flex; gap: 4px; flex-wrap: wrap; justify-content: center; }
+  .r-cta-badge { font-family: 'DM Sans', sans-serif; font-size: 9px; font-weight: 700; letter-spacing: .06em; color: var(--green); border: 1px solid rgba(0,200,150,0.35); padding: 2px 7px; border-radius: 3px; }
+  .r-testimonial { border-top: 1px solid rgba(0,0,0,0.07); padding: 16px 22px; background: #fafafa; display: flex; gap: 10px; align-items: flex-start; }
+  .r-t-icon { font-family: 'Fraunces', serif; font-size: 28px; font-weight: 700; color: var(--green); opacity: .4; line-height: 1; flex-shrink: 0; margin-top: -2px; }
+  .r-t-text { font-size: 12px; font-style: italic; color: #666; line-height: 1.85; margin-bottom: 4px; }
+  .r-t-author { font-family: 'DM Sans', sans-serif; font-size: 10px; color: #aaa; }
+  .r-banner { border-top: 1px solid rgba(0,0,0,0.07); padding: 16px; background: #f5f5f5; display: flex; justify-content: center; }
+  .r-banner a { display: block; border-radius: 8px; overflow: hidden; line-height: 0; }
+  .r-banner img { max-width: 300px; width: 100%; height: auto; border-radius: 8px; }
+  .r-card-list { display: flex; flex-direction: column; gap: 0; margin-bottom: 32px; }
+  @media (max-width: 767px) {
+    .r-head { flex-direction: column; }
+    .r-head-left { width: 100%; border-right: none; border-bottom: 1px solid rgba(0,0,0,0.07); flex-direction: row; align-items: center; gap: 14px; padding: 14px 18px; }
+    .r-body { grid-template-columns: 1fr; }
+    .r-body-left { border-right: none; border-bottom: 1px solid rgba(0,0,0,0.07); padding: 16px 18px; }
+    .r-body-right { padding: 16px 18px; }
+  }
 </style>
 </head>
 <body>
@@ -656,8 +757,8 @@
       <a href="/general/" class="hd-nav-link">IT転職 全般</a>
       <a href="/saas/" class="hd-nav-link">SaaS・AI特化</a>
     </div>
-    <a href="/general/#ranking" class="hd-cta">
-      エージェントを比較する
+    <a href="/diagnosis/" class="hd-cta">
+      30秒で年収診断
       <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7h10M8 4l3 3-3 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
     </a>
   </div>
@@ -1115,9 +1216,21 @@
       <li><span class="insight-num">09</span>ITスキルは会社が変わっても持ち運べる</li>
       <li><span class="insight-num">10</span>IT業界の平均年収は457万円（doda）</li>
     </ul>
-    <div class="a-section-cta" style="padding-top:36px">
+    <a href="/diagnosis/" class="diag-chip">
+      <div class="diag-chip-icon">
+        <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M9 2v4M9 12v4M2 9h4M12 9h4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><circle cx="9" cy="9" r="2.5" stroke="currentColor" stroke-width="1.6"/></svg>
+      </div>
+      <div class="diag-chip-text">
+        <div class="diag-chip-label">30秒診断</div>
+        <div class="diag-chip-main">自分のタイプがどれか、30秒で診断できます →</div>
+      </div>
+      <div class="diag-chip-arrow">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M4 8h8M9 5l3 3-3 3" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </div>
+    </a>
+    <div class="a-section-cta" style="padding-top:24px">
       <a href="#ranking" class="a-section-cta-btn">
-        エージェントを比較する
+        おすすめエージェントを見る
         <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7h10M8 4l3 3-3 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
       </a>
     </div>
@@ -1131,68 +1244,172 @@
   <div class="cta-inner">
     <p class="pr-notice">本ページにはPR広告（アフィリエイト）が含まれます</p>
     <div class="cta-eyebrow">RANKING — 2026年版</div>
-    <h2 class="cta-title">未経験からIT転職<br><em>編集部おすすめエージェント</em></h2>
-    <p class="cta-sub">20代・未経験・文系歓迎。完全無料で利用できます。</p>
+    <h2 class="cta-title">30歳の壁を超える前に<br><em>今の市場価値を確認する</em></h2>
+    <p class="cta-sub">この記事の「30歳の壁」「AIによるスキル陳腐化」は、エージェントに相談することで具体的な対策が見えます。完全無料・在職中OK。</p>
 
-    <div class="ranking-cards">
-      <a href="https://px.a8.net/svt/ejp?a8mat=4B3N6R+DTQFA2+5B0Y+HV7V6"
-         target="_blank" rel="nofollow noopener"
-         class="ranking-card"
-         onclick="gtag('event','click',{event_category:'affiliate',event_label:'techgo',event_campaign:'article'}); gtag_report_conversion();">
-        <div class="ranking-card-rank">1</div>
-        <div class="ranking-card-info">
-          <div class="ranking-card-name">TechGO（テックゴー）</div>
-          <div class="ranking-card-desc">ITエンジニア求人に完全特化。未経験〜経験者まで幅広く対応し、非公開求人も多数保有。専任エージェントが求人紹介・書類添削・面接対策まで個別サポート。強引な勧誘なしで相談しやすい。</div>
+    <div class="r-card-list">
+
+      <!-- TechGO -->
+      <div class="r-card primary">
+        <div class="r-bar r-bar-1"></div>
+        <div class="r-head">
+          <div class="r-head-left">
+            <div class="r-badge"><span class="r-medal">🥇</span> 第1位 <span class="r-pr-badge">PR</span></div>
+            <div class="r-name">TechGO</div>
+            <div class="r-stars">★★★★★</div>
+          </div>
+          <div class="r-head-right">
+            <div class="r-highlight-tag">30代エンジニア 平均年収160万円アップ</div>
+            <p class="r-sub-card">30歳の壁を超えるために必要なのは、スキルより「正当な評価をしてくれるエージェント」だ。TechGOは元エンジニア出身のアドバイザーが、あなたのスキルを業界相場で正確に評価し、年収交渉まで代行する。</p>
+          </div>
         </div>
-        <div class="ranking-card-cta">無料相談 →</div>
-      </a>
-      <div style="display:flex;justify-content:center;padding:4px 0">
-        <a href="https://px.a8.net/svt/ejp?a8mat=4B3N6R+DTQFA2+5B0Y+HVNAP"
-           target="_blank" rel="nofollow noopener"
-           onclick="gtag('event','click',{event_category:'affiliate_banner',event_label:'techgo',event_campaign:'article'}); gtag_report_conversion();">
-          <img border="0" width="300" height="250" alt="ITエンジニアの転職なら【TechGO（テックゴー）】" src="https://www22.a8.net/svt/bgt?aid=260510499836&wid=002&eno=01&mid=s00000024757003003000&mc=1">
-        </a>
-        <img border="0" width="1" height="1" src="https://www12.a8.net/0.gif?a8mat=4B3N6R+DTQFA2+5B0Y+HVNAP" alt="" style="display:none">
-      </div>
-      <a href="https://px.a8.net/svt/ejp?a8mat=4B3G6L+25EE6Y+5S0C+BWVTE"
-         target="_blank" rel="nofollow noopener"
-         class="ranking-card"
-         onclick="gtag('event','click',{event_category:'affiliate',event_label:'milife',event_campaign:'article'}); gtag_report_conversion();">
-        <div class="ranking-card-rank">2</div>
-        <div class="ranking-card-info">
-          <div class="ranking-card-name">ミライフ</div>
-          <div class="ranking-card-desc">「あなたの人生から逆算する」個人起点のキャリア支援。SaaS・AI・スタートアップへの転職実績が豊富で、担当者1人がじっくり向き合う少数精鋭スタイル。電話攻撃・押し付け一切なし。年収アップ事例多数。</div>
+        <div class="r-body">
+          <div class="r-body-left">
+            <div class="r-problem-table">
+              <div class="r-pt-title">この記事の悩みを解決します</div>
+              <div class="r-pt-row"><span class="r-pt-problem">30歳の壁が不安</span><span class="r-pt-arrow">→</span><span class="r-pt-solution">28〜33歳の転職実績が最も豊富</span></div>
+              <div class="r-pt-row"><span class="r-pt-problem">スキルが市場で評価されない</span><span class="r-pt-arrow">→</span><span class="r-pt-solution">元エンジニア出身アドバイザーが精査</span></div>
+              <div class="r-pt-row"><span class="r-pt-problem">AIで仕事が不安</span><span class="r-pt-arrow">→</span><span class="r-pt-solution">AI耐性の高いポジションを提案</span></div>
+              <div class="r-pt-row"><span class="r-pt-problem">面接・選考が不安</span><span class="r-pt-arrow">→</span><span class="r-pt-solution">模擬面接 回数無制限</span></div>
+            </div>
+            <div class="r-features">
+              <div class="r-feature">平均138万円アップの年収交渉実績・交渉成功率100%</div>
+              <div class="r-feature">ITエンジニア向け求人10,000件以上（IT営業・ITコンサルも多数）</div>
+              <div class="r-feature">アドバイザーの約8割が元エンジニア・ITコンサル出身</div>
+            </div>
+          </div>
+          <div class="r-body-right">
+            <a href="https://px.a8.net/svt/ejp?a8mat=4B3N6R+DTQFA2+5B0Y+HV7V6"
+               target="_blank" rel="nofollow noopener"
+               class="r-btn"
+               onclick="gtag('event','click',{event_category:'affiliate',event_label:'techgo',event_campaign:'article-card'}); gtag_report_conversion();">
+              30代の市場価値を<br>TechGOで確認する →
+            </a>
+            <div class="r-cta-badge-row">
+              <span class="r-cta-badge">在職中OK</span>
+              <span class="r-cta-badge">登録2分</span>
+              <span class="r-cta-badge">完全無料</span>
+            </div>
+            <span class="r-note">強引な勧誘なし</span>
+          </div>
         </div>
-        <div class="ranking-card-cta">無料面談 →</div>
-      </a>
-      <div style="display:flex;justify-content:center;padding:4px 0">
-        <a href="https://px.a8.net/svt/ejp?a8mat=4B3G6L+25EE6Y+5S0C+BXQOH"
-           target="_blank" rel="nofollow noopener"
-           onclick="gtag('event','click',{event_category:'affiliate_banner',event_label:'milife',event_campaign:'article'}); gtag_report_conversion();">
-          <img width="300" height="250" alt="100%個人起点のキャリア相談・転職支援【ミライフ】" src="https://www23.a8.net/svt/bgt?aid=260501421130&wid=002&eno=01&mid=s00000026958002005000&mc=1">
-        </a>
-        <img border="0" width="1" height="1" src="https://www15.a8.net/0.gif?a8mat=4B3G6L+25EE6Y+5S0C+BXQOH" alt="" style="display:none">
-      </div>
-      <a href="https://px.a8.net/svt/ejp?a8mat=4B3G6L+2DQGNU+5SN4+5YJRM"
-         target="_blank" rel="nofollow noopener"
-         class="ranking-card"
-         onclick="gtag('event','click',{event_category:'affiliate',event_label:'rakus',event_campaign:'article'}); gtag_report_conversion();">
-        <div class="ranking-card-rank">3</div>
-        <div class="ranking-card-info">
-          <div class="ranking-card-name">ラクスパートナーズ</div>
-          <div class="ranking-card-desc">未経験からエンジニア転職に特化した手厚いサポートが強み。書類作成・面接練習・日程調整まで徹底的に個別対応。IT・Web・SIer系求人を幅広く保有し、文系・未経験での内定実績が豊富。</div>
+        <div class="r-testimonial">
+          <span class="r-t-icon">"</span>
+          <div>
+            <p class="r-t-text">「3年間SIerでシステム開発をやってきたが、年収が全然上がらなかった。TechGOに相談したら担当者が開発現場を熟知していて、『あなたのスキルはもっと高く評価される』と言い切ってくれた。内定後の年収交渉で前職より150万円アップした。」</p>
+            <span class="r-t-author">― Hさん（29歳・元SIerエンジニア → メガベンチャー）</span>
+          </div>
         </div>
-        <div class="ranking-card-cta">無料相談 →</div>
-      </a>
-      <div style="display:flex;justify-content:center;padding:4px 0">
-        <a href="https://px.a8.net/svt/ejp?a8mat=4B3G6L+2DQGNU+5SN4+5YZ75"
-           target="_blank" rel="nofollow noopener"
-           onclick="gtag('event','click',{event_category:'affiliate_banner',event_label:'rakus',event_campaign:'article'}); gtag_report_conversion();">
-          <img width="300" height="250" alt="未経験からのエンジニア転職なら【ラクスパートナーズ】" src="https://www28.a8.net/svt/bgt?aid=260501421144&wid=002&eno=01&mid=s00000027040001003000&mc=1">
-        </a>
-        <img border="0" width="1" height="1" src="https://www16.a8.net/0.gif?a8mat=4B3G6L+2DQGNU+5SN4+5YZ75" alt="" style="display:none">
+        <div class="r-banner">
+          <a href="https://px.a8.net/svt/ejp?a8mat=4B3N6R+DTQFA2+5B0Y+HVNAP"
+             target="_blank" rel="nofollow noopener"
+             onclick="gtag('event','click',{event_category:'affiliate_banner',event_label:'techgo',event_campaign:'article'}); gtag_report_conversion();">
+            <img border="0" width="300" height="250" alt="ITエンジニアの転職なら【TechGO（テックゴー）】" src="https://www22.a8.net/svt/bgt?aid=260510499836&wid=002&eno=01&mid=s00000024757003003000&mc=1">
+          </a>
+          <img border="0" width="1" height="1" src="https://www12.a8.net/0.gif?a8mat=4B3N6R+DTQFA2+5B0Y+HVNAP" alt="" style="display:none">
+        </div>
       </div>
-    </div>
+      <img border="0" width="1" height="1" src="https://www11.a8.net/0.gif?a8mat=4B3N6R+DTQFA2+5B0Y+HV7V6" alt="" style="display:none">
+
+      <!-- ミライフ -->
+      <div class="r-card">
+        <div class="r-bar r-bar-2"></div>
+        <div class="r-head">
+          <div class="r-head-left">
+            <div class="r-badge"><span class="r-medal">🥈</span> 第2位</div>
+            <div class="r-name">ミライフ</div>
+            <div class="r-stars">★★★★★</div>
+          </div>
+          <div class="r-head-right">
+            <p class="r-sub-card">「何がしたいかわからない」まま転職エージェントに登録すると、求人に振り回されて終わる。ミライフは求人より先に「あなたの人生」から逆算してキャリアを設計する。方向性に迷いがある人のセカンドオピニオンとして最適。</p>
+          </div>
+        </div>
+        <div class="r-body">
+          <div class="r-body-left">
+            <div class="r-features">
+              <div class="r-feature">大手にはない「人生から逆算する」キャリア支援</div>
+              <div class="r-feature">SaaS・AI・スタートアップへの転職実績が豊富</div>
+              <div class="r-feature">少数精鋭・電話攻撃なし・押しつけなし</div>
+            </div>
+          </div>
+          <div class="r-body-right">
+            <a href="https://px.a8.net/svt/ejp?a8mat=4B3G6L+25EE6Y+5S0C+BWVTE"
+               target="_blank" rel="nofollow noopener"
+               class="r-btn dark"
+               onclick="gtag('event','click',{event_category:'affiliate',event_label:'milife',event_campaign:'article-card'}); gtag_report_conversion();">
+              ミライフで<br>キャリア相談する →
+            </a>
+            <span class="r-note">完全無料・在職中OK</span>
+          </div>
+        </div>
+        <div class="r-testimonial">
+          <span class="r-t-icon">"</span>
+          <div>
+            <p class="r-t-text">「転職先よりも『自分が何をしたいか』から一緒に考えてくれるエージェントだった。29歳で営業からSaaSカスタマーサクセスに転職。年収110万円アップ、今は毎日仕事が楽しい。」</p>
+            <span class="r-t-author">― Kさん（29歳・元法人営業 → SaaSカスタマーサクセス）</span>
+          </div>
+        </div>
+        <div class="r-banner">
+          <a href="https://px.a8.net/svt/ejp?a8mat=4B3G6L+25EE6Y+5S0C+BXQOH"
+             target="_blank" rel="nofollow noopener"
+             onclick="gtag('event','click',{event_category:'affiliate_banner',event_label:'milife',event_campaign:'article'}); gtag_report_conversion();">
+            <img width="300" height="250" alt="100%個人起点のキャリア相談・転職支援【ミライフ】" src="https://www23.a8.net/svt/bgt?aid=260501421130&wid=002&eno=01&mid=s00000026958002005000&mc=1">
+          </a>
+          <img border="0" width="1" height="1" src="https://www15.a8.net/0.gif?a8mat=4B3G6L+25EE6Y+5S0C+BXQOH" alt="" style="display:none">
+        </div>
+      </div>
+      <img border="0" width="1" height="1" src="https://www15.a8.net/0.gif?a8mat=4B3G6L+25EE6Y+5S0C+BWVTE" alt="" style="display:none">
+
+      <!-- ラクスパートナーズ -->
+      <div class="r-card">
+        <div class="r-bar r-bar-3"></div>
+        <div class="r-head">
+          <div class="r-head-left">
+            <div class="r-badge"><span class="r-medal">🥉</span> 第3位</div>
+            <div class="r-name">ラクスパートナーズ</div>
+            <div class="r-stars">★★★★☆</div>
+          </div>
+          <div class="r-head-right">
+            <p class="r-sub-card">「スキルがない自分でも転職できるのか」——その不安に一番真摯に向き合うエージェント。未経験からのエンジニア転職に特化し、書類から面接まで個別対応。第一歩の不安を取り除いてくれる。</p>
+          </div>
+        </div>
+        <div class="r-body">
+          <div class="r-body-left">
+            <div class="r-features">
+              <div class="r-feature">未経験からエンジニア転職の実績が豊富</div>
+              <div class="r-feature">書類作成・面接練習まで個別サポート</div>
+              <div class="r-feature">IT・Web・SIer系求人を幅広く保有</div>
+            </div>
+          </div>
+          <div class="r-body-right">
+            <a href="https://px.a8.net/svt/ejp?a8mat=4B3G6L+2DQGNU+5SN4+5YJRM"
+               target="_blank" rel="nofollow noopener"
+               class="r-btn dark"
+               onclick="gtag('event','click',{event_category:'affiliate',event_label:'rakus',event_campaign:'article-card'}); gtag_report_conversion();">
+              今すぐ無料で<br>相談する →
+            </a>
+            <span class="r-note">登録2分・完全無料</span>
+          </div>
+        </div>
+        <div class="r-testimonial">
+          <span class="r-t-icon">"</span>
+          <div>
+            <p class="r-t-text">「文系・未経験でも丁寧にサポートしてもらえました。面接練習を何度も付き合ってもらって、第一志望に内定できました。」</p>
+            <span class="r-t-author">― Mさん（23歳・文系大卒）</span>
+          </div>
+        </div>
+        <div class="r-banner">
+          <a href="https://px.a8.net/svt/ejp?a8mat=4B3G6L+2DQGNU+5SN4+5YZ75"
+             target="_blank" rel="nofollow noopener"
+             onclick="gtag('event','click',{event_category:'affiliate_banner',event_label:'rakus',event_campaign:'article'}); gtag_report_conversion();">
+            <img width="300" height="250" alt="未経験からのエンジニア転職なら【ラクスパートナーズ】" src="https://www28.a8.net/svt/bgt?aid=260501421144&wid=002&eno=01&mid=s00000027040001003000&mc=1">
+          </a>
+          <img border="0" width="1" height="1" src="https://www16.a8.net/0.gif?a8mat=4B3G6L+2DQGNU+5SN4+5YZ75" alt="" style="display:none">
+        </div>
+      </div>
+      <img border="0" width="1" height="1" src="https://www15.a8.net/0.gif?a8mat=4B3G6L+2DQGNU+5SN4+5YJRM" alt="" style="display:none">
+
+    </div><!-- /r-card-list -->
 
     <a href="https://px.a8.net/svt/ejp?a8mat=4B3N6R+DTQFA2+5B0Y+HV7V6"
        target="_blank" rel="nofollow noopener"

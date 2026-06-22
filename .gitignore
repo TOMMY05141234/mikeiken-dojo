@@ -1,0 +1,10 @@
+# 非公開のローカル戦略資料・作業ファイル（Cloudflare Pagesへ公開デプロイしない）
+knowledge/
+CLAUDE.md
+lp_preview.html
+
+# wrangler / ビルドキャッシュ
+.wrangler/
+
+# OS
+.DS_Store

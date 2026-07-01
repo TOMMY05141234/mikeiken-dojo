@@ -116,39 +116,19 @@ strong{color:var(--ink);font-weight:700}
   border-radius:100px;padding:6px 12px;display:inline-flex;align-items:center;gap:6px}
 .trust span::before{content:"";width:5px;height:5px;border-radius:50%;background:var(--teal)}
 
-/* ============ PROMO BANNER（プロフィット訴求） ============ */
-.promo{display:block;text-decoration:none;position:relative;overflow:hidden;margin:6px 0;
-  border-radius:var(--radius-lg);padding:22px 20px 20px;
-  background:linear-gradient(160deg,#0F2A28 0%,#10233A 55%,#0C1830 100%);
-  border:1px solid var(--teal-glow);
-  box-shadow:0 24px 60px -30px rgba(45,212,191,.5),inset 0 1px 0 rgba(255,255,255,.06);
+/* ============ A8 BANNER（プロフィット訴求） ============ */
+.a8banner{text-align:center;margin:6px 0}
+.a8banner .lab{display:inline-flex;align-items:center;gap:10px;font-size:13px;font-weight:700;
+  color:var(--teal);letter-spacing:.02em;margin-bottom:14px}
+.a8banner .lab::before,.a8banner .lab::after{content:"";width:20px;height:1px;background:var(--teal-glow)}
+.a8banner a.bnr-link{display:inline-block;line-height:0;border-radius:14px;overflow:hidden;
+  border:1px solid var(--teal-glow);max-width:100%;
+  box-shadow:0 22px 55px -26px rgba(45,212,191,.5),inset 0 1px 0 rgba(255,255,255,.06);
   transition:transform .2s ease,box-shadow .2s ease}
-.promo:hover{transform:translateY(-2px);box-shadow:0 30px 70px -28px rgba(45,212,191,.6),inset 0 1px 0 rgba(255,255,255,.1)}
-.promo:active{transform:scale(.99)}
-.promo::before{content:"";position:absolute;top:-40%;right:-20%;width:70%;height:160%;
-  background:radial-gradient(circle,rgba(45,212,191,.22),transparent 70%);pointer-events:none}
-.promo-top{display:flex;align-items:center;gap:10px;margin-bottom:14px;position:relative}
-.promo-brand{font-family:var(--en);font-weight:800;font-size:17px;letter-spacing:.01em;
-  background:linear-gradient(120deg,#EAF0FF,var(--teal) 70%,#7FE8DA);
-  -webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
-.promo-tag{font-size:10.5px;font-weight:700;letter-spacing:.06em;color:var(--teal);
-  border:1px solid var(--teal-glow);border-radius:100px;padding:4px 11px;background:rgba(45,212,191,.08)}
-.promo-tag.free{margin-left:auto;color:#052019;background:var(--teal);border-color:var(--teal)}
-.promo-h{position:relative;font-size:17px;font-weight:900;line-height:1.6;color:var(--ink);margin-bottom:16px;letter-spacing:-.005em}
-.promo-h b{color:var(--teal)}
-.promo-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:18px;position:relative}
-.promo-stats>div{background:rgba(11,18,32,.45);border:1px solid var(--line);border-radius:12px;
-  padding:12px 8px;text-align:center;display:flex;flex-direction:column;gap:3px}
-.promo-stats b{font-family:var(--en);font-size:21px;font-weight:800;line-height:1;color:var(--teal);white-space:nowrap}
-.promo-stats b small{font-family:var(--jp);font-size:11px;font-weight:700;margin-left:1px}
-.promo-stats span{font-size:10px;line-height:1.4;color:var(--muted)}
-.promo-cta{position:relative;display:flex;align-items:center;justify-content:center;gap:8px;
-  background:linear-gradient(135deg,var(--teal),var(--teal-2));color:#052019;
-  font-weight:900;font-size:15.5px;padding:15px;border-radius:13px;min-height:44px;
-  box-shadow:inset 0 1px 0 rgba(255,255,255,.35)}
-.promo-cta .arw{transition:transform .2s}
-.promo:hover .promo-cta .arw{transform:translateX(4px)}
-.promo-fine{position:relative;text-align:center;font-size:10.5px;color:var(--muted-2);margin-top:10px;line-height:1.6}
+.a8banner a.bnr-link:hover{transform:translateY(-2px);box-shadow:0 30px 65px -24px rgba(45,212,191,.6)}
+.a8banner a.bnr-link:active{transform:scale(.99)}
+.a8banner img.bnr{width:300px;max-width:100%;height:auto;display:block}
+.a8banner .fine{font-size:11px;color:var(--muted-2);margin-top:11px;line-height:1.6}
 
 /* ============ TOC / この記事で分かること ============ */
 .toc{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius-lg);padding:24px 20px}
@@ -283,24 +263,16 @@ footer .copy{border-top:1px solid var(--line);padding-top:16px;color:var(--muted
   </div>
 </header>
 
-<!-- ============ PROMO BANNER（FV直後・プロフィット訴求） ============ -->
+<!-- ============ A8 BANNER（FV直後・プロフィット訴求） ============ -->
 <section class="block" style="padding-top:6px">
   <div class="wrap rv">
-    <a class="promo cta-link" href="#" data-cmp="techgo-article-banner-fv">
-      <div class="promo-top">
-        <span class="promo-brand">TechGO</span>
-        <span class="promo-tag">経験2年以上のITエンジニア向け</span>
-        <span class="promo-tag free">無料</span>
-      </div>
-      <p class="promo-h">その経験、<b>もっと高く評価される</b>かもしれません。まずは市場価値を診断。</p>
-      <div class="promo-stats">
-        <div><b>〜950<small>万</small></b><span>ITSS5の年収レンジ上限</span></div>
-        <div><b>無制限</b><span>模擬面接の回数</span></div>
-        <div><b>¥0</b><span>相談は無料</span></div>
-      </div>
-      <span class="promo-cta">無料で市場価値を診断する<span class="arw">→</span></span>
-      <p class="promo-fine">※年収レンジは厚生労働省 job tag（設計・構築領域）の公表値。結果には個人差があります。</p>
-    </a>
+    <div class="a8banner">
+      <span class="lab">その経験、いくらで評価される？</span>
+      <a class="bnr-link" href="https://px.a8.net/svt/ejp?a8mat=4B3N6R+DTQFA2+5B0Y+I0KRL" rel="nofollow sponsored noopener" target="_blank"
+         onclick="gtag('event','click',{event_category:'affiliate',event_label:'techgo',event_campaign:'techgo-article-banner-fv'});gtag('event','conversion',{'send_to':'AW-18146496318/iVstCNOmp6scEL6e9sxD'});">
+        <img class="bnr" border="0" width="300" height="250" alt="TechGO｜経験2年以上のITエンジニア向け転職エージェント 無料相談" src="https://www27.a8.net/svt/bgt?aid=260510499836&wid=002&eno=01&mid=s00000024757003026000&mc=1"></a><img border="0" width="1" height="1" src="https://www10.a8.net/0.gif?a8mat=4B3N6R+DTQFA2+5B0Y+I0KRL" alt="" aria-hidden="true">
+      <p class="fine">年収アップを目指す経験者エンジニアへ／相談は無料</p>
+    </div>
   </div>
 </section>
 
@@ -510,21 +482,13 @@ footer .copy{border-top:1px solid var(--line);padding-top:16px;color:var(--muted
     <a class="cta cta-link" href="#" data-cmp="techgo-article-final">TechGOで無料相談する<span class="arw">→</span></a>
     <p class="cta-note"><b>相談は無料。</b>「話を聞いてから考える」でも大丈夫です。</p>
 
-    <a class="promo cta-link" href="#" data-cmp="techgo-article-banner-final" style="margin-top:26px;text-align:left">
-      <div class="promo-top">
-        <span class="promo-brand">TechGO</span>
-        <span class="promo-tag">年収アップを目指す経験者へ</span>
-        <span class="promo-tag free">無料</span>
-      </div>
-      <p class="promo-h">今の年収は、<b>「今の会社」基準</b>かもしれません。<br>本当の市場価値を、プロと確認。</p>
-      <div class="promo-stats">
-        <div><b>高年収</b><span>ITコンサル・メガベンチャー求人</span></div>
-        <div><b>土曜<small>OK</small></b><span>1Day選考会あり</span></div>
-        <div><b>¥0</b><span>相談は無料</span></div>
-      </div>
-      <span class="promo-cta">無料でTechGOに相談する<span class="arw">→</span></span>
-      <p class="promo-fine">※本ページはプロモーションを含みます。サービス内容は変更される場合があります。</p>
-    </a>
+    <div class="a8banner" style="margin-top:30px">
+      <span class="lab">まずは無料で市場価値をチェック</span>
+      <a class="bnr-link" href="https://px.a8.net/svt/ejp?a8mat=4B3N6R+DTQFA2+5B0Y+I0KRL" rel="nofollow sponsored noopener" target="_blank"
+         onclick="gtag('event','click',{event_category:'affiliate',event_label:'techgo',event_campaign:'techgo-article-banner-final'});gtag('event','conversion',{'send_to':'AW-18146496318/iVstCNOmp6scEL6e9sxD'});">
+        <img class="bnr" border="0" width="300" height="250" alt="TechGO｜経験2年以上のITエンジニア向け転職エージェント 無料相談" src="https://www27.a8.net/svt/bgt?aid=260510499836&wid=002&eno=01&mid=s00000024757003026000&mc=1"></a><img border="0" width="1" height="1" src="https://www10.a8.net/0.gif?a8mat=4B3N6R+DTQFA2+5B0Y+I0KRL" alt="" aria-hidden="true">
+      <p class="fine">本ページはプロモーションを含みます</p>
+    </div>
   </div>
 </section>
 

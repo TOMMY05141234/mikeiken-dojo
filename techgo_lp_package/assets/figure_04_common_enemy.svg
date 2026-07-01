@@ -1,0 +1,23 @@
+<svg width="1000" height="520" viewBox="0 0 1000 520" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+<title id="title">求人を見るだけでは足りない</title>
+<desc id="desc">求人を見るだけの場合と評価される準備をした場合の比較</desc>
+<rect width="1000" height="520" rx="28" fill="#0B1220"/>
+<text x="56" y="66" fill="#FFFFFF" font-family="Arial" font-size="30" font-weight="700">共通敵は「求人を見ただけで準備不足のまま進むこと」</text>
+<rect x="70" y="120" width="400" height="300" rx="22" fill="#271A1A" stroke="#604040"/>
+<text x="110" y="170" fill="#FFB4B4" font-family="Arial" font-size="22" font-weight="700">求人を見るだけ</text>
+<g fill="#EAF0FF" font-family="Arial" font-size="18">
+<text x="110" y="225">1. 年収レンジを見る</text>
+<text x="110" y="270">2. なんとなく応募する</text>
+<text x="110" y="315">3. 面接で実績が伝わらない</text>
+<text x="110" y="360">4. 本来より低く評価される可能性</text>
+</g>
+<rect x="530" y="120" width="400" height="300" rx="22" fill="#12261F" stroke="#2DD4BF"/>
+<text x="570" y="170" fill="#2DD4BF" font-family="Arial" font-size="22" font-weight="700">評価される準備</text>
+<g fill="#EAF0FF" font-family="Arial" font-size="18">
+<text x="570" y="225">1. 経験を棚卸しする</text>
+<text x="570" y="270">2. 企業別に強みを整理する</text>
+<text x="570" y="315">3. 模擬面接で伝え方を磨く</text>
+<text x="570" y="360">4. 評価される形で選考に進む</text>
+</g>
+<text x="70" y="470" fill="#A7B0C0" font-family="Arial" font-size="17">大手サイトや求人閲覧が悪いのではなく、「準備せずに進むこと」が機会損失につながる。</text>
+</svg>

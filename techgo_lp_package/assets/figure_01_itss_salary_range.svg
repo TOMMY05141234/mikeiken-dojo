@@ -1,0 +1,21 @@
+<svg width="900" height="520" viewBox="0 0 900 520" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+<title id="title">ITSSレベル別 年収レンジ</title>
+<desc id="desc">厚生労働省Job Tagの設計・構築領域におけるITSSレベル別年収レンジ</desc>
+<rect width="900" height="520" rx="28" fill="#0B1220"/>
+<text x="56" y="70" fill="#FFFFFF" font-family="Arial, sans-serif" font-size="32" font-weight="700">ITSSレベル別 年収レンジ</text>
+<text x="56" y="105" fill="#A7B0C0" font-family="Arial, sans-serif" font-size="16">設計・構築領域／第一四分位〜第三四分位</text>
+<line x1="180" y1="410" x2="820" y2="410" stroke="#344055" stroke-width="2"/>
+<g font-family="Arial, sans-serif" font-size="13" fill="#A7B0C0">
+<text x="172" y="435">400</text><text x="332" y="435">550</text><text x="492" y="435">700</text><text x="652" y="435">850</text><text x="800" y="435">1,000万円</text>
+</g>
+<g font-family="Arial, sans-serif" font-size="18" fill="#EAF0FF" font-weight="600">
+<text x="56" y="172">ITSS 1〜2</text><text x="56" y="242">ITSS 3</text><text x="56" y="312">ITSS 4</text><text x="56" y="382">ITSS 5以上</text>
+</g>
+<g>
+<rect x="201" y="150" width="213" height="30" rx="15" fill="#2DD4BF" opacity="0.9"/><text x="425" y="172" fill="#EAF0FF" font-family="Arial" font-size="15">420〜620万円</text>
+<rect x="233" y="220" width="267" height="30" rx="15" fill="#2DD4BF" opacity="0.9"/><text x="510" y="242" fill="#EAF0FF" font-family="Arial" font-size="15">450〜700万円</text>
+<rect x="286" y="290" width="299" height="30" rx="15" fill="#2DD4BF" opacity="0.9"/><text x="596" y="312" fill="#EAF0FF" font-family="Arial" font-size="15">500〜780万円</text>
+<rect x="393" y="360" width="373" height="30" rx="15" fill="#2DD4BF" opacity="0.9"/><text x="776" y="382" fill="#EAF0FF" font-family="Arial" font-size="15">600〜950万円</text>
+</g>
+<text x="56" y="477" fill="#7F8AA3" font-family="Arial" font-size="13">出典：厚生労働省 Job Tag「プログラマー」「システムエンジニア（Webサービス開発）」</text>
+</svg>

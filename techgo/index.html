@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>実務経験2年以上のITエンジニアへ｜「もっと評価される会社があるかもしれない」と思ったら｜市場価値の確かめ方</title>
+<meta name="description" content="今の会社で評価されていないからといって、あなたの市場価値が低いとは限りません。同じ経験でも会社・評価制度・伝え方で年収レンジは変わります。転職する前に、市場価値を確かめる方法を解説します。">
+<meta name="robots" content="index,follow">
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-18146496318"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'AW-18146496318');
+  function gtag_report_conversion(url) {
+    var callback = function () { if (typeof(url) != 'undefined') { window.location = url; } };
+    gtag('event', 'conversion', {
+      'send_to': 'AW-18146496318/iVstCNOmp6scEL6e9sxD',
+      'event_callback': callback
+    });
+    return false;
+  }
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --bg:#0B1220; --bg-2:#0E1626; --panel:#151E2F; --panel-2:#1A2436;
+  --line:rgba(167,176,192,.14); --line-strong:rgba(167,176,192,.24);
+  --teal:#2DD4BF; --teal-2:#14B8A6; --teal-glow:rgba(45,212,191,.35);
+  --ink:#EAF0FF; --muted:#A7B0C0; --muted-2:#7F8AA3; --danger:#FFB4B4;
+  --radius:18px; --radius-lg:24px;
+  --maxw:600px;
+  --jp:'Noto Sans JP',system-ui,sans-serif; --en:'Inter',var(--jp);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{
+  background:var(--bg); color:var(--ink); font-family:var(--jp);
+  font-size:16px; line-height:1.85; letter-spacing:.01em;
+  -webkit-font-smoothing:antialiased; overflow-x:hidden;
+}
+body::before{
+  content:""; position:fixed; inset:0; z-index:-1; pointer-events:none;
+  background:
+    radial-gradient(60% 40% at 50% -5%, rgba(45,212,191,.12), transparent 70%),
+    radial-gradient(50% 30% at 100% 20%, rgba(56,120,255,.08), transparent 70%),
+    var(--bg);
+}
+img,svg{display:block;max-width:100%;height:auto}
+a{color:inherit}
+
+/* reading progress */
+#progress{position:fixed;top:0;left:0;height:3px;width:0;z-index:1000;
+  background:linear-gradient(90deg,var(--teal),var(--teal-2));box-shadow:0 0 12px var(--teal-glow)}
+
+/* layout */
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 20px}
+section{position:relative}
+.block{padding:44px 0}
+.divider{height:1px;background:linear-gradient(90deg,transparent,var(--line-strong),transparent);margin:0 20px}
+
+/* eyebrow / kicker */
+.kicker{display:inline-flex;align-items:center;gap:8px;font-family:var(--en);
+  font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--teal);border:1px solid var(--teal-glow);border-radius:100px;
+  padding:6px 14px;background:rgba(45,212,191,.06);margin-bottom:18px}
+.kicker::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--teal);box-shadow:0 0 8px var(--teal)}
+
+/* headings */
+h2{font-size:clamp(22px,6.2vw,27px);line-height:1.42;font-weight:900;letter-spacing:-.01em;margin-bottom:16px}
+h2 .hl{color:var(--teal)}
+h3{font-size:18px;font-weight:700;line-height:1.5;margin-bottom:10px}
+.lead{color:var(--muted);font-size:15.5px;line-height:1.95}
+.lead + .lead{margin-top:14px}
+strong{color:var(--ink);font-weight:700}
+.mark{background:linear-gradient(transparent 62%, rgba(45,212,191,.28) 62%);color:var(--ink);font-weight:700;padding:0 1px}
+
+/* ============ HERO ============ */
+.hero{padding:34px 0 40px;text-align:left}
+.hero .to{font-family:var(--en);font-size:12px;font-weight:600;letter-spacing:.04em;color:var(--muted);
+  display:flex;align-items:center;gap:9px;margin-bottom:16px}
+.hero .to::before{content:"";width:22px;height:1px;background:var(--teal)}
+.hero h1{font-size:clamp(27px,8vw,36px);line-height:1.4;font-weight:900;letter-spacing:-.015em;margin-bottom:20px}
+.hero h1 .accent{
+  background:linear-gradient(120deg,#EAF0FF 0%,var(--teal) 55%,#7FE8DA 100%);
+  -webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;
+}
+.hero .sub{color:var(--muted);font-size:15.5px;line-height:1.95;margin-bottom:26px}
+.hero .sub strong{color:var(--ink)}
+
+/* CTA button */
+.cta{display:block;text-align:center;background:linear-gradient(135deg,var(--teal),var(--teal-2));
+  color:#052019;font-family:var(--jp);font-weight:900;font-size:17px;letter-spacing:.01em;
+  padding:19px 22px;border-radius:16px;text-decoration:none;position:relative;overflow:hidden;
+  box-shadow:0 10px 30px -8px var(--teal-glow),inset 0 1px 0 rgba(255,255,255,.35);
+  transition:transform .18s ease,box-shadow .18s ease;min-height:44px}
+.cta:active{transform:scale(.985)}
+.cta:hover{box-shadow:0 16px 40px -8px var(--teal-glow),inset 0 1px 0 rgba(255,255,255,.45)}
+.cta .arw{display:inline-block;margin-left:8px;transition:transform .2s}
+.cta:hover .arw{transform:translateX(4px)}
+.cta::after{content:"";position:absolute;top:0;left:-120%;width:60%;height:100%;
+  background:linear-gradient(100deg,transparent,rgba(255,255,255,.5),transparent);
+  transform:skewX(-18deg);animation:sheen 4.5s ease-in-out infinite}
+@keyframes sheen{0%,60%{left:-120%}80%,100%{left:150%}}
+.cta-note{text-align:center;color:var(--muted-2);font-size:12.5px;margin-top:12px;line-height:1.7}
+.cta-note b{color:var(--teal);font-weight:700}
+
+.trust{display:flex;flex-wrap:wrap;gap:8px;margin-top:24px}
+.trust span{font-size:11.5px;color:var(--muted);background:var(--panel);border:1px solid var(--line);
+  border-radius:100px;padding:6px 12px;display:inline-flex;align-items:center;gap:6px}
+.trust span::before{content:"";width:5px;height:5px;border-radius:50%;background:var(--teal)}
+
+/* ============ PROMO BANNER（プロフィット訴求） ============ */
+.promo{display:block;text-decoration:none;position:relative;overflow:hidden;margin:6px 0;
+  border-radius:var(--radius-lg);padding:22px 20px 20px;
+  background:linear-gradient(160deg,#0F2A28 0%,#10233A 55%,#0C1830 100%);
+  border:1px solid var(--teal-glow);
+  box-shadow:0 24px 60px -30px rgba(45,212,191,.5),inset 0 1px 0 rgba(255,255,255,.06);
+  transition:transform .2s ease,box-shadow .2s ease}
+.promo:hover{transform:translateY(-2px);box-shadow:0 30px 70px -28px rgba(45,212,191,.6),inset 0 1px 0 rgba(255,255,255,.1)}
+.promo:active{transform:scale(.99)}
+.promo::before{content:"";position:absolute;top:-40%;right:-20%;width:70%;height:160%;
+  background:radial-gradient(circle,rgba(45,212,191,.22),transparent 70%);pointer-events:none}
+.promo-top{display:flex;align-items:center;gap:10px;margin-bottom:14px;position:relative}
+.promo-brand{font-family:var(--en);font-weight:800;font-size:17px;letter-spacing:.01em;
+  background:linear-gradient(120deg,#EAF0FF,var(--teal) 70%,#7FE8DA);
+  -webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.promo-tag{font-size:10.5px;font-weight:700;letter-spacing:.06em;color:var(--teal);
+  border:1px solid var(--teal-glow);border-radius:100px;padding:4px 11px;background:rgba(45,212,191,.08)}
+.promo-tag.free{margin-left:auto;color:#052019;background:var(--teal);border-color:var(--teal)}
+.promo-h{position:relative;font-size:17px;font-weight:900;line-height:1.6;color:var(--ink);margin-bottom:16px;letter-spacing:-.005em}
+.promo-h b{color:var(--teal)}
+.promo-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:18px;position:relative}
+.promo-stats>div{background:rgba(11,18,32,.45);border:1px solid var(--line);border-radius:12px;
+  padding:12px 8px;text-align:center;display:flex;flex-direction:column;gap:3px}
+.promo-stats b{font-family:var(--en);font-size:21px;font-weight:800;line-height:1;color:var(--teal);white-space:nowrap}
+.promo-stats b small{font-family:var(--jp);font-size:11px;font-weight:700;margin-left:1px}
+.promo-stats span{font-size:10px;line-height:1.4;color:var(--muted)}
+.promo-cta{position:relative;display:flex;align-items:center;justify-content:center;gap:8px;
+  background:linear-gradient(135deg,var(--teal),var(--teal-2));color:#052019;
+  font-weight:900;font-size:15.5px;padding:15px;border-radius:13px;min-height:44px;
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.35)}
+.promo-cta .arw{transition:transform .2s}
+.promo:hover .promo-cta .arw{transform:translateX(4px)}
+.promo-fine{position:relative;text-align:center;font-size:10.5px;color:var(--muted-2);margin-top:10px;line-height:1.6}
+
+/* ============ TOC / この記事で分かること ============ */
+.toc{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius-lg);padding:24px 20px}
+.toc .cap{font-family:var(--en);font-size:11px;font-weight:700;letter-spacing:.12em;color:var(--teal);text-transform:uppercase;margin-bottom:16px}
+.toc ol{list-style:none;counter-reset:t;display:flex;flex-direction:column;gap:2px}
+.toc li{counter-increment:t;display:flex;gap:14px;align-items:flex-start;padding:11px 0;border-bottom:1px dashed var(--line)}
+.toc li:last-child{border-bottom:0;padding-bottom:0}
+.toc li::before{content:counter(t,decimal-leading-zero);font-family:var(--en);font-weight:700;font-size:12px;
+  color:var(--teal);background:rgba(45,212,191,.08);border:1px solid var(--teal-glow);
+  min-width:30px;height:30px;border-radius:9px;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px}
+.toc li span{font-size:14.5px;line-height:1.6;color:var(--ink);font-weight:500}
+
+/* ============ CHECKLIST 共感 ============ */
+.checks{display:flex;flex-direction:column;gap:10px;margin-top:6px}
+.check{display:flex;gap:13px;align-items:flex-start;background:var(--panel);
+  border:1px solid var(--line);border-radius:14px;padding:15px 16px;transition:border-color .2s,transform .2s}
+.check:hover{border-color:var(--teal-glow);transform:translateX(3px)}
+.check .ic{flex-shrink:0;width:24px;height:24px;border-radius:7px;background:rgba(45,212,191,.1);
+  border:1px solid var(--teal-glow);display:flex;align-items:center;justify-content:center;margin-top:1px}
+.check .ic svg{width:13px;height:13px}
+.check p{font-size:14.5px;line-height:1.6;color:var(--ink)}
+.checks-foot{margin-top:18px;background:linear-gradient(135deg,rgba(45,212,191,.08),rgba(45,212,191,.02));
+  border:1px solid var(--teal-glow);border-radius:14px;padding:16px 18px;font-size:14.5px;line-height:1.85;color:var(--ink)}
+
+/* ============ FIGURE ============ */
+figure{margin:22px 0 8px;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;
+  background:#0B1220;box-shadow:0 20px 50px -30px rgba(0,0,0,.9)}
+figure svg{width:100%;height:auto}
+figcaption{font-size:12px;color:var(--muted-2);padding:12px 16px;border-top:1px solid var(--line);
+  display:flex;align-items:center;gap:8px;line-height:1.6}
+figcaption::before{content:"SOURCE";font-family:var(--en);font-size:9px;font-weight:700;letter-spacing:.1em;
+  color:var(--teal);border:1px solid var(--teal-glow);border-radius:4px;padding:2px 6px;flex-shrink:0}
+
+/* compare rows */
+.compare{display:flex;flex-direction:column;gap:12px;margin-top:20px}
+.compare-row{background:var(--panel);border:1px solid var(--line);border-radius:14px;overflow:hidden}
+.compare-row .lab{font-size:11.5px;font-weight:700;letter-spacing:.04em;padding:10px 16px;
+  display:flex;align-items:center;gap:8px}
+.compare-row.a .lab{color:var(--muted);background:rgba(167,176,192,.06)}
+.compare-row.b .lab{color:var(--teal);background:rgba(45,212,191,.07)}
+.compare-row .lab::before{content:"";width:6px;height:6px;border-radius:50%;background:currentColor}
+.compare-row .val{padding:14px 16px;font-size:14.5px;line-height:1.7;color:var(--ink)}
+.compare-arrow{text-align:center;color:var(--teal);font-size:20px;line-height:1}
+
+/* pull quote / emphasis */
+.pull{position:relative;background:linear-gradient(135deg,var(--panel-2),var(--panel));
+  border:1px solid var(--line-strong);border-radius:var(--radius);padding:26px 22px;margin:22px 0;
+  border-left:3px solid var(--teal)}
+.pull .q{font-size:18px;font-weight:700;line-height:1.7;color:var(--ink)}
+.pull .q .hl{color:var(--teal)}
+
+/* bullet list card */
+.list-card{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);padding:20px}
+.list-card ul{list-style:none;display:flex;flex-direction:column;gap:12px}
+.list-card li{display:flex;gap:12px;align-items:flex-start;font-size:14.5px;line-height:1.65;color:var(--ink)}
+.list-card li .b{flex-shrink:0;width:20px;height:20px;border-radius:6px;background:rgba(45,212,191,.1);
+  border:1px solid var(--teal-glow);color:var(--teal);display:flex;align-items:center;justify-content:center;
+  font-size:11px;font-weight:800;margin-top:2px}
+
+/* reasons TechGO */
+.reasons{display:flex;flex-direction:column;gap:12px;margin-top:8px}
+.reason{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);padding:20px;
+  position:relative;overflow:hidden;transition:border-color .2s,transform .2s}
+.reason:hover{border-color:var(--teal-glow);transform:translateY(-2px)}
+.reason .no{font-family:var(--en);font-size:12px;font-weight:800;letter-spacing:.08em;color:var(--teal);margin-bottom:8px;display:flex;align-items:center;gap:8px}
+.reason .no::after{content:"";flex:1;height:1px;background:var(--line)}
+.reason h3{font-size:16.5px;margin-bottom:8px}
+.reason p{font-size:14px;line-height:1.8;color:var(--muted)}
+
+/* brand chip */
+.brand{display:inline-flex;align-items:center;gap:8px;font-weight:900;color:var(--ink);letter-spacing:.02em}
+.brand b{background:linear-gradient(120deg,var(--teal),#7FE8DA);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+
+/* final cta band */
+.final{background:
+    radial-gradient(80% 60% at 50% 0%,rgba(45,212,191,.14),transparent 70%),
+    linear-gradient(180deg,var(--panel),var(--bg-2));
+  border-top:1px solid var(--teal-glow);border-bottom:1px solid var(--line);padding:48px 0 52px;text-align:center}
+.final h2{margin-bottom:16px}
+.final .lead{margin-bottom:26px}
+
+/* footer */
+footer{padding:30px 0 120px;color:var(--muted-2);font-size:12px;line-height:1.9}
+footer .pr{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:12px 14px;margin-bottom:18px;color:var(--muted)}
+footer .src{margin-bottom:16px}
+footer .src b{color:var(--muted);display:block;margin-bottom:6px;font-size:11px;letter-spacing:.06em}
+footer .src a{color:var(--muted);text-decoration:underline;text-underline-offset:2px}
+footer .copy{border-top:1px solid var(--line);padding-top:16px;color:var(--muted-2)}
+
+/* sticky bottom cta */
+#sticky{position:fixed;left:0;right:0;bottom:0;z-index:900;transform:translateY(120%);
+  transition:transform .35s cubic-bezier(.2,.8,.2,1);
+  background:rgba(11,18,32,.86);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);
+  border-top:1px solid var(--teal-glow);padding:11px 16px calc(11px + env(safe-area-inset-bottom))}
+#sticky.show{transform:translateY(0)}
+#sticky .in{max-width:var(--maxw);margin:0 auto;display:flex;align-items:center;gap:12px}
+#sticky .txt{flex:1;min-width:0}
+#sticky .txt b{display:block;font-size:12.5px;color:var(--ink);font-weight:700;line-height:1.4}
+#sticky .txt small{font-size:10.5px;color:var(--muted)}
+#sticky .cta{margin:0;flex-shrink:0;padding:13px 20px;font-size:14px;border-radius:12px;min-width:150px}
+#sticky .cta::after{display:none}
+
+/* reveal animation */
+.rv{opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s cubic-bezier(.2,.8,.2,1)}
+.rv.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}.cta::after{animation:none}}
+
+@media (min-width:640px){
+  body{font-size:16.5px}
+  .hero{padding:52px 0 48px}
+}
+</style>
+</head>
+<body>
+
+<div id="progress"></div>
+
+<!-- ============ HERO ============ -->
+<header class="hero block">
+  <div class="wrap">
+    <p class="to">実務経験2年以上のITエンジニアへ</p>
+    <h1>「もっと評価される会社が<br><span class="accent">あるかもしれない</span>」<br>と思ったことは、ありませんか？</h1>
+    <p class="sub">今の会社で評価されていないからといって、あなたの<strong>市場価値が低いとは限りません</strong>。同じ経験でも、会社・職種・評価制度・伝え方によって、年収レンジは大きく変わります。</p>
+    <p class="sub">転職するかどうかを決める前に、まずは「自分の経験が、転職市場でどう評価されるのか」を確かめてみませんか？</p>
+    <a class="cta cta-link" href="#" data-cmp="techgo-article-fv">無料で市場価値を相談する<span class="arw">→</span></a>
+    <p class="cta-note"><b>相談は無料。</b>転職するかどうかは、相談してから決めれば大丈夫です。</p>
+    <div class="trust">
+      <span>実務経験2年以上が対象</span>
+      <span>模擬面接 回数制限なし</span>
+      <span>土曜1Day選考会</span>
+    </div>
+  </div>
+</header>
+
+<!-- ============ PROMO BANNER（FV直後・プロフィット訴求） ============ -->
+<section class="block" style="padding-top:6px">
+  <div class="wrap rv">
+    <a class="promo cta-link" href="#" data-cmp="techgo-article-banner-fv">
+      <div class="promo-top">
+        <span class="promo-brand">TechGO</span>
+        <span class="promo-tag">経験2年以上のITエンジニア向け</span>
+        <span class="promo-tag free">無料</span>
+      </div>
+      <p class="promo-h">その経験、<b>もっと高く評価される</b>かもしれません。まずは市場価値を診断。</p>
+      <div class="promo-stats">
+        <div><b>〜950<small>万</small></b><span>ITSS5の年収レンジ上限</span></div>
+        <div><b>無制限</b><span>模擬面接の回数</span></div>
+        <div><b>¥0</b><span>相談は無料</span></div>
+      </div>
+      <span class="promo-cta">無料で市場価値を診断する<span class="arw">→</span></span>
+      <p class="promo-fine">※年収レンジは厚生労働省 job tag（設計・構築領域）の公表値。結果には個人差があります。</p>
+    </a>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ============ この記事で分かること ============ -->
+<section class="block">
+  <div class="wrap rv">
+    <div class="toc">
+      <p class="cap">この記事で分かること</p>
+      <ol>
+        <li><span>なぜ同じエンジニア経験でも年収差が生まれるのか</span></li>
+        <li><span>今の会社の評価と、転職市場での評価がズレる理由</span></li>
+        <li><span>求人を見るだけでは市場価値が分からない理由</span></li>
+        <li><span>経験者エンジニアが転職で損しやすいポイント</span></li>
+        <li><span>なぜTechGOが年収アップを目指すエンジニアと相性が良いのか</span></li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 共感 ============ -->
+<section class="block">
+  <div class="wrap">
+    <div class="rv">
+      <span class="kicker">Check List</span>
+      <h2>頑張っているのに、評価が<br><span class="hl">年収に反映されていない</span>と感じていませんか？</h2>
+    </div>
+    <div class="checks rv">
+      <div class="check"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#2DD4BF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span><p>毎年昇給しても数千円〜1万円程度</p></div>
+      <div class="check"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#2DD4BF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span><p>担当範囲は広がったのに給与は変わらない</p></div>
+      <div class="check"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#2DD4BF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span><p>同期や知人エンジニアの年収を聞いて焦った</p></div>
+      <div class="check"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#2DD4BF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span><p>このまま今の会社にいていいのか不安</p></div>
+      <div class="check"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#2DD4BF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span><p>転職したい気持ちはあるが、自分の市場価値が分からない</p></div>
+    </div>
+    <p class="checks-foot rv">もし一つでも当てはまるなら、あなたの能力が低いのではなく、<strong>今の会社の評価制度や給与水準が合っていないだけ</strong>かもしれません。</p>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ============ 教育1：年収は能力だけで決まらない ============ -->
+<section class="block">
+  <div class="wrap">
+    <div class="rv">
+      <span class="kicker">Why · 01</span>
+      <h2>エンジニアの年収は、<br><span class="hl">「能力」だけ</span>では決まりません</h2>
+      <p class="lead">年収は、スキルだけでなく、会社の給与テーブル・利益率・評価制度・担当案件によって変わります。厚生労働省 job tag では、ITSSレベル別の年収レンジに<strong>大きな幅</strong>が示されています。</p>
+      <p class="lead">例えば設計・構築領域では、ITSSレベル3の年収レンジは450万〜700万円、レベル4では500万〜780万円とされています。<span class="mark">同じ「エンジニア」でも、評価される環境によって年収の上限は変わります。</span></p>
+    </div>
+    <figure class="rv">
+      <img src="assets/figure_01_itss_salary_range.svg" alt="ITSSレベル別の年収レンジ。設計・構築領域でITSS1〜2が420〜620万円、ITSS3が450〜700万円、ITSS4が500〜780万円、ITSS5以上が600〜950万円。厚生労働省job tagより。" loading="lazy">
+      <figcaption>厚生労働省 job tag「プログラマー」「システムエンジニア（Webサービス開発）」</figcaption>
+    </figure>
+    <p class="lead rv">あなたの年収が伸びない理由は、能力不足ではなく、<strong>今いる会社の評価制度や給与水準にある</strong>のかもしれません。</p>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ============ 教育2：社内評価と市場評価 ============ -->
+<section class="block">
+  <div class="wrap">
+    <div class="rv">
+      <span class="kicker">Why · 02</span>
+      <h2>今の会社の評価と、転職市場での評価は<br><span class="hl">一致しない</span>ことがあります</h2>
+      <p class="lead">社内では「普通の保守運用」と見られている経験でも、別の会社では高く評価されることがあります。今の会社では当たり前でも、こんな経験はありませんか？</p>
+    </div>
+    <div class="list-card rv" style="margin-top:18px">
+      <ul>
+        <li><span class="b">✓</span>障害対応で、原因調査から改修まで担当した</li>
+        <li><span class="b">✓</span>既存システムの改善提案をした</li>
+        <li><span class="b">✓</span>チーム内の作業効率化を進めた</li>
+        <li><span class="b">✓</span>顧客折衝や要件整理に関わった</li>
+        <li><span class="b">✓</span>後輩のレビューや育成をしていた</li>
+      </ul>
+    </div>
+    <figure class="rv">
+      <img src="assets/figure_02_internal_vs_market.svg" alt="社内での見られ方は「保守運用を担当」。一方、転職市場での見られ方は「障害対応・原因調査・改善提案・顧客折衝・レビュー経験あり」。同じ経験でも切り出し方で評価が変わることを示す図。" loading="lazy">
+      <figcaption>社内評価と市場評価のズレ（イメージ図）</figcaption>
+    </figure>
+    <div class="compare rv">
+      <div class="compare-row a"><div class="lab">社内での見られ方</div><div class="val">保守運用を担当</div></div>
+      <div class="compare-arrow">↓</div>
+      <div class="compare-row b"><div class="lab">転職市場での見られ方</div><div class="val">障害対応・原因調査・改善提案・顧客折衝・レビュー経験あり</div></div>
+    </div>
+    <p class="lead rv" style="margin-top:20px">同じ経験でも、<strong>どう切り出して伝えるか</strong>で、評価は変わります。</p>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ============ 教育3：求人だけでは分からない ============ -->
+<section class="block">
+  <div class="wrap">
+    <div class="rv">
+      <span class="kicker">Why · 03</span>
+      <h2>求人票に「年収700万円」と書かれていても、<br><span class="hl">自分がその年収で評価されるとは限りません</span></h2>
+      <p class="lead">企業が見ているのは、単なる使用技術ではありません。面接で見られているのは、こうしたポイントです。</p>
+    </div>
+    <div class="list-card rv" style="margin-top:18px">
+      <ul>
+        <li><span class="b">?</span>どんな課題を解決したか</li>
+        <li><span class="b">?</span>どの範囲まで任されていたか</li>
+        <li><span class="b">?</span>どんな改善をしたか</li>
+        <li><span class="b">?</span>なぜその技術を選んだのか</li>
+        <li><span class="b">?</span>面接で再現性を説明できるか</li>
+      </ul>
+    </div>
+    <div class="pull rv">
+      <p class="q">スキルが<span class="hl">「ある」</span>ことと、スキルを<span class="hl">「評価される形で伝えられる」</span>ことは、違います。</p>
+    </div>
+    <p class="lead rv">ここで損をしやすいのが、転職活動に慣れていない<strong>2社目・3社目のエンジニア</strong>です。</p>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ============ 共通敵 ============ -->
+<section class="block">
+  <div class="wrap">
+    <div class="rv">
+      <span class="kicker">Pitfall</span>
+      <h2>一番もったいないのは<br>「求人を見ただけ」で<br><span class="hl">転職活動を始めてしまう</span>こと</h2>
+      <p class="lead">大手転職サイトやスカウトサービスで求人を見ること自体は、悪くありません。ただし求人を見るだけでは、<strong>自分の経験をどう武器にするか</strong>までは分かりません。</p>
+    </div>
+    <figure class="rv">
+      <img src="assets/figure_04_common_enemy.svg" alt="「求人を見るだけ」は年収レンジを見る・応募する・面接でうまく伝わらない、で終わりがち。一方「評価される準備」は経験整理・企業別対策・模擬面接・強みを伝える、につながる比較図。" loading="lazy">
+      <figcaption>「見るだけ」と「準備する」の違い（イメージ図）</figcaption>
+    </figure>
+    <p class="lead rv" style="margin-top:20px">本当に年収アップを狙うなら、必要なのは求人探しだけではなく、次のような準備です。</p>
+    <div class="list-card rv" style="margin-top:16px">
+      <ul>
+        <li><span class="b">1</span>経験の棚卸し</li>
+        <li><span class="b">2</span>職務経歴書の見せ方</li>
+        <li><span class="b">3</span>面接での伝え方</li>
+        <li><span class="b">4</span>企業ごとの評価ポイントの把握</li>
+        <li><span class="b">5</span>年収交渉を見据えた選考対策</li>
+      </ul>
+    </div>
+    <p class="lead rv" style="margin-top:18px">「スキルがあるから大丈夫」と準備不足のまま面接に進むと、<strong>本来より低く評価される可能性</strong>があります。</p>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ============ 解決策 ============ -->
+<section class="block">
+  <div class="wrap">
+    <div class="rv">
+      <span class="kicker">Solution</span>
+      <h2>だから、<span class="hl">経験者向けエージェント</span><br>という選択肢があります</h2>
+      <p class="lead">実務経験2年以上のエンジニアは、ポテンシャルではなく「これまで何をして、次に何ができるか」を見られます。だからこそ、求人紹介だけでなく、<strong>経験の棚卸し・面接対策・企業別の選考準備まで支援してくれる</strong>エージェントを選ぶ意味があります。</p>
+    </div>
+    <figure class="rv">
+      <img src="assets/figure_03_value_communication_flow.svg" alt="経験→棚卸し→職務経歴書→面接での伝達→企業評価→年収オファー、という経験を評価に変える流れの図。" loading="lazy">
+      <figcaption>経験を「評価」に変える流れ（イメージ図）</figcaption>
+    </figure>
+    <div class="pull rv">
+      <p class="q">大切なのは求人を紹介してもらうことではなく、<br>あなたの経験を<span class="hl">企業に評価される形で伝えられる状態</span>にすることです。</p>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ============ なぜTechGO ============ -->
+<section class="block">
+  <div class="wrap">
+    <div class="rv">
+      <span class="kicker">Why TechGO</span>
+      <h2>年収アップを目指す経験者エンジニアに、<br><span class="brand"><b>TechGO</b></span> が相性の良い理由</h2>
+      <p class="lead"><span class="brand"><b>TechGO</b></span> は、実務経験2年以上のITエンジニア向け転職エージェント。単に求人を紹介するだけでなく、<strong>「評価されるための準備」まで支援してくれる</strong>点が特徴です。</p>
+    </div>
+    <div class="reasons rv">
+      <div class="reason">
+        <div class="no">Reason 01</div>
+        <h3>模擬面接は回数制限なし</h3>
+        <p>面接で自分の実績を伝えるのが苦手なエンジニアにとって、模擬面接を何度でもできる点は大きなメリットです。</p>
+      </div>
+      <div class="reason">
+        <div class="no">Reason 02</div>
+        <h3>ITコンサル・メガベンチャーなど高年収求人に強い</h3>
+        <p>コンサル業界・ハイクラス求人に強いMyVisionと同じ運営会社。課題解決力を活かして高年収を目指せるポジションと相性があります。</p>
+      </div>
+      <div class="reason">
+        <div class="no">Reason 03</div>
+        <h3>土曜1Day選考会で忙しい人も進めやすい</h3>
+        <p>平日は業務が忙しいエンジニアでも、土曜日に選考を進められる機会があります。</p>
+      </div>
+      <div class="reason">
+        <div class="no">Reason 04</div>
+        <h3>エンジニア目線で対策しやすい</h3>
+        <p>IT業界を理解したアドバイザーが支援。技術職ならではの経験や強みを整理しやすい点も魅力です。</p>
+      </div>
+    </div>
+    <p class="lead rv" style="margin-top:20px">市場価値を知るだけでなく、企業に正しく評価される準備までしたいなら、<strong>TechGOは相性の良い選択肢</strong>です。</p>
+  </div>
+</section>
+
+<!-- ============ 最終CTA ============ -->
+<section class="final">
+  <div class="wrap rv">
+    <span class="kicker">Free Consultation</span>
+    <h2>転職するかどうかは、<br><span class="hl">市場価値を知ってから</span>決めても<br>遅くありません</h2>
+    <p class="lead">今の会社だけを基準に、自分の価値を決めてしまうのはもったいないかもしれません。まずは、あなたの経験が転職市場でどう評価されるのかを確認してみませんか？</p>
+    <a class="cta cta-link" href="#" data-cmp="techgo-article-final">TechGOで無料相談する<span class="arw">→</span></a>
+    <p class="cta-note"><b>相談は無料。</b>「話を聞いてから考える」でも大丈夫です。</p>
+
+    <a class="promo cta-link" href="#" data-cmp="techgo-article-banner-final" style="margin-top:26px;text-align:left">
+      <div class="promo-top">
+        <span class="promo-brand">TechGO</span>
+        <span class="promo-tag">年収アップを目指す経験者へ</span>
+        <span class="promo-tag free">無料</span>
+      </div>
+      <p class="promo-h">今の年収は、<b>「今の会社」基準</b>かもしれません。<br>本当の市場価値を、プロと確認。</p>
+      <div class="promo-stats">
+        <div><b>高年収</b><span>ITコンサル・メガベンチャー求人</span></div>
+        <div><b>土曜<small>OK</small></b><span>1Day選考会あり</span></div>
+        <div><b>¥0</b><span>相談は無料</span></div>
+      </div>
+      <span class="promo-cta">無料でTechGOに相談する<span class="arw">→</span></span>
+      <p class="promo-fine">※本ページはプロモーションを含みます。サービス内容は変更される場合があります。</p>
+    </a>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer>
+  <div class="wrap">
+    <p class="pr">本ページはプロモーションを含みます。掲載しているサービスの利用は無料です。年収や評価の変化を保証するものではなく、結果には個人差があります。</p>
+    <div class="src">
+      <b>出典・参考</b>
+      厚生労働省 job tag「プログラマー」「システムエンジニア（Webサービス開発）」／
+      <a href="https://shigoto.mhlw.go.jp/" target="_blank" rel="noopener">https://shigoto.mhlw.go.jp/</a><br>
+      ※年収レンジは職務領域・調査時点により異なります。掲載数値は上記公表資料に基づく参考値です。
+    </div>
+    <p class="copy">記事内の図表はイメージ図を含みます。サービス内容・実施の有無は変更される場合があるため、最新情報は公式サイトでご確認ください。</p>
+  </div>
+</footer>
+
+<!-- ============ STICKY CTA ============ -->
+<div id="sticky">
+  <div class="in">
+    <div class="txt">
+      <b>まずは市場価値を確認</b>
+      <small>相談は無料 / 転職は後から決めてOK</small>
+    </div>
+    <a class="cta cta-link" href="#" data-cmp="techgo-article-sticky">無料相談<span class="arw">→</span></a>
+  </div>
+</div>
+
+<script>
+/* === アフィリエイトリンク（差し替え箇所） === */
+var TECHGO_AFFILIATE_URL = "https://px.a8.net/svt/ejp?a8mat=4B3N6R+DTQFA2+5B0Y+HV7V6";
+
+document.querySelectorAll('.cta-link').forEach(function(a){
+  // href に A8 アフィリンクを設定（JSが無効でも成果報酬Cookieが発火するフォールバック）
+  a.setAttribute('href', TECHGO_AFFILIATE_URL);
+  a.setAttribute('target','_blank');
+  a.setAttribute('rel','noopener sponsored');
+  a.addEventListener('click', function(e){
+    e.preventDefault();
+    var cmp = a.getAttribute('data-cmp') || 'techgo-article';
+    // ① Google広告：クリックイベント（どのCTA経由か識別）
+    gtag('event','click',{event_category:'affiliate',event_label:'techgo',event_campaign:cmp});
+    // ② Google広告：コンバージョン計測（新規タブで遷移するため現ページは生存＝ビーコン確実送信）
+    gtag('event','conversion',{'send_to':'AW-18146496318/iVstCNOmp6scEL6e9sxD'});
+    // ③ 成果報酬（A8.net）：アフィリンクを新規タブで開きクリックCookieを発火
+    window.open(TECHGO_AFFILIATE_URL,'_blank','noopener');
+  });
+});
+
+/* === reading progress === */
+var prog = document.getElementById('progress');
+function onScroll(){
+  var h = document.documentElement;
+  var sc = h.scrollTop || document.body.scrollTop;
+  var max = h.scrollHeight - h.clientHeight;
+  prog.style.width = (max>0 ? (sc/max*100) : 0) + '%';
+}
+window.addEventListener('scroll', onScroll, {passive:true});
+onScroll();
+
+/* === sticky cta：ヒーローを過ぎたら表示、最終CTAでは隠す === */
+var sticky = document.getElementById('sticky');
+var finalSec = document.querySelector('.final');
+window.addEventListener('scroll', function(){
+  var y = window.scrollY;
+  var finalTop = finalSec.getBoundingClientRect().top;
+  if(y > 520 && finalTop > window.innerHeight){ sticky.classList.add('show'); }
+  else { sticky.classList.remove('show'); }
+}, {passive:true});
+
+/* === reveal on scroll === */
+var io = new IntersectionObserver(function(entries){
+  entries.forEach(function(en){ if(en.isIntersecting){ en.target.classList.add('in'); io.unobserve(en.target); } });
+},{threshold:.12, rootMargin:'0px 0px -8% 0px'});
+document.querySelectorAll('.rv').forEach(function(el){ io.observe(el); });
+</script>
+</body>
+</html>

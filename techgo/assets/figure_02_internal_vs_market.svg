@@ -1,0 +1,23 @@
+<svg width="900" height="500" viewBox="0 0 900 500" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+<title id="title">社内評価と市場評価のズレ</title>
+<desc id="desc">保守運用経験が転職市場では複数の評価要素として見られる例</desc>
+<rect width="900" height="500" rx="28" fill="#0B1220"/>
+<text x="56" y="68" fill="#FFFFFF" font-family="Arial, sans-serif" font-size="30" font-weight="700">社内評価と市場評価は一致しないことがある</text>
+<rect x="70" y="125" width="320" height="260" rx="22" fill="#151E2F" stroke="#344055"/>
+<text x="105" y="170" fill="#A7B0C0" font-family="Arial" font-size="16">社内での見られ方</text>
+<text x="105" y="222" fill="#FFFFFF" font-family="Arial" font-size="34" font-weight="700">保守運用</text>
+<text x="105" y="260" fill="#A7B0C0" font-family="Arial" font-size="17">「いつもの担当業務」</text>
+<text x="105" y="295" fill="#A7B0C0" font-family="Arial" font-size="17">「現状維持」</text>
+<text x="105" y="330" fill="#A7B0C0" font-family="Arial" font-size="17">「評価テーブル内で昇給」</text>
+<path d="M420 250 C455 250 455 250 490 250" stroke="#2DD4BF" stroke-width="5" fill="none" marker-end="url(#arrow)"/>
+<defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="7" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L0,6 L8,3 z" fill="#2DD4BF"/></marker></defs>
+<rect x="510" y="125" width="320" height="260" rx="22" fill="#12261F" stroke="#2DD4BF"/>
+<text x="545" y="170" fill="#A7B0C0" font-family="Arial" font-size="16">転職市場での見られ方</text>
+<g fill="#FFFFFF" font-family="Arial" font-size="19" font-weight="600">
+<text x="545" y="218">障害対応・原因調査</text>
+<text x="545" y="258">改善提案・効率化</text>
+<text x="545" y="298">顧客折衝・要件整理</text>
+<text x="545" y="338">レビュー・育成経験</text>
+</g>
+<text x="70" y="438" fill="#A7B0C0" font-family="Arial" font-size="16">同じ経験でも、切り出し方・伝え方で評価されるポイントは変わる。</text>
+</svg>

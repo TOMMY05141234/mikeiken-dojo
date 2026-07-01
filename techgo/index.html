@@ -86,6 +86,15 @@ strong{color:var(--ink);font-weight:700}
 .hero .to{font-family:var(--en);font-size:12px;font-weight:600;letter-spacing:.04em;color:var(--muted);
   display:flex;align-items:center;gap:9px;margin-bottom:16px}
 .hero .to::before{content:"";width:22px;height:1px;background:var(--teal)}
+.hero-target{display:inline-flex;align-items:center;gap:10px;margin-bottom:18px;
+  background:linear-gradient(135deg,rgba(45,212,191,.16),rgba(45,212,191,.04));
+  border:1px solid var(--teal-glow);border-radius:100px;padding:7px 16px 7px 8px;
+  box-shadow:0 0 0 4px rgba(45,212,191,.05)}
+.hero-target .ic{width:28px;height:28px;border-radius:9px;background:rgba(45,212,191,.18);
+  display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.hero-target .ic svg{width:16px;height:16px}
+.hero-target span{font-size:12.5px;font-weight:700;color:var(--ink);letter-spacing:.02em;line-height:1.3}
+.hero-target b{color:var(--teal);font-weight:800;font-size:13.5px}
 .hero h1{font-size:clamp(27px,8vw,36px);line-height:1.4;font-weight:900;letter-spacing:-.015em;margin-bottom:20px}
 .hero h1 .accent{
   background:linear-gradient(120deg,#EAF0FF 0%,var(--teal) 55%,#7FE8DA 100%);
@@ -249,9 +258,13 @@ footer .copy{border-top:1px solid var(--line);padding-top:16px;color:var(--muted
 <!-- ============ HERO ============ -->
 <header class="hero block">
   <div class="wrap">
-    <p class="to">実務経験2年以上のITエンジニアへ</p>
-    <h1>「もっと評価される会社が<br><span class="accent">あるかもしれない</span>」<br>と思ったことは、ありませんか？</h1>
-    <p class="sub">今の会社で評価されていないからといって、あなたの<strong>市場価値が低いとは限りません</strong>。同じ経験でも、会社・職種・評価制度・伝え方によって、年収レンジは大きく変わります。</p>
+    <div class="hero-target">
+      <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#2DD4BF" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m8 8-4 4 4 4"/><path d="m16 8 4 4-4 4"/><path d="m13 5-2 14"/></svg></span>
+      <span>実務経験2年以上の<b>ITエンジニア</b>向け</span>
+    </div>
+    <h1>その開発経験、<br><span class="accent">今の会社の評価がすべて</span>だと<br>思っていませんか？</h1>
+    <p class="sub"><strong>「もっと評価される会社があるかもしれない」</strong>——そう感じたことのあるエンジニアへ。今の会社で評価されていないからといって、あなたの<strong>市場価値が低いとは限りません</strong>。</p>
+    <p class="sub">同じ開発・運用の経験でも、会社・職種・評価制度・伝え方によって、<strong>年収レンジは大きく変わります</strong>。</p>
     <p class="sub">転職するかどうかを決める前に、まずは「自分の経験が、転職市場でどう評価されるのか」を確かめてみませんか？</p>
     <a class="cta cta-link" href="#" data-cmp="techgo-article-fv">無料で市場価値を相談する<span class="arw">→</span></a>
     <p class="cta-note"><b>相談は無料。</b>転職するかどうかは、相談してから決めれば大丈夫です。</p>

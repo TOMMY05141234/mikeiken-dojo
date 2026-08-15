@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 480" role="img" aria-labelledby="f4t f4d" preserveAspectRatio="xMidYMid meet">
+<title id="f4t">上流へ向かう3つのルート</title>
+<desc id="f4d">現在地であるSES・二次請け／三次請け・客先常駐（主な担当は製造・テスト・運用・詳細設計）から、3つの行き先へ矢印が分岐する概念図。ルート1は元請け・一次請けSIer（要件定義・基本設計を自社で持つ）、ルート2は事業会社の社内SE・情シス（発注する側に回る／情報通信業から非情報通信業への転職では61パーセントが転職後に賃金上昇・回答数23件で傾向として参照）、ルート3はITコンサルタント（job tagの平均年収889万円・職業分類ベース）。下部に同一職種区分内の転職で賃金が上昇した人の割合を示す棒グラフ。企画立案・プロジェクト管理67パーセント、設計・構築54パーセント、運用・保守47パーセント。</desc>
+<style>
+  .ttl{font:700 17px 'Hiragino Kaku Gothic ProN','Noto Sans JP','Yu Gothic',sans-serif;fill:#EAF0FF}
+  .mut{font:400 13px 'Hiragino Kaku Gothic ProN','Noto Sans JP','Yu Gothic',sans-serif;fill:#8D97AB}
+  .nowh{font:700 14px 'Hiragino Kaku Gothic ProN','Noto Sans JP','Yu Gothic',sans-serif;fill:#EAF0FF}
+  .nows{font:400 13px 'Hiragino Kaku Gothic ProN','Noto Sans JP','Yu Gothic',sans-serif;fill:#9AA0A6}
+  .chip{font:700 12.5px 'Hiragino Kaku Gothic ProN','Noto Sans JP','Yu Gothic',sans-serif;fill:#9FC0FF}
+  .cth{font:700 15px 'Hiragino Kaku Gothic ProN','Noto Sans JP','Yu Gothic',sans-serif;fill:#EAF0FF}
+  .cts{font:400 13px 'Hiragino Kaku Gothic ProN','Noto Sans JP','Yu Gothic',sans-serif;fill:#A7B0C0}
+  .bdg{font:700 12.5px 'Hiragino Kaku Gothic ProN','Noto Sans JP','Yu Gothic',sans-serif;fill:#2DD4BF}
+  .lb{font:500 13px 'Hiragino Kaku Gothic ProN','Noto Sans JP','Yu Gothic',sans-serif;fill:#C9D2E2}
+  .vl{font:700 13px 'Hiragino Kaku Gothic ProN','Noto Sans JP','Yu Gothic',sans-serif;fill:#C9D2E2}
+</style>
+<rect width="600" height="480" fill="#0B1220"/>
+
+<text class="ttl" x="20" y="32">上流へ向かう3つのルート</text>
+
+<!-- current position -->
+<rect x="20" y="90" width="170" height="130" rx="14" fill="#1A2436" stroke="#6B7688" stroke-width="1.4"/>
+<text class="mut" x="36" y="112">現在地</text>
+<text class="nowh" x="36" y="138">SES・二次請け</text>
+<text class="nowh" x="36" y="158">三次請け・客先常駐</text>
+<line x1="36" y1="170" x2="174" y2="170" stroke="#3A455C"/>
+<text class="nows" x="36" y="192">主な担当：製造・テスト</text>
+<text class="nows" x="36" y="210">運用・詳細設計</text>
+
+<!-- arrows -->
+<g fill="none" stroke="#5B8DEF" stroke-width="1.8">
+  <path d="M190,145 C218,145 218,118 240,118"/>
+  <path d="M190,155 C218,155 218,222 240,222"/>
+  <path d="M190,165 C218,165 218,336 240,336"/>
+</g>
+<g fill="#5B8DEF">
+  <polygon points="248,118 238,113 238,123"/>
+  <polygon points="248,222 238,217 238,227"/>
+  <polygon points="248,336 238,331 238,341"/>
+</g>
+
+<!-- route 1 -->
+<rect x="250" y="76" width="330" height="84" rx="14" fill="#151E2F" stroke="#3E5B93" stroke-width="1.4"/>
+<rect x="264" y="86" width="60" height="21" rx="10" fill="#21304F"/>
+<text class="chip" x="294" y="101" text-anchor="middle">ルート1</text>
+<text class="cth" x="264" y="128">元請け・一次請けSIer</text>
+<text class="cts" x="264" y="149">要件定義・基本設計を自社で持つ</text>
+
+<!-- route 2 -->
+<rect x="250" y="170" width="330" height="104" rx="14" fill="#151E2F" stroke="#3E5B93" stroke-width="1.4"/>
+<rect x="264" y="180" width="60" height="21" rx="10" fill="#21304F"/>
+<text class="chip" x="294" y="195" text-anchor="middle">ルート2</text>
+<text class="cth" x="264" y="222">事業会社の社内SE・情シス</text>
+<text class="cts" x="264" y="243">発注する側に回る</text>
+<rect x="264" y="250" width="302" height="20" rx="6" fill="#0F2A2B" stroke="#2DD4BF" stroke-opacity=".4"/>
+<text class="bdg" x="272" y="264">転職後に賃金上昇 61%（n=23・傾向として）</text>
+
+<!-- route 3 -->
+<rect x="250" y="284" width="330" height="104" rx="14" fill="#151E2F" stroke="#3E5B93" stroke-width="1.4"/>
+<rect x="264" y="294" width="60" height="21" rx="10" fill="#21304F"/>
+<text class="chip" x="294" y="309" text-anchor="middle">ルート3</text>
+<text class="cth" x="264" y="336">ITコンサルタント</text>
+<text class="cts" x="264" y="357">「何を作るか」を決める</text>
+<rect x="264" y="364" width="302" height="20" rx="6" fill="#0F2A2B" stroke="#2DD4BF" stroke-opacity=".4"/>
+<text class="bdg" x="272" y="378">job tag 平均年収 889万円（職業分類ベース）</text>
+
+<!-- bottom band -->
+<line x1="20" y1="398" x2="580" y2="398" stroke="#28324A"/>
+<text class="mut" x="20" y="416">転職後に賃金が上昇した人の割合（同一職種区分内の転職）</text>
+<g>
+  <text class="lb" x="150" y="436" text-anchor="end">企画立案・PM</text>
+  <rect x="160" y="427" width="228" height="11" rx="5.5" fill="#5B8DEF"/>
+  <text class="vl" x="396" y="436">67%</text>
+
+  <text class="lb" x="150" y="454" text-anchor="end">設計・構築</text>
+  <rect x="160" y="445" width="184" height="11" rx="5.5" fill="#8B94A6"/>
+  <text class="vl" x="352" y="454">54%</text>
+
+  <text class="lb" x="150" y="472" text-anchor="end">運用・保守</text>
+  <rect x="160" y="463" width="160" height="11" rx="5.5" fill="#6B7688"/>
+  <text class="vl" x="328" y="472">47%</text>
+</g>
+</svg>

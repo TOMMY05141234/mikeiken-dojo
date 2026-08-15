@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 248" role="img" aria-labelledby="f4t f4d" font-family="'Noto Sans JP','Hiragino Sans','Yu Gothic',sans-serif">
+<title id="f4t">同じIT系の職業でも、求人倍率にこれだけ差がある</title>
+<desc id="f4d">厚生労働省job tagの有効求人倍率（令和6年度）。プログラマーは0.94倍、データサイエンティストは11.88倍。ハローワークに登録された求人が母集団。</desc>
+
+<rect width="360" height="248" fill="#0B1220"/>
+
+<text x="16" y="28" fill="#EAF0FF" font-size="15" font-weight="700">同じIT系の職業でも、</text>
+<text x="16" y="48" fill="#EAF0FF" font-size="15" font-weight="700">求人倍率にこれだけ差がある</text>
+<text x="344" y="84" text-anchor="end" fill="#7F8AA3" font-size="12">単位：倍</text>
+
+<!-- gridlines -->
+<g stroke="#1B2438" stroke-width="1">
+<line x1="40" y1="70" x2="40" y2="182"/>
+<line x1="81.7" y1="70" x2="81.7" y2="182"/>
+<line x1="123.3" y1="70" x2="123.3" y2="182"/>
+<line x1="165" y1="70" x2="165" y2="182"/>
+<line x1="206.7" y1="70" x2="206.7" y2="182"/>
+<line x1="248.3" y1="70" x2="248.3" y2="182"/>
+<line x1="290" y1="70" x2="290" y2="182"/>
+</g>
+
+<text x="16" y="84" fill="#C9D3E6" font-size="12">プログラマー</text>
+<rect x="40" y="90" width="19.6" height="22" rx="4" fill="#7F8AA3"/>
+<text x="65" y="105" fill="#A7B0C0" font-size="12" font-weight="700">0.94倍</text>
+
+<text x="16" y="140" fill="#5EEAD4" font-size="12" font-weight="700">データサイエンティスト</text>
+<rect x="40" y="146" width="247.5" height="22" rx="4" fill="#2DD4BF"/>
+<text x="292" y="161" fill="#5EEAD4" font-size="12" font-weight="700">11.88倍</text>
+
+<line x1="40" y1="182" x2="290" y2="182" stroke="#344055" stroke-width="1.5"/>
+<g fill="#7F8AA3" font-size="12" text-anchor="middle">
+<text x="40" y="196">0</text><text x="81.7" y="196">2</text><text x="123.3" y="196">4</text><text x="165" y="196">6</text><text x="206.7" y="196">8</text><text x="248.3" y="196">10</text><text x="290" y="196">12</text>
+</g>
+
+<text x="16" y="220" fill="#7F8AA3" font-size="12">※ハローワークに登録された求人が母集団。</text>
+<text x="16" y="238" fill="#7F8AA3" font-size="12">転職市場全体を示すものではありません。</text>
+</svg>

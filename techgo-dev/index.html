@@ -1,0 +1,1109 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Java・Python 実務経験2年以上の方へ｜その言語、どこで書いてきたかで評価は変わります</title>
+
+<!-- Google tag (gtag.js) — GA4 + Google Ads -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-5M4MMZRL4E"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-5M4MMZRL4E');          // GA4
+  gtag('config', 'AW-18146496318');        // Google 広告
+</script>
+
+<meta name="description" content="同じJava・同じPythonでも、どの業界で・どの工程で書くかによって身につく経験も提示される条件も変わります。厚生労働省job tagのITSSレベル別年収レンジ、paizaの言語調査、国税庁の業種別平均給与をもとに、言語経験の「評価のされ方」を整理しました。">
+<meta name="robots" content="index,follow">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --bg:#0B1220; --bg-2:#0E1626; --panel:#151E2F; --panel-2:#1A2436;
+  --line:rgba(167,176,192,.14); --line-strong:rgba(167,176,192,.24);
+  --teal:#2DD4BF; --teal-2:#14B8A6; --teal-glow:rgba(45,212,191,.35);
+  --amber:#F5C451; --amber-glow:rgba(245,196,81,.32);
+  --ink:#EAF0FF; --muted:#A7B0C0; --muted-2:#7F8AA3;
+  --radius:18px; --radius-lg:24px;
+  --maxw:600px;
+  --jp:'Noto Sans JP',system-ui,sans-serif; --en:'Inter',var(--jp);
+  --mono:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{
+  background:var(--bg); color:var(--ink); font-family:var(--jp);
+  font-size:16px; line-height:1.85; letter-spacing:.01em;
+  -webkit-font-smoothing:antialiased; overflow-x:hidden;
+}
+body::before{
+  content:""; position:fixed; inset:0; z-index:-1; pointer-events:none;
+  background:
+    radial-gradient(60% 40% at 50% -5%, rgba(45,212,191,.12), transparent 70%),
+    radial-gradient(46% 26% at 8% 34%, rgba(245,196,81,.06), transparent 70%),
+    radial-gradient(50% 30% at 100% 20%, rgba(56,120,255,.08), transparent 70%),
+    var(--bg);
+}
+img,svg{display:block;max-width:100%;height:auto}
+a{color:inherit}
+
+/* reading progress */
+#progress{position:fixed;top:0;left:0;height:3px;width:0;z-index:1000;
+  background:linear-gradient(90deg,var(--teal),var(--amber));box-shadow:0 0 12px var(--teal-glow)}
+
+/* layout */
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 20px}
+section{position:relative}
+.block{padding:44px 0}
+.divider{height:1px;background:linear-gradient(90deg,transparent,var(--line-strong),transparent);margin:0 20px}
+
+/* kicker — code comment motif */
+.kicker{display:inline-flex;align-items:center;gap:8px;font-family:var(--mono);
+  font-size:11.5px;font-weight:700;letter-spacing:.1em;
+  color:var(--amber);border:1px solid var(--amber-glow);border-radius:8px;
+  padding:5px 12px;background:rgba(245,196,81,.06);margin-bottom:18px}
+.kicker::before{content:"//";color:var(--amber);opacity:.75;font-weight:700}
+
+/* headings */
+h2{font-size:clamp(22px,6.2vw,27px);line-height:1.42;font-weight:900;letter-spacing:-.01em;margin-bottom:16px}
+h2 .hl{color:var(--teal)}
+h2 .hla{color:var(--amber)}
+h3{font-size:18px;font-weight:700;line-height:1.5;margin-bottom:10px}
+.lead{color:var(--muted);font-size:15.5px;line-height:1.95}
+.lead + .lead{margin-top:14px}
+strong{color:var(--ink);font-weight:700}
+.mark{background:linear-gradient(transparent 62%, rgba(45,212,191,.28) 62%);color:var(--ink);font-weight:700;padding:0 1px}
+.mark-a{background:linear-gradient(transparent 62%, rgba(245,196,81,.30) 62%);color:var(--ink);font-weight:700;padding:0 1px}
+.ul{text-decoration:underline;text-decoration-color:var(--teal);text-underline-offset:4px;text-decoration-thickness:2px}
+.num{font-family:var(--mono);font-weight:700;color:var(--teal);letter-spacing:0}
+
+/* language chip */
+.lang-chip{display:inline-flex;align-items:center;font-family:var(--mono);font-size:12.5px;font-weight:700;
+  color:var(--amber);background:rgba(245,196,81,.10);border:1px solid var(--amber-glow);
+  border-radius:7px;padding:1px 8px;letter-spacing:.02em;line-height:1.7;vertical-align:2%}
+
+/* ============ HERO ============ */
+.hero{padding:34px 0 40px;text-align:left}
+.hero-target{display:inline-flex;align-items:center;gap:10px;margin-bottom:18px;
+  background:linear-gradient(135deg,rgba(45,212,191,.16),rgba(45,212,191,.04));
+  border:1px solid var(--teal-glow);border-radius:100px;padding:7px 16px 7px 8px;
+  box-shadow:0 0 0 4px rgba(45,212,191,.05)}
+.hero-target .ic{width:28px;height:28px;border-radius:9px;background:rgba(45,212,191,.18);
+  display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.hero-target .ic svg{width:16px;height:16px}
+.hero-target span{font-size:12.5px;font-weight:700;color:var(--ink);letter-spacing:.02em;line-height:1.3}
+.hero-target b{color:var(--teal);font-weight:800;font-size:13.5px}
+.hero .codeline{font-family:var(--mono);font-size:12px;color:var(--muted-2);letter-spacing:.02em;margin-bottom:12px}
+.hero .codeline b{color:var(--amber);font-weight:700}
+.hero h1{font-size:clamp(27px,8vw,36px);line-height:1.4;font-weight:900;letter-spacing:-.015em;margin-bottom:20px}
+.hero h1 .accent{
+  background:linear-gradient(120deg,#EAF0FF 0%,var(--teal) 55%,#7FE8DA 100%);
+  -webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;
+}
+.hero .sub{color:var(--muted);font-size:15.5px;line-height:1.95;margin-bottom:22px}
+.hero .sub strong{color:var(--ink)}
+
+/* CTA button */
+.cta{display:block;text-align:center;background:linear-gradient(135deg,var(--teal),var(--teal-2));
+  color:#052019;font-family:var(--jp);font-weight:900;font-size:16.5px;letter-spacing:.01em;
+  padding:19px 20px;border-radius:16px;text-decoration:none;position:relative;overflow:hidden;
+  box-shadow:0 10px 30px -8px var(--teal-glow),inset 0 1px 0 rgba(255,255,255,.35);
+  transition:transform .18s ease,box-shadow .18s ease;min-height:44px;line-height:1.45}
+.cta:active{transform:scale(.985)}
+.cta:hover{box-shadow:0 16px 40px -8px var(--teal-glow),inset 0 1px 0 rgba(255,255,255,.45)}
+.cta .arw{display:inline-block;margin-left:8px;transition:transform .2s}
+.cta:hover .arw{transform:translateX(4px)}
+.cta::after{content:"";position:absolute;top:0;left:-120%;width:60%;height:100%;
+  background:linear-gradient(100deg,transparent,rgba(255,255,255,.5),transparent);
+  transform:skewX(-18deg);animation:sheen 4.5s ease-in-out infinite}
+@keyframes sheen{0%,60%{left:-120%}80%,100%{left:150%}}
+.cta-note{text-align:center;color:var(--muted-2);font-size:12.5px;margin-top:12px;line-height:1.7}
+.cta-note b{color:var(--teal);font-weight:700}
+
+.trust{display:flex;flex-wrap:wrap;gap:8px;margin-top:24px}
+.trust span{font-size:11.5px;color:var(--muted);background:var(--panel);border:1px solid var(--line);
+  border-radius:100px;padding:6px 12px;display:inline-flex;align-items:center;gap:6px}
+.trust span::before{content:"";width:5px;height:5px;border-radius:50%;background:var(--teal)}
+
+/* ============ A8 BANNER ============ */
+.a8banner{text-align:center;margin:6px 0}
+.a8banner .lab{display:inline-flex;align-items:center;gap:10px;font-size:13px;font-weight:700;
+  color:var(--teal);letter-spacing:.02em;margin-bottom:14px}
+.a8banner .lab::before,.a8banner .lab::after{content:"";width:20px;height:1px;background:var(--teal-glow)}
+.a8banner a.bnr-link{display:inline-block;line-height:0;border-radius:14px;overflow:hidden;
+  border:1px solid var(--teal-glow);max-width:100%;
+  box-shadow:0 22px 55px -26px rgba(45,212,191,.5),inset 0 1px 0 rgba(255,255,255,.06);
+  transition:transform .2s ease,box-shadow .2s ease}
+.a8banner a.bnr-link:hover{transform:translateY(-2px);box-shadow:0 30px 65px -24px rgba(45,212,191,.6)}
+.a8banner a.bnr-link:active{transform:scale(.99)}
+.a8banner img.bnr{width:300px;max-width:100%;height:auto;display:block}
+.a8banner .fine{font-size:11px;color:var(--muted-2);margin-top:11px;line-height:1.6}
+
+/* ============ TOC ============ */
+.toc{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius-lg);padding:24px 20px}
+.toc .cap{font-family:var(--mono);font-size:11.5px;font-weight:700;letter-spacing:.08em;color:var(--amber);margin-bottom:16px}
+.toc ol{list-style:none;counter-reset:t;display:flex;flex-direction:column;gap:2px}
+.toc li{counter-increment:t;display:flex;gap:14px;align-items:flex-start;padding:11px 0;border-bottom:1px dashed var(--line)}
+.toc li:last-child{border-bottom:0;padding-bottom:0}
+.toc li::before{content:counter(t,decimal-leading-zero);font-family:var(--mono);font-weight:700;font-size:12px;
+  color:var(--teal);background:rgba(45,212,191,.08);border:1px solid var(--teal-glow);
+  min-width:30px;height:30px;border-radius:9px;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px}
+.toc li span{font-size:14.5px;line-height:1.6;color:var(--ink);font-weight:500}
+
+/* ============ CHECKLIST ============ */
+.checks{display:flex;flex-direction:column;gap:10px;margin-top:6px}
+.check{display:flex;gap:13px;align-items:flex-start;background:var(--panel);
+  border:1px solid var(--line);border-radius:14px;padding:15px 16px;transition:border-color .2s,transform .2s}
+.check:hover{border-color:var(--teal-glow);transform:translateX(3px)}
+.check .ic{flex-shrink:0;width:24px;height:24px;border-radius:7px;background:rgba(45,212,191,.1);
+  border:1px solid var(--teal-glow);display:flex;align-items:center;justify-content:center;margin-top:1px}
+.check .ic svg{width:13px;height:13px}
+.check p{font-size:14.5px;line-height:1.6;color:var(--ink)}
+.checks-foot{margin-top:18px;background:linear-gradient(135deg,rgba(45,212,191,.08),rgba(45,212,191,.02));
+  border:1px solid var(--teal-glow);border-radius:14px;padding:16px 18px;font-size:14.5px;line-height:1.85;color:var(--ink)}
+
+/* ============ FIGURE ============ */
+figure{margin:22px 0 8px;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;
+  background:#0B1220;box-shadow:0 20px 50px -30px rgba(0,0,0,.9)}
+figure img{width:100%;height:auto}
+figcaption{font-size:11.5px;color:var(--muted-2);padding:12px 16px;border-top:1px solid var(--line);
+  display:flex;align-items:flex-start;gap:8px;line-height:1.65}
+figcaption::before{content:"SOURCE";font-family:var(--mono);font-size:9px;font-weight:700;letter-spacing:.08em;
+  color:var(--teal);border:1px solid var(--teal-glow);border-radius:4px;padding:2px 6px;flex-shrink:0;margin-top:3px}
+
+/* ============ CODE CARD（ターミナル風） ============ */
+.codecard{background:#0E1626;border:1px solid var(--line-strong);border-radius:14px;overflow:hidden;margin:20px 0}
+.codecard .bar{display:flex;align-items:center;gap:7px;padding:9px 14px;background:rgba(167,176,192,.05);
+  border-bottom:1px solid var(--line)}
+.codecard .bar i{width:9px;height:9px;border-radius:50%;background:#39445A;display:block}
+.codecard .bar i:nth-child(1){background:#4A5570}
+.codecard .bar span{font-family:var(--mono);font-size:11px;color:var(--muted-2);margin-left:6px;letter-spacing:.02em}
+.codecard .body{padding:16px;font-family:var(--mono);font-size:12.5px;line-height:2;color:var(--muted)}
+.codecard .body b{color:var(--ink);font-weight:700}
+.codecard .body .k{color:var(--amber)}
+
+/* ============ 比較カード（S6） ============ */
+.compare{display:flex;flex-direction:column;gap:12px;margin-top:18px}
+.compare-row{background:var(--panel);border:1px solid var(--line);border-radius:14px;overflow:hidden}
+.compare-row .lab{font-family:var(--mono);font-size:11.5px;font-weight:700;letter-spacing:.04em;padding:10px 16px;
+  display:flex;align-items:center;gap:8px}
+.compare-row.a{border-left:3px solid #5D6880}
+.compare-row.b{border-left:3px solid var(--teal)}
+.compare-row.a .lab{color:var(--muted);background:rgba(167,176,192,.06)}
+.compare-row.b .lab{color:var(--teal);background:rgba(45,212,191,.07)}
+.compare-row .lab::before{content:"";width:6px;height:6px;border-radius:50%;background:currentColor;flex-shrink:0}
+.compare-row .val{padding:14px 16px}
+.compare-row .val ul{list-style:none;display:flex;flex-direction:column;gap:9px}
+.compare-row .val li{position:relative;padding-left:16px;font-size:14.5px;line-height:1.7;color:var(--ink)}
+.compare-row .val li::before{content:"›";position:absolute;left:0;top:0;font-family:var(--mono);color:var(--muted-2);font-weight:700}
+.compare-row.b .val li::before{color:var(--teal)}
+.compare-row .val li.gain{margin-top:4px;padding-top:11px;border-top:1px dashed var(--line);color:var(--muted);font-size:13.5px}
+.compare-row .val li.gain::before{content:"+"}
+.compare-row .val li.gain b{color:var(--ink)}
+.compare-arrow{text-align:center;color:var(--muted-2);font-family:var(--mono);font-size:15px;line-height:1}
+.sub-h{font-family:var(--mono);font-size:13px;font-weight:700;color:var(--amber);letter-spacing:.04em;
+  margin-top:26px;display:flex;align-items:center;gap:10px}
+.sub-h::after{content:"";flex:1;height:1px;background:var(--line)}
+
+/* pull quote */
+.pull{position:relative;background:linear-gradient(135deg,var(--panel-2),var(--panel));
+  border:1px solid var(--line-strong);border-radius:var(--radius);padding:24px 22px;margin:22px 0;
+  border-left:3px solid var(--teal)}
+.pull .q{font-size:17.5px;font-weight:700;line-height:1.75;color:var(--ink)}
+.pull .q .hl{color:var(--teal)}
+.pull.amber{border-left-color:var(--amber)}
+.pull.amber .q .hl{color:var(--amber)}
+
+/* highlight box */
+.hlbox{background:linear-gradient(135deg,rgba(45,212,191,.12),rgba(45,212,191,.03));
+  border:1px solid var(--teal-glow);border-radius:var(--radius);padding:22px 20px;margin:22px 0;
+  font-size:16.5px;font-weight:700;line-height:1.75;color:var(--ink);text-align:center}
+.hlbox .hl{color:var(--teal)}
+.hlbox small{display:block;font-size:13px;font-weight:400;color:var(--muted);margin-top:8px;line-height:1.8}
+
+/* bullet list card */
+.list-card{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);padding:20px;margin-top:16px}
+.list-card ul,.list-card ol{list-style:none;display:flex;flex-direction:column;gap:12px}
+.list-card li{display:flex;gap:12px;align-items:flex-start;font-size:14.5px;line-height:1.7;color:var(--ink)}
+.list-card li .b{flex-shrink:0;width:20px;height:20px;border-radius:6px;background:rgba(45,212,191,.1);
+  border:1px solid var(--teal-glow);color:var(--teal);display:flex;align-items:center;justify-content:center;
+  font-family:var(--mono);font-size:11px;font-weight:800;margin-top:3px}
+.list-card li .b.q{background:rgba(245,196,81,.1);border-color:var(--amber-glow);color:var(--amber)}
+.list-card .cap{font-family:var(--mono);font-size:11px;font-weight:700;letter-spacing:.06em;color:var(--muted-2);margin-bottom:14px}
+
+/* data rows (ランキング / 数値) */
+.datalist{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);padding:18px 20px;margin-top:16px}
+.datalist .cap{font-family:var(--mono);font-size:11.5px;font-weight:700;letter-spacing:.05em;color:var(--amber);margin-bottom:12px}
+.datalist ol{list-style:none;counter-reset:d;display:flex;flex-direction:column;gap:9px}
+.datalist li{counter-increment:d;display:flex;flex-wrap:wrap;align-items:baseline;gap:4px 10px;font-size:14.5px;line-height:1.6}
+.datalist li::before{content:counter(d);font-family:var(--mono);font-size:11px;font-weight:700;color:var(--muted-2);
+  min-width:16px}
+.datalist ol.plain li::before{content:"›";color:var(--muted-2)}
+.datalist li .nm{flex:1 1 auto;min-width:0;font-family:var(--mono);font-weight:600;color:var(--ink);letter-spacing:.01em}
+.datalist li .vl{flex:0 0 auto;margin-left:auto;font-family:var(--mono);font-weight:700;color:var(--teal);white-space:nowrap}
+.datalist li.on .nm,.datalist li.on .vl{color:var(--amber)}
+.datalist .note{font-size:12px;color:var(--muted-2);margin-top:12px;line-height:1.7}
+
+/* reasons */
+.reasons{display:flex;flex-direction:column;gap:12px;margin-top:8px}
+.reason{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);padding:20px;
+  position:relative;overflow:hidden;transition:border-color .2s,transform .2s}
+.reason:hover{border-color:var(--teal-glow);transform:translateY(-2px)}
+.reason .no{font-family:var(--mono);font-size:11.5px;font-weight:700;letter-spacing:.06em;color:var(--amber);margin-bottom:8px;display:flex;align-items:center;gap:8px}
+.reason .no::after{content:"";flex:1;height:1px;background:var(--line)}
+.reason h3{font-size:16.5px;margin-bottom:8px}
+.reason p{font-size:14px;line-height:1.8;color:var(--muted)}
+
+/* form demo（S12） */
+.formdemo{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);padding:20px;margin-top:16px}
+.formdemo .top{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:14px}
+.formdemo .top .t{font-family:var(--mono);font-size:11.5px;font-weight:700;color:var(--muted-2);letter-spacing:.05em}
+.formdemo .badge{font-family:var(--mono);font-size:11px;font-weight:700;color:var(--amber);
+  background:rgba(245,196,81,.1);border:1px solid var(--amber-glow);border-radius:100px;padding:3px 11px;flex-shrink:0}
+.formdemo .fields{display:flex;flex-direction:column;gap:9px}
+.formdemo .f{display:flex;align-items:center;gap:11px;background:var(--bg-2);border:1px solid var(--line);
+  border-radius:11px;padding:12px 14px}
+.formdemo .f i{font-family:var(--mono);font-size:10.5px;font-style:normal;font-weight:700;color:var(--teal);
+  background:rgba(45,212,191,.1);border-radius:5px;min-width:22px;height:20px;display:flex;align-items:center;justify-content:center}
+.formdemo .f span{font-size:14px;color:var(--ink);font-weight:500}
+.formdemo .foot{font-size:12.5px;color:var(--muted-2);margin-top:13px;line-height:1.7;text-align:center}
+
+/* FAQ */
+.faq{display:flex;flex-direction:column;gap:10px;margin-top:8px}
+.faq details{background:var(--panel);border:1px solid var(--line);border-radius:14px;overflow:hidden}
+.faq details[open]{border-color:var(--teal-glow)}
+.faq summary{list-style:none;cursor:pointer;padding:16px 46px 16px 16px;position:relative;
+  font-size:14.5px;font-weight:700;line-height:1.6;color:var(--ink);min-height:44px}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::before{content:"Q";font-family:var(--mono);font-size:11px;font-weight:800;color:var(--amber);margin-right:9px}
+.faq summary::after{content:"";position:absolute;right:18px;top:50%;width:9px;height:9px;
+  border-right:2px solid var(--teal);border-bottom:2px solid var(--teal);
+  transform:translateY(-70%) rotate(45deg);transition:transform .25s}
+.faq details[open] summary::after{transform:translateY(-20%) rotate(-135deg)}
+.faq .ans{padding:0 16px 18px;font-size:14px;line-height:1.9;color:var(--muted);border-top:1px solid var(--line);padding-top:14px}
+.faq .ans strong{color:var(--ink)}
+
+/* final cta band */
+.final{background:
+    radial-gradient(80% 60% at 50% 0%,rgba(45,212,191,.14),transparent 70%),
+    linear-gradient(180deg,var(--panel),var(--bg-2));
+  border-top:1px solid var(--teal-glow);border-bottom:1px solid var(--line);padding:48px 0 52px;text-align:center}
+.final h2{margin-bottom:16px}
+.final .lead{margin-bottom:26px}
+
+/* footer */
+footer{padding:30px 0 120px;color:var(--muted-2);font-size:12px;line-height:1.9}
+footer .pr{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:12px 14px;margin-bottom:18px;color:var(--muted)}
+footer .src{margin-bottom:16px}
+footer .src b{color:var(--muted);display:block;margin-bottom:8px;font-size:11px;letter-spacing:.06em;font-family:var(--mono)}
+footer .src ol{list-style:none;counter-reset:s;display:flex;flex-direction:column;gap:9px}
+footer .src li{counter-increment:s;padding-left:22px;position:relative;line-height:1.75}
+footer .src li::before{content:"[" counter(s) "]";position:absolute;left:0;top:0;font-family:var(--mono);color:var(--muted-2)}
+footer .src a{color:var(--muted);text-decoration:underline;text-underline-offset:2px;word-break:break-all}
+footer .copy{border-top:1px solid var(--line);padding-top:16px;margin-top:18px;color:var(--muted-2)}
+
+/* sticky bottom cta */
+#sticky{position:fixed;left:0;right:0;bottom:0;z-index:900;transform:translateY(120%);
+  transition:transform .35s cubic-bezier(.2,.8,.2,1);
+  background:rgba(11,18,32,.88);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);
+  border-top:1px solid var(--teal-glow);padding:11px 16px calc(11px + env(safe-area-inset-bottom))}
+#sticky.show{transform:translateY(0)}
+#sticky .in{max-width:var(--maxw);margin:0 auto;display:flex;align-items:center;gap:12px}
+#sticky .txt{flex:1;min-width:0}
+#sticky .txt b{display:block;font-size:12.5px;color:var(--ink);font-weight:700;line-height:1.4}
+#sticky .txt small{font-size:10.5px;color:var(--muted);font-family:var(--mono)}
+#sticky .cta{margin:0;flex-shrink:0;padding:13px 20px;font-size:14px;border-radius:12px;min-width:140px;min-height:44px}
+#sticky .cta::after{display:none}
+
+/* reveal animation */
+.rv{opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s cubic-bezier(.2,.8,.2,1)}
+.rv.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .rv{opacity:1;transform:none;transition:none}
+  .cta::after{animation:none}
+  *{transition:none!important}
+}
+
+@media (min-width:640px){
+  body{font-size:16.5px}
+  .hero{padding:52px 0 48px}
+}
+</style>
+</head>
+<body>
+
+<div id="progress"></div>
+
+<!-- ==================== S0：ファーストビュー ==================== -->
+<header class="hero block">
+  <div class="wrap">
+    <div class="hero-target">
+      <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#2DD4BF" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m8 8-4 4 4 4"/><path d="m16 8 4 4-4 4"/><path d="m13 5-2 14"/></svg></span>
+      <span><b>Java・Python</b> 実務経験2年以上のエンジニアへ</span>
+    </div>
+    <p class="codeline">// <b>experience</b> != <b>evaluation</b></p>
+    <h1>その言語、<br><span class="accent">どこで書いてきたか</span>で<br>評価は変わります</h1>
+    <p class="sub"><strong>同じJava、同じPythonでも、</strong>どの業界で・どの工程で・どんなプロダクトのために書くかによって、身につく経験も、提示される条件も変わります。</p>
+    <p class="sub">「自分のスキルが低いのかもしれない」と考える前に、その経験が<strong>“別の現場ではどう評価されるのか”</strong>を確かめてみませんか。</p>
+    <a class="cta cta-link" href="#" data-pos="fv">言語経験の活かし方を無料で相談する<span class="arw">→</span></a>
+    <p class="cta-note"><b>相談は無料。</b>転職するかどうかは、聞いてから決めて大丈夫です。</p>
+    <div class="trust">
+      <span>実務経験2年以上が対象</span>
+      <span>模擬面接 回数制限なし</span>
+      <span>土曜1Day選考会</span>
+    </div>
+  </div>
+</header>
+
+<!-- ==================== A8バナー（FV直下） ==================== -->
+<section class="block" style="padding-top:6px">
+  <div class="wrap rv">
+    <div class="a8banner">
+      <span class="lab">その言語経験、どこで評価される？</span>
+      <a class="bnr-link" data-pos="banner_fv" href="https://px.a8.net/svt/ejp?a8mat=4B3N6R+DTQFA2+5B0Y+I0KRL"
+         rel="nofollow sponsored noopener" target="_blank">
+        <img class="bnr" border="0" width="300" height="250" alt="TechGO｜経験2年以上のITエンジニア向け転職エージェント 無料相談" src="https://www27.a8.net/svt/bgt?aid=260510499836&wid=002&eno=01&mid=s00000024757003026000&mc=1"></a><img border="0" width="1" height="1" src="https://www10.a8.net/0.gif?a8mat=4B3N6R+DTQFA2+5B0Y+I0KRL" alt="" aria-hidden="true">
+      <p class="fine">本ページはプロモーションを含みます／相談は無料</p>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ==================== S1：このページで分かること ==================== -->
+<section class="block">
+  <div class="wrap rv">
+    <div class="toc">
+      <p class="cap">/* このページで分かること */</p>
+      <ol>
+        <li><span>同じスキルレベルでも、職務領域によって年収レンジに差がある理由（公的データ）</span></li>
+        <li><span>求人数が多い言語＝提示年収が高い言語、ではないこと</span></li>
+        <li><span>同じJava・同じPythonでも、現場によって経験の中身がどう分かれるか</span></li>
+        <li><span>なぜ「求人票を眺めるだけ」では自分の選択肢が分からないのか</span></li>
+        <li><span>言語経験を次の現場につなげたいときに、エージェントをどう使うか</span></li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== S2：共感 ==================== -->
+<section class="block">
+  <div class="wrap">
+    <div class="rv">
+      <span class="kicker">Check List</span>
+      <h2>「Java歴◯年」と書けるのに、<br>何ができる人なのか<span class="hl">説明しづらい</span>——<br>そんな感覚はありませんか？</h2>
+    </div>
+    <div class="checks rv">
+      <div class="check"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#2DD4BF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span><p>経験年数は増えているのに、書けるコードの幅が広がった実感がない</p></div>
+      <div class="check"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#2DD4BF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span><p>詳細設計書どおりに実装して、テストのエビデンスを取る時間が長い</p></div>
+      <div class="check"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#2DD4BF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span><p>フレームワークもバージョンも、自分が入る前から決まっていた</p></div>
+      <div class="check"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#2DD4BF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span><p>「Pythonができる人」として便利に頼まれるが、事業の中心は触っていない</p></div>
+      <div class="check"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#2DD4BF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span><p>同じ言語を使っている同世代と、年収の話をして少し焦った</p></div>
+      <div class="check"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#2DD4BF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span><p>転職したいのか、今の現場が合わないだけなのか、自分でも切り分けられない</p></div>
+    </div>
+    <p class="checks-foot rv">ひとつでも当てはまるなら、それは<strong>スキル不足のサインではなく、経験の“置き場所”のサイン</strong>かもしれません。</p>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ==================== S3：共通の敵 ==================== -->
+<section class="block">
+  <div class="wrap">
+    <div class="rv">
+      <span class="kicker">Structure</span>
+      <h2>保守と改修が中心なのは、<br>あなたの<span class="hl">実力の問題ではない</span>かもしれません</h2>
+      <p class="lead">経済産業省が2018年に公表した「DXレポート」は、日本企業のITの課題として「2025年の崖」を提起しました。その中身は要するに、<strong>既存システムを維持し続けることに、資金と人材が大きく割かれている</strong>という指摘です。</p>
+      <p class="lead">そして、この状況は今も続いています。</p>
+      <p class="lead">野村総合研究所が2025年9月に実施した「IT活用実態調査（2025年）」では、情報システムにレガシーシステムが存在すると回答した企業は、<strong>アプリケーションで<span class="num">47.3%</span>、基盤で<span class="num">48.2%</span></strong>。つまり、<span class="mark">約半数の企業に、まだ古いシステムが残っている</span>ということです。</p>
+      <p class="lead">さらにIPA「DX動向2025」では、<strong>DXを推進する人材の“量”が不足していると回答した日本企業は<span class="num">85.1%</span></strong>。米国の<span class="num">23.8%</span>、ドイツの<span class="num">44.6%</span>と比べても高い水準でした。</p>
+    </div>
+
+    <div class="codecard rv">
+      <div class="bar"><i></i><i></i><i></i><span>japan_it_field.log</span></div>
+      <div class="body">
+        <span class="k">&gt;</span> 古いシステムは<b>残っている</b><br>
+        <span class="k">&gt;</span> 維持する人手は<b>必要</b><br>
+        <span class="k">&gt;</span> 新しいことをやる人は<b>足りていない</b>
+      </div>
+    </div>
+
+    <div class="rv">
+      <p class="lead">この3つが同時に起きているのが、いまの日本のIT現場です。</p>
+      <p class="lead">あなたが保守と改修に時間を使っているのは、能力が低いからではなく、<strong>そういう配分になっている場所に、いま立っているから</strong>という可能性があります。</p>
+    </div>
+
+    <div class="hlbox rv">
+      そしてこれは、裏を返せばこうも言えます。<br>
+      <span class="hl">立つ場所を変えれば、同じ言語経験でも<br>見える景色が変わる可能性がある。</span>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ==================== S4：教育1（核） ==================== -->
+<section class="block">
+  <div class="wrap">
+    <div class="rv">
+      <span class="kicker">Data · 01</span>
+      <h2>同じスキルレベルでも、<br><span class="hl">職務領域が違えば</span>年収レンジが違います</h2>
+      <p class="lead">厚生労働省の職業情報提供サイト「job tag」には、ITスキル標準（ITSS）のレベル別に、年収レンジが掲載されています。</p>
+      <p class="lead">同じ「レベル3」でも、職務領域によってこう違います。</p>
+    </div>
+
+    <figure class="rv">
+      <img src="assets/fig1_itss_level_range.svg" loading="lazy" width="360" height="464"
+        alt="厚生労働省job tagによるITSSレベル別の年収レンジ比較。レベル3では、設計・構築が450万円から700万円、ソフトウェア開発スペシャリストが450万円から695万円、データサイエンティストが600万円から900万円。同じレベル3でも上限に200万円の開きがある。レベル5以上では、設計・構築が600万円から950万円、ソフトウェア開発スペシャリストが550万円から866万円、データサイエンティストが700万円から1,100万円。">
+      <figcaption>厚生労働省 職業情報提供サイト（job tag）「システムエンジニア（Webサービス開発）」「プログラマー」「データサイエンティスト」／厚生労働省が2023年度に実施した委託調査結果に基づく。金額は第一四分位〜第三四分位の範囲。</figcaption>
+    </figure>
+
+    <div class="datalist rv">
+      <p class="cap">ITSS レベル3 ／ 年収レンジ</p>
+      <ol class="plain">
+        <li><span class="nm">設計・構築</span><span class="vl">450〜700万円</span></li>
+        <li><span class="nm">ソフトウェア開発スペシャリスト</span><span class="vl">450〜695万円</span></li>
+        <li><span class="nm">データサイエンティスト</span><span class="vl">600〜900万円</span></li>
+      </ol>
+      <p class="note">厚生労働省 job tag。厚生労働省が2023年度に実施した委託調査結果に基づく数値。</p>
+    </div>
+
+    <div class="rv">
+      <p class="lead" style="margin-top:18px">注目してほしいのは、<strong class="ul">これが「スキルレベルが違う人」の比較ではない</strong>ということです。同じレベル3として整理されている人たちの間でも、どの領域の仕事をしているかによって、示されている年収の範囲が変わっています。</p>
+      <p class="lead">レベル5以上まで見ると、この差はさらに広がります。</p>
+    </div>
+
+    <div class="datalist rv">
+      <p class="cap">ITSS レベル5以上 ／ 年収レンジ</p>
+      <ol class="plain">
+        <li><span class="nm">設計・構築</span><span class="vl">600〜950万円</span></li>
+        <li><span class="nm">データサイエンティスト</span><span class="vl">700〜1,100万円</span></li>
+      </ol>
+      <p class="note">厚生労働省 job tag。同上。</p>
+    </div>
+
+    <div class="hlbox rv">
+      <span class="hl">同じ努力量でも、<br>乗っている土俵で上限が変わる。</span>
+      <small>これは公的なデータからも読み取れる構造です。</small>
+    </div>
+
+    <div class="rv">
+      <p class="lead">もちろん、これは「データ分析の仕事に移れば年収が上がる」という意味ではありません。そんな単純な話ではありませんし、必ずそうなる保証もありません。</p>
+      <p class="lead">ただ、<span class="mark">自分がいまどの土俵にいるのかを知らないまま、「自分のスキルが低いのだろう」と結論づけてしまうのは、もったいない</span>——そう言えるだけの材料は、公開データの中にあります。</p>
+    </div>
+
+    <div class="rv" style="margin-top:28px">
+      <a class="cta cta-link" href="#" data-pos="mid1">自分の言語経験がどう評価されるか無料で聞いてみる<span class="arw">→</span></a>
+      <p class="cta-note">実務経験2年以上のITエンジニアが対象です。</p>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ==================== S5：教育2 ==================== -->
+<section class="block">
+  <div class="wrap">
+    <div class="rv">
+      <span class="kicker">Data · 02</span>
+      <h2>年収を決めているのは、<br><span class="hla">「言語の名前」ではありません</span></h2>
+      <p class="lead">「<span class="lang-chip">Java</span>だから年収が上がらない」「<span class="lang-chip">Python</span>なら上がる」——そういう話ではない、というデータもあります。</p>
+      <p class="lead">paizaが公表した「プログラミング言語に関する調査（2025年版）」では、同社の求人9,280件をもとに、2つのランキングが示されています。</p>
+    </div>
+
+    <figure class="rv">
+      <img src="assets/fig2_demand_vs_offer.svg" loading="lazy" width="360" height="480"
+        alt="paizaの調査による2つのランキング比較。企業ニーズ（求人に占める割合）はJavaScriptが14.4パーセント、Javaが13.9パーセント、PHPが11.0パーセント。一方、平均提示年収はGoが723万円、TypeScriptが714万円、Rubyが689万円。上位に並ぶ言語の顔ぶれが一致していないことを示す図。">
+      <figcaption>paiza株式会社「プログラミング言語に関する調査（2025年版）」（2025年12月22日公表）。同社求人9,280件をもとに集計。提示年収は求人記載の年収レンジの中央値ベース。同社プラットフォーム上の求人が母集団であり、転職市場全体を示すものではありません。</figcaption>
+    </figure>
+
+    <div class="datalist rv">
+      <p class="cap">企業ニーズ（求人に占める割合）</p>
+      <ol>
+        <li><span class="nm">JavaScript</span><span class="vl">14.4%</span></li>
+        <li class="on"><span class="nm">Java</span><span class="vl">13.9%</span></li>
+        <li><span class="nm">PHP</span><span class="vl">11.0%</span></li>
+      </ol>
+    </div>
+
+    <div class="datalist rv">
+      <p class="cap">平均提示年収</p>
+      <ol>
+        <li><span class="nm">Go</span><span class="vl">723万円</span></li>
+        <li><span class="nm">TypeScript</span><span class="vl">714万円</span></li>
+        <li><span class="nm">Ruby</span><span class="vl">689万円</span></li>
+      </ol>
+      <p class="note">paiza株式会社「プログラミング言語に関する調査（2025年版）」。同社求人9,280件をもとに集計。</p>
+    </div>
+
+    <div class="rv">
+      <p class="lead" style="margin-top:18px">Javaは、求人数の割合で見れば上位に入る言語です。つまり<span class="mark-a">「選べる椅子の数」で言えば、Javaエンジニアはかなり恵まれた立場にいます。</span></p>
+      <p class="lead">一方で、提示年収の上位に並んでいるのは別の言語でした。ここから読み取れるのは、「言語ごとに価値が決まっている」ということではなく、<strong>その言語が“いま、どんな事業領域で使われているか”が条件に効いている</strong>ということです。</p>
+      <p class="lead">事実、業種によって給与の水準そのものが違います。</p>
+      <p class="lead">国税庁「令和6年分 民間給与実態統計調査」によると、1年を通じて勤務した給与所得者の平均給与は<span class="num">478万円</span>。これに対して——</p>
+    </div>
+
+    <figure class="rv">
+      <img src="assets/fig3_industry_salary.svg" loading="lazy" width="360" height="320"
+        alt="国税庁の民間給与実態統計調査による業種別の平均給与。給与所得者全体は478万円、情報通信業は659.5万円、金融業・保険業は702.3万円。全体平均478万円の位置に破線の基準線を引いた縦棒グラフ。">
+      <figcaption>国税庁「令和6年分 民間給与実態統計調査」（2025年9月公表）。1年を通じて勤務した給与所得者の平均給与。</figcaption>
+    </figure>
+
+    <div class="datalist rv">
+      <p class="cap">業種別 平均給与</p>
+      <ol class="plain">
+        <li><span class="nm">情報通信業</span><span class="vl">659万5,000円</span></li>
+        <li><span class="nm">金融業・保険業</span><span class="vl">702万3,000円</span></li>
+      </ol>
+      <p class="note">国税庁「令和6年分 民間給与実態統計調査」。1年を通じて勤務した給与所得者の平均給与。</p>
+    </div>
+
+    <div class="pull rv">
+      <p class="q"><span class="hl">同じスキルでも、どの産業の中で働くか</span>によって、そもそもの水準が違う。</p>
+    </div>
+
+    <div class="hlbox rv">
+      言語を変えるより先に、<br>
+      <span class="hl">同じ言語のまま、使われる場所を変える</span><br>
+      という選択肢があります。
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ==================== S6：教育3 ==================== -->
+<section class="block">
+  <div class="wrap">
+    <div class="rv">
+      <span class="kicker">Branch</span>
+      <h2>同じJava・同じPythonでも、<br>経験の中身は<span class="hl">ここまで分かれます</span></h2>
+      <p class="lead">ここまでの話を、もう少し具体的にします。</p>
+    </div>
+
+    <p class="sub-h rv"><span class="lang-chip">Java</span>&nbsp;の場合</p>
+    <div class="compare rv">
+      <div class="compare-row a">
+        <div class="lab">A：すでに動いているものを、止めないための開発</div>
+        <div class="val">
+          <ul>
+            <li>既存の基幹系・業務系システムの改修と障害対応</li>
+            <li>フレームワーク、バージョン、設計方針は着任前から決まっている</li>
+            <li>詳細設計書に沿った実装と、テストエビデンスの作成が中心</li>
+            <li class="gain"><b>身につくもの：</b>既存仕様の読解力、影響範囲の見極め、障害対応の胆力</li>
+          </ul>
+        </div>
+      </div>
+      <div class="compare-arrow">/ /</div>
+      <div class="compare-row b">
+        <div class="lab">B：これから作るもの、作り替えるものの開発</div>
+        <div class="val">
+          <ul>
+            <li>レガシー刷新・マイクロサービス化・クラウド移行</li>
+            <li>技術選定やアーキテクチャの議論に参加する</li>
+            <li>事業側と要件を詰める場面がある</li>
+            <li class="gain"><b>身につくもの：</b>設計判断の理由を言語化する力、技術選定の経験、上流の視点</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="pull amber rv">
+      <p class="q"><span class="hl">どちらも価値のある仕事です。</span></p>
+    </div>
+
+    <div class="rv">
+      <p class="lead">ただし、<strong>転職市場で「次に何ができる人か」を判断するときに参照されやすいのはBの経験</strong>です。そしてAにいる人の多くが、実はB寄りの経験も部分的に持っています（後述）。</p>
+    </div>
+
+    <p class="sub-h rv"><span class="lang-chip">Python</span>&nbsp;の場合</p>
+    <div class="compare rv">
+      <div class="compare-row a">
+        <div class="lab">A：業務を回すためのPython</div>
+        <div class="val">
+          <ul>
+            <li>社内の定型作業の自動化、Excel連携、定期バッチ、簡易スクレイピング</li>
+            <li>「Pythonができる人」として便利に頼まれる</li>
+            <li>使うライブラリの範囲が固定されがち</li>
+          </ul>
+        </div>
+      </div>
+      <div class="compare-arrow">/ /</div>
+      <div class="compare-row b">
+        <div class="lab">B：プロダクトや意思決定を支えるPython</div>
+        <div class="val">
+          <ul>
+            <li>データ基盤の構築・整備、ETL、分析用パイプライン</li>
+            <li>機械学習モデルの実装・運用、MLOps</li>
+            <li>SaaSプロダクトのバックエンド、API開発</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="rv">
+      <p class="lead" style="margin-top:20px">同じ「Python 3年」でも、AとBでは職務経歴書に書ける内容がまったく変わります。</p>
+      <p class="lead">そして重要なのはここです。<strong>AにいるからBに行けない、という決まりはありません。</strong>Aで培った「業務理解」「泥臭いデータの扱い」「現場の要件を聞き取る力」は、Bの現場でも評価対象になります。</p>
+    </div>
+
+    <div class="hlbox rv">
+      問題は、<br><span class="hl">その経験が“B側の言葉”で書かれていないこと</span>です。
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ==================== S7：教育4 ==================== -->
+<section class="block">
+  <div class="wrap">
+    <div class="rv">
+      <span class="kicker">Data · 03</span>
+      <h2>経験が足りないのではなく、<br><span class="hl">足りている場所に立っていない</span>だけかもしれません</h2>
+      <p class="lead">需要は、IT業界の中で均等に分布していません。</p>
+      <p class="lead">経済産業省の委託調査「IT人材需給に関する調査」（2019年3月公表）では、IT需要の伸びが高位で推移した場合、<strong>2030年に先端IT人材は約<span class="num">54.5万人</span>不足する一方、従来型IT人材は約<span class="num">9.7万人</span>が余る</strong>という試算が示されています。IT人材全体では、2030年に<strong>最大で約<span class="num">79万人</span></strong>が不足するとされました。</p>
+      <p class="lead">厚生労働省の「job tag」に掲載されている有効求人倍率（令和6年度）を見ても、同じIT系の職業の中で数字が大きく違います。</p>
+    </div>
+
+    <figure class="rv">
+      <img src="assets/fig4_job_ratio_gap.svg" loading="lazy" width="360" height="248"
+        alt="厚生労働省job tagに掲載された有効求人倍率（令和6年度）の比較。プログラマーは0.94倍、データサイエンティストは11.88倍。ハローワークに登録された求人が母集団であることを注記した横棒グラフ。">
+      <figcaption>厚生労働省 職業情報提供サイト（job tag）「プログラマー」「データサイエンティスト」／有効求人倍率（令和6年度）。</figcaption>
+    </figure>
+
+    <div class="datalist rv">
+      <p class="cap">有効求人倍率（令和6年度）</p>
+      <ol class="plain">
+        <li><span class="nm">プログラマー</span><span class="vl">0.94倍</span></li>
+        <li><span class="nm">データサイエンティスト</span><span class="vl">11.88倍</span></li>
+      </ol>
+      <p class="note">ハローワークに登録された求人が母集団のため、転職市場全体を示すものではありません。それでも、同じIT職の中に需給の温度差があることは読み取れます。</p>
+    </div>
+
+    <div class="rv">
+      <p class="lead" style="margin-top:18px">さらに、企業側の動きも変わってきています。野村総合研究所「IT活用実態調査（2025年）」では、<strong>生成AIを導入済みの企業は<span class="num">57.7%</span>、検討中を含めると約<span class="num">76%</span></strong>。新しい技術を実際に扱える人を必要とする企業は、確実に増えています。</p>
+      <p class="lead">つまり——</p>
+    </div>
+
+    <div class="hlbox rv" style="padding:26px 20px">
+      <span class="hl">「経験が足りない」のではなく、<br>「経験が足りている場所に、<br>まだ立っていない」。</span>
+      <small>このズレは、努力量ではなく、情報量で埋められる部分があります。</small>
+    </div>
+
+    <div class="rv" style="margin-top:28px">
+      <a class="cta cta-link" href="#" data-pos="mid2">いまの経験でどんな現場を狙えるか無料で相談する<span class="arw">→</span></a>
+      <p class="cta-note">在職中のままで大丈夫です。</p>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ==================== S8：問題提起 ==================== -->
+<section class="block">
+  <div class="wrap">
+    <div class="rv">
+      <span class="kicker">Problem · 01</span>
+      <h2>求人票を読んでも、<br>「その現場で<span class="hl">何を書くことになるか</span>」<br>までは分かりません</h2>
+      <p class="lead">求人票には、たいてい同じようなことが書かれています。</p>
+    </div>
+
+    <div class="codecard rv">
+      <div class="bar"><i></i><i></i><i></i><span>job_posting.txt</span></div>
+      <div class="body">
+        <span class="k">-</span> Java／Spring Bootを用いた開発<br>
+        <span class="k">-</span> 実務経験3年以上<br>
+        <span class="k">-</span> 要件定義から携われます<br>
+        <span class="k">-</span> モダンな開発環境
+      </div>
+    </div>
+
+    <p class="lead rv">ここから読み取れないことのほうが、実は多いのです。</p>
+
+    <div class="list-card rv">
+      <p class="cap">// 求人票に書かれていないこと</p>
+      <ul>
+        <li><span class="b q">?</span>そのプロダクトは、会社の売上のどこに位置しているのか</li>
+        <li><span class="b q">?</span>開発は内製なのか、外部に出しているのか</li>
+        <li><span class="b q">?</span>技術選定の権限は、どのポジションにあるのか</li>
+        <li><span class="b q">?</span>「要件定義から」は、実際にはどこまでを指しているのか</li>
+        <li><span class="b q">?</span>レガシー刷新の途中なのか、すでに終わっているのか</li>
+      </ul>
+    </div>
+
+    <div class="pull rv">
+      <p class="q">同じ求人票でも、この中身によって、<span class="hl">3年後に自分が何を語れる人になるか</span>が変わります。</p>
+    </div>
+
+    <p class="lead rv">そしてこれは、求人票を何百件読んでも書いていません。<strong>その会社を見てきた人からしか、出てこない情報</strong>です。</p>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ==================== S9：問題提起2 ==================== -->
+<section class="block">
+  <div class="wrap">
+    <div class="rv">
+      <span class="kicker">Problem · 02</span>
+      <h2>経験者が損をする一番の原因は、<br>職務経歴書が<span class="hla">「使用言語の一覧」</span>に<br>なっていること</h2>
+      <p class="lead">転職に慣れていないエンジニアの職務経歴書は、こうなりがちです。</p>
+    </div>
+
+    <div class="codecard rv">
+      <div class="bar"><i></i><i></i><i></i><span>resume.md</span></div>
+      <div class="body">
+        <span class="k">【使用言語】</span> Java, SQL, Shell<br>
+        <span class="k">【担当工程】</span> 詳細設計、製造、単体テスト<br>
+        <span class="k">【業務内容】</span> 既存システムの保守・改修
+      </div>
+    </div>
+
+    <div class="rv">
+      <p class="lead">書いてあることは事実です。でもこれでは、<strong>あなたにしかない部分がひとつも書かれていません。</strong></p>
+      <p class="lead">同じ業務でも、掘ればこういう経験が出てくることがあります。</p>
+    </div>
+
+    <div class="list-card rv">
+      <p class="cap">// 掘り起こせる経験の例</p>
+      <ul>
+        <li><span class="b">✓</span>原因不明の障害を、ログとデータから追い切って再発防止まで持っていった</li>
+        <li><span class="b">✓</span>手作業だった運用をスクリプト化して、月◯時間の作業を削減した</li>
+        <li><span class="b">✓</span>仕様が固まっていない状態で、業務担当者に確認しながら実装を進めた</li>
+        <li><span class="b">✓</span>レビューで後輩の設計ミスを事前に止めた</li>
+        <li><span class="b">✓</span>古いライブラリのバージョンアップを、影響範囲を洗い出して実施した</li>
+      </ul>
+    </div>
+
+    <div class="hlbox rv">
+      社内では「当たり前の作業」でも、<br>
+      <span class="hl">別の会社では「課題を自分で定義して<br>解決した経験」として評価されます。</span>
+    </div>
+
+    <p class="lead rv">同じ経験が、書き方ひとつで別物になる。<strong>ここで差がつきます。</strong></p>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ==================== S10：解決 ==================== -->
+<section class="block">
+  <div class="wrap">
+    <div class="rv">
+      <span class="kicker">Solution</span>
+      <h2>必要なのは学び直しの前に、<br><span class="hl">「経験の棚卸し」</span>かもしれません</h2>
+      <p class="lead">「今の経験では通用しない気がする」と感じたとき、多くの人はまず勉強を始めようとします。</p>
+      <p class="lead">もちろん学習は無駄になりません。ただ、<strong>実務経験が2年以上あるエンジニアの場合、先に手をつけたほうが効果が出やすいのは、たいてい棚卸しのほう</strong>です。</p>
+      <p class="lead">なぜなら——</p>
+    </div>
+
+    <div class="list-card rv">
+      <ul>
+        <li><span class="b">1</span>すでに持っている経験は、<strong>今日から使える資産</strong>だから</li>
+        <li><span class="b">2</span>資格や新しい言語の学習は、<strong>評価につながるまでに時間がかかる</strong>から</li>
+        <li><span class="b">3</span>そもそも「何を学ぶべきか」は、<strong>狙う現場が決まってから</strong>でないと決められないから</li>
+      </ul>
+    </div>
+
+    <p class="lead rv" style="margin-top:20px">具体的にやることは、この4つです。</p>
+
+    <div class="list-card rv">
+      <p class="cap">// STEP 01 → 04</p>
+      <ul>
+        <li><span class="b">1</span><strong>経験の棚卸し</strong> ── 何を、どこまで、なぜやったのかを分解する</li>
+        <li><span class="b">2</span><strong>言い換え</strong> ── 社内の言葉を、市場で評価される言葉に置き換える</li>
+        <li><span class="b">3</span><strong>狙う現場の特定</strong> ── その経験が最も高く評価される領域を決める</li>
+        <li><span class="b">4</span><strong>選考対策</strong> ── 面接で再現性を説明できる状態にする</li>
+      </ul>
+    </div>
+
+    <div class="rv">
+      <p class="lead" style="margin-top:20px">これを一人でやるのが難しいのは、<span class="mark">自分の仕事を「当たり前」だと思っている人ほど、棚卸しができない</span>からです。</p>
+      <p class="lead">だからこそ、経験者向けのエージェントという選択肢があります。</p>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ==================== S11：サービス紹介 ==================== -->
+<section class="block">
+  <div class="wrap">
+    <div class="rv">
+      <span class="kicker">Why TechGO</span>
+      <h2>言語経験を次の現場につなげたい人に、<br><span class="hl">TechGO</span> が相性の良い理由</h2>
+      <p class="lead">TechGOは、<strong>実務経験2年以上のITエンジニア</strong>を対象とした転職エージェントです。求人を紹介するだけでなく、「評価される状態にする」ところまで支援している点が特徴です。</p>
+    </div>
+
+    <div class="reasons rv">
+      <div class="reason">
+        <div class="no">Reason 01</div>
+        <h3>IT業界に理解のあるアドバイザーが担当する</h3>
+        <p>エンジニアの経験は、業界の文脈を知らない人には翻訳が難しい領域です。TechGOでは、IT業界に理解のあるアドバイザーが、<strong>経験の棚卸し・職務経歴書の作成・面接対策</strong>まで支援します。「保守がメインで書けることがない」と思っている人ほど、話しながら整理する価値があります。</p>
+      </div>
+      <div class="reason">
+        <div class="no">Reason 02</div>
+        <h3>模擬面接は回数制限なし</h3>
+        <p>技術は書けるのに、面接で説明するのが苦手——というエンジニアは少なくありません。TechGOの模擬面接には<strong>回数制限がありません</strong>。納得できるまで、伝え方を作り込めます。</p>
+      </div>
+      <div class="reason">
+        <div class="no">Reason 03</div>
+        <h3>ITコンサル・ハイクラス転職に強いMyVisionと同じ運営会社</h3>
+        <p>TechGOを運営するMyVision, Inc.は、<strong>ITコンサル・ハイクラス転職の領域に強み</strong>を持つ会社です。言語経験を、より上流の役割やプロダクト側のポジションにつなげたい場合、この背景は選択肢の幅として効いてきます。</p>
+      </div>
+      <div class="reason">
+        <div class="no">Reason 04</div>
+        <h3>土曜1Day選考会がある</h3>
+        <p>在職中のエンジニアにとって、平日に選考時間を取るのは簡単ではありません。TechGOには<strong>土曜の1Day選考会</strong>があり、働きながらでも進めやすい設計になっています。</p>
+      </div>
+    </div>
+
+    <p class="lead rv" style="margin-top:22px"><strong>20代後半〜30代の支援実績が豊富</strong>な点も、「実務2〜8年、これからのキャリアを決めたい」という層と相性があります。</p>
+
+    <div class="rv" style="margin-top:28px">
+      <a class="cta cta-link" href="#" data-pos="mid3">TechGOに無料で相談してみる<span class="arw">→</span></a>
+      <p class="cta-note">入力は4項目・約30秒。</p>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ==================== S12：ハードル下げ ==================== -->
+<section class="block">
+  <div class="wrap">
+    <div class="rv">
+      <span class="kicker">Easy Start</span>
+      <h2>相談は、<span class="hl">たった4項目</span>の<br>入力から始まります</h2>
+      <p class="lead">入力するのは、これだけです。</p>
+    </div>
+
+    <div class="formdemo rv">
+      <div class="top">
+        <span class="t">// 入力フォーム</span>
+        <span class="badge">約30秒</span>
+      </div>
+      <div class="fields">
+        <div class="f"><i>01</i><span>お名前</span></div>
+        <div class="f"><i>02</i><span>生年月日</span></div>
+        <div class="f"><i>03</i><span>メールアドレス</span></div>
+        <div class="f"><i>04</i><span>電話番号</span></div>
+      </div>
+      <p class="foot"><strong>入力は4項目・約30秒。相談は無料です。</strong><br>※実際の入力はリンク先の申込フォームで行います。</p>
+    </div>
+
+    <div class="list-card rv">
+      <ul>
+        <li><span class="b">✓</span>在職中でも問題ありません</li>
+        <li><span class="b">✓</span>「転職するか決めていない」段階でも大丈夫です</li>
+        <li><span class="b">✓</span>まずは、いまの経験がどう評価されるかを聞くだけでも構いません</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ==================== S13：FAQ ==================== -->
+<section class="block">
+  <div class="wrap">
+    <div class="rv">
+      <span class="kicker">FAQ</span>
+      <h2>よくある質問</h2>
+    </div>
+    <div class="faq rv">
+      <details>
+        <summary>実務経験が2年ちょうどでも相談できますか？</summary>
+        <div class="ans">TechGOは実務経験2年以上のITエンジニアが対象です。2年でも対象に含まれます。むしろ、キャリアの方向性がこれから決まる時期だからこそ、「いまの経験がどう見られるか」を早めに確認しておく意味があります。</div>
+      </details>
+      <details>
+        <summary>資格もGitHubのポートフォリオもありません。不利になりませんか？</summary>
+        <div class="ans">実務経験者の選考で見られるのは、まず「業務で何を、どこまで、なぜやったか」です。資格や個人開発は加点材料になり得ますが、それが無いことが即マイナスになるわけではありません。むしろ多くの人は、<strong>業務経験の中に書ける材料を持っているのに、それを言語化できていない</strong>状態です。その整理を一緒にやるのがエージェントの役割です。</div>
+      </details>
+      <details>
+        <summary>保守・改修がメインで、設計や新規開発の経験がありません。</summary>
+        <div class="ans">そういう相談は珍しくありません。保守・改修の中にも、障害の原因追跡、影響範囲の見極め、既存仕様の読解、業務担当者との折衝など、評価対象になる経験は含まれています。「何もない」と思っているものを分解するところから始められます。</div>
+      </details>
+      <details>
+        <summary>在職中でも進められますか？</summary>
+        <div class="ans">可能です。TechGOには土曜の1Day選考会があり、平日に時間を取りにくい方でも進めやすい形があります。模擬面接も回数制限がないため、自分のペースで準備できます。</div>
+      </details>
+      <details>
+        <summary>相談したら、転職を強く勧められませんか？</summary>
+        <div class="ans">「転職するかどうかを決めてから相談しなければならない」ということはありません。まずは自分の経験がどう評価されるかを聞いて、そのうえで動くかどうかを決める、という使い方もできます。相談は無料です。</div>
+      </details>
+      <details>
+        <summary>Java（またはPython）以外の言語に変えないと年収は上がりませんか？</summary>
+        <div class="ans">そうとは限りません。このページで見てきたとおり、条件に効いているのは言語の名前そのものよりも、<strong>その言語がどんな事業領域・どんな開発フェーズで使われているか</strong>です。同じ言語のまま、使われる場所を変えるという選択肢もあります。どちらが自分に合うかは、経験を整理してから判断するほうが確実です。</div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== S14：最終CTA ==================== -->
+<section class="final">
+  <div class="wrap rv">
+    <span class="kicker">Free Consultation</span>
+    <h2>転職するかどうかは、<br><span class="hl">確かめてから決めても</span><br>遅くありません</h2>
+    <p class="lead">いまの現場での評価だけを基準に、自分の言語経験の価値を決めてしまうのは、もったいないかもしれません。</p>
+    <p class="lead">同じJava、同じPython。でも、それをどこで書くかによって、次の3年で身につくものは変わります。</p>
+    <p class="lead">まずは、あなたの経験が「別の現場ではどう評価されるのか」を、確かめるところから始めてみませんか。</p>
+    <a class="cta cta-link" href="#" data-pos="final">言語経験の活かし方を無料で相談する<span class="arw">→</span></a>
+    <p class="cta-note"><b>相談は無料・入力4項目。</b>在職中のままで大丈夫です。</p>
+
+    <div class="a8banner" style="margin-top:30px">
+      <span class="lab">まずは無料で相談してみる</span>
+      <a class="bnr-link" data-pos="banner_final" href="https://px.a8.net/svt/ejp?a8mat=4B3N6R+DTQFA2+5B0Y+I0KRL"
+         rel="nofollow sponsored noopener" target="_blank">
+        <img class="bnr" border="0" width="300" height="250" alt="TechGO｜経験2年以上のITエンジニア向け転職エージェント 無料相談" src="https://www27.a8.net/svt/bgt?aid=260510499836&wid=002&eno=01&mid=s00000024757003026000&mc=1"></a><img border="0" width="1" height="1" src="https://www10.a8.net/0.gif?a8mat=4B3N6R+DTQFA2+5B0Y+I0KRL" alt="" aria-hidden="true">
+      <p class="fine">本ページはプロモーションを含みます</p>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== FOOTER ==================== -->
+<footer>
+  <div class="wrap">
+    <p class="pr">本ページはプロモーションを含みます。掲載しているサービスの利用は無料です。年収や評価の変化を保証するものではなく、<strong>結果には個人差があります</strong>。</p>
+    <div class="src">
+      <b>出典・参考</b>
+      <ol>
+        <li>経済産業省「DXレポート ～ITシステム『2025年の崖』の克服とDXの本格的な展開～」（2018年9月公表）<br><a href="https://www.meti.go.jp/policy/it_policy/dx/20180907_03.pdf" target="_blank" rel="noopener">https://www.meti.go.jp/policy/it_policy/dx/20180907_03.pdf</a></li>
+        <li>野村総合研究所「IT活用実態調査（2025年）」（2025年9月調査／2025年11月公表）── レガシーシステムの存在（アプリケーション47.3%／基盤48.2%）、生成AI導入済み57.7%・検討中を含め約76%<br><a href="https://www.nri.com/jp/news/newsrelease/20251125_1.html" target="_blank" rel="noopener">https://www.nri.com/jp/news/newsrelease/20251125_1.html</a></li>
+        <li>IPA「DX動向2025」（2025年6月公表）── DX推進人材の「量」の不足（日本85.1%／米国23.8%／ドイツ44.6%）<br><a href="https://www.ipa.go.jp/digital/chousa/dx-trend/dx-trend-2025.html" target="_blank" rel="noopener">https://www.ipa.go.jp/digital/chousa/dx-trend/dx-trend-2025.html</a></li>
+        <li>厚生労働省 職業情報提供サイト（job tag）「システムエンジニア（Webサービス開発）」── 設計・構築のITSSレベル別年収レンジ<br><a href="https://shigoto.mhlw.go.jp/User/Occupation/Detail/314" target="_blank" rel="noopener">https://shigoto.mhlw.go.jp/User/Occupation/Detail/314</a></li>
+        <li>厚生労働省 職業情報提供サイト（job tag）「プログラマー」── ソフトウェア開発スペシャリストの年収レンジ、有効求人倍率（令和6年度）0.94倍<br><a href="https://shigoto.mhlw.go.jp/User/Occupation/Detail/313" target="_blank" rel="noopener">https://shigoto.mhlw.go.jp/User/Occupation/Detail/313</a></li>
+        <li>厚生労働省 職業情報提供サイト（job tag）「データサイエンティスト」── 年収レンジ、有効求人倍率（令和6年度）11.88倍<br><a href="https://shigoto.mhlw.go.jp/User/Occupation/Detail/323" target="_blank" rel="noopener">https://shigoto.mhlw.go.jp/User/Occupation/Detail/323</a></li>
+        <li>paiza株式会社「プログラミング言語に関する調査（2025年版）」（2025年12月22日公表）── 同社求人9,280件をもとに集計。同社プラットフォーム上の求人が母集団<br><a href="https://www.paiza.co.jp/news/20251222/251222_survey_programming_2025/" target="_blank" rel="noopener">https://www.paiza.co.jp/news/20251222/251222_survey_programming_2025/</a></li>
+        <li>国税庁「令和6年分 民間給与実態統計調査」（2025年9月公表）── 給与所得者全体478万円／情報通信業659万5,000円／金融業・保険業702万3,000円<br><a href="https://www.nta.go.jp/publication/statistics/kokuzeicho/minkan/gaiyou/2024.htm" target="_blank" rel="noopener">https://www.nta.go.jp/publication/statistics/kokuzeicho/minkan/gaiyou/2024.htm</a></li>
+        <li>経済産業省「IT人材需給に関する調査（概要）」（みずほ情報総研委託／2019年3月調査）── 2030年に先端IT人材 約54.5万人不足／従来型IT人材 約9.7万人余剰／IT人材全体 最大約79万人不足（高位シナリオ）<br><a href="https://www.meti.go.jp/policy/it_policy/jinzai/gaiyou.pdf" target="_blank" rel="noopener">https://www.meti.go.jp/policy/it_policy/jinzai/gaiyou.pdf</a></li>
+        <li>TechGO（運営：MyVision, Inc.）広告主提供情報および申込フォーム（2026年8月時点）── 対象要件、模擬面接の回数制限なし、土曜1Day選考会、入力4項目、相談無料<br><a href="https://form.tech-go.jp/promotions/delivery/3cafcf7a-0951-4c95-a9b2-31cb2befc7da" target="_blank" rel="nofollow sponsored noopener">https://form.tech-go.jp/promotions/delivery/3cafcf7a-0951-4c95-a9b2-31cb2befc7da</a></li>
+      </ol>
+    </div>
+    <p class="copy">※年収レンジ・平均給与・求人倍率は、いずれも上記の公表資料に基づく参考値です。調査時点・母集団・集計方法によって数値は異なります。サービス内容・実施の有無は変更される場合があるため、最新情報は公式サイトでご確認ください。</p>
+  </div>
+</footer>
+
+<!-- ==================== S15：固定バー ==================== -->
+<div id="sticky">
+  <div class="in">
+    <div class="txt">
+      <b>まずは経験の評価を確かめる</b>
+      <small>Java・Python経験2年以上の方へ</small>
+    </div>
+    <a class="cta cta-link" href="#" data-pos="sticky">無料相談<span class="arw">→</span></a>
+  </div>
+</div>
+
+<script>
+/* ===== 共通パラメータ ===== */
+var LP_ID   = "techgo-dev";
+var AGENT   = "techgo";
+var GA4_ID  = "G-5M4MMZRL4E";
+var ADS_CV  = "AW-18146496318/--LXCP2mqsocEL6e9sxD";
+var TECHGO_AFFILIATE_URL = "https://px.a8.net/svt/ejp?a8mat=4B3N6R+DTQFA2+5B0Y+HV7V6";
+
+/* ===== 計測ヘルパー ===== */
+function trackAffiliateClick(pos, type){
+  // ① GA4：キーイベント（CVに設定）
+  gtag('event','affiliate_click',{
+    lp_id: LP_ID, agent: AGENT, cta_position: pos, link_type: type || 'text_cta'
+  });
+  // ② 旧レポート互換（既存LPと横並びで見るため残す）
+  gtag('event','click',{event_category:'affiliate', event_label:AGENT, event_campaign:LP_ID+'-'+pos});
+  // ③ Google広告：コンバージョン
+  gtag('event','conversion',{'send_to': ADS_CV});
+}
+
+/* ===== テキストCTA ===== */
+document.querySelectorAll('.cta-link').forEach(function(a){
+  // JSが無効でも／新規タブで開かれても A8 のクリックCookieが発火するよう href を実URLで上書き
+  a.setAttribute('href', TECHGO_AFFILIATE_URL);
+  a.setAttribute('target','_blank');
+  a.setAttribute('rel','noopener sponsored nofollow');
+  a.addEventListener('click', function(e){
+    e.preventDefault();
+    trackAffiliateClick(a.getAttribute('data-pos') || 'unknown', 'text_cta');
+    // 現ページは生存したまま新規タブで開くので、計測ビーコンが確実に送信される
+    window.open(TECHGO_AFFILIATE_URL, '_blank', 'noopener');
+  });
+});
+
+/* ===== A8バナー（href は a8mat のバナー用URLのまま。遷移は阻害しない） ===== */
+document.querySelectorAll('.bnr-link').forEach(function(a){
+  a.addEventListener('click', function(){
+    trackAffiliateClick(a.getAttribute('data-pos') || 'banner', 'banner');
+  });
+});
+
+/* ===== スクロール到達率 ===== */
+var depthHit = {};
+window.addEventListener('scroll', function(){
+  var h = document.documentElement;
+  var max = h.scrollHeight - h.clientHeight;
+  if(max <= 0) return;
+  var p = Math.round((h.scrollTop || document.body.scrollTop) / max * 100);
+  [25,50,75,100].forEach(function(mark){
+    if(p >= mark && !depthHit[mark]){
+      depthHit[mark] = 1;
+      gtag('event','scroll_depth',{lp_id: LP_ID, percent: mark});
+    }
+  });
+}, {passive:true});
+
+/* ===== CTA視認（CTR算出用） ===== */
+var ctaSeen = {};
+var ctaIO = new IntersectionObserver(function(es){
+  es.forEach(function(en){
+    if(!en.isIntersecting) return;
+    var pos = en.target.getAttribute('data-pos') || 'unknown';
+    if(ctaSeen[pos]) return;
+    ctaSeen[pos] = 1;
+    gtag('event','cta_view',{lp_id: LP_ID, cta_position: pos});
+  });
+},{threshold:.6});
+document.querySelectorAll('.cta-link, .bnr-link').forEach(function(el){ ctaIO.observe(el); });
+
+/* ===== 滞在時間 ===== */
+[10,30,60].forEach(function(s){
+  setTimeout(function(){ gtag('event','time_on_page',{lp_id: LP_ID, seconds: s}); }, s*1000);
+});
+
+/* ===== 読了プログレスバー ===== */
+var prog = document.getElementById('progress');
+function onScroll(){
+  var h = document.documentElement;
+  var sc = h.scrollTop || document.body.scrollTop;
+  var max = h.scrollHeight - h.clientHeight;
+  prog.style.width = (max>0 ? (sc/max*100) : 0) + '%';
+}
+window.addEventListener('scroll', onScroll, {passive:true});
+onScroll();
+
+/* ===== 下部固定CTA：ヒーローを過ぎたら表示、最終CTAで隠す ===== */
+var sticky = document.getElementById('sticky');
+var finalSec = document.querySelector('.final');
+window.addEventListener('scroll', function(){
+  var y = window.scrollY;
+  var finalTop = finalSec.getBoundingClientRect().top;
+  if(y > 520 && finalTop > window.innerHeight){ sticky.classList.add('show'); }
+  else { sticky.classList.remove('show'); }
+}, {passive:true});
+
+/* ===== スクロールフェードイン ===== */
+var io = new IntersectionObserver(function(entries){
+  entries.forEach(function(en){ if(en.isIntersecting){ en.target.classList.add('in'); io.unobserve(en.target); } });
+},{threshold:.12, rootMargin:'0px 0px -8% 0px'});
+document.querySelectorAll('.rv').forEach(function(el){ io.observe(el); });
+</script>
+
+<!-- A8.net メディアタグ -->
+<script src="//statics.a8.net/a8link/a8media-ad.js"></script>
+</body>
+</html>

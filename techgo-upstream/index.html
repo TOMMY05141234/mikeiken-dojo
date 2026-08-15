@@ -1,0 +1,1040 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>SES・二次請けから上流工程へ｜同じスキルでも「立ち位置」で年収の相場は変わる｜公的調査で読み解く</title>
+<meta name="description" content="同じITスキルレベルでも、担当する工程で年収の中央値には差があります。厚生労働省・公正取引委員会の公的調査から、多重下請け構造で上流の経験が積めなくなる仕組みと、そこを抜ける3つのルートを解説します。">
+<meta name="robots" content="index,follow">
+
+<!-- Google tag (gtag.js) — GA4 + Google Ads -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-5M4MMZRL4E"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-5M4MMZRL4E');
+  gtag('config', 'AW-18146496318');
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --bg:#0B1220; --bg-2:#0E1626; --panel:#151E2F; --panel-2:#1A2436;
+  --line:rgba(167,176,192,.14); --line-strong:rgba(167,176,192,.24);
+  --teal:#2DD4BF; --teal-2:#14B8A6; --teal-glow:rgba(45,212,191,.35);
+  --blue:#5B8DEF; --blue-glow:rgba(91,141,239,.32);
+  --ink:#EAF0FF; --muted:#A7B0C0; --muted-2:#7F8AA3; --danger:#FFB4B4;
+  --radius:18px; --radius-lg:24px;
+  --maxw:600px;
+  --jp:'Noto Sans JP',system-ui,sans-serif; --en:'Inter',var(--jp);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{
+  background:var(--bg); color:var(--ink); font-family:var(--jp);
+  font-size:16px; line-height:1.85; letter-spacing:.01em;
+  -webkit-font-smoothing:antialiased; overflow-x:hidden;
+}
+body::before{
+  content:""; position:fixed; inset:0; z-index:-1; pointer-events:none;
+  background:
+    radial-gradient(60% 40% at 50% -5%, rgba(45,212,191,.12), transparent 70%),
+    radial-gradient(55% 32% at 100% 18%, rgba(91,141,239,.10), transparent 70%),
+    var(--bg);
+}
+img,svg{display:block;max-width:100%;height:auto}
+a{color:inherit}
+
+/* reading progress */
+#progress{position:fixed;top:0;left:0;height:3px;width:0;z-index:1000;
+  background:linear-gradient(90deg,var(--blue),var(--teal));box-shadow:0 0 12px var(--teal-glow)}
+
+/* layout */
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 20px}
+section{position:relative}
+.block{padding:44px 0}
+.divider{height:1px;background:linear-gradient(90deg,transparent,var(--line-strong),transparent);margin:0 20px}
+
+/* eyebrow / kicker */
+.kicker{display:inline-flex;align-items:center;gap:8px;font-family:var(--en);
+  font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--teal);border:1px solid var(--teal-glow);border-radius:100px;
+  padding:6px 14px;background:rgba(45,212,191,.06);margin-bottom:18px}
+.kicker::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--teal);box-shadow:0 0 8px var(--teal)}
+.kicker.b{color:var(--blue);border-color:var(--blue-glow);background:rgba(91,141,239,.07)}
+.kicker.b::before{background:var(--blue);box-shadow:0 0 8px var(--blue)}
+
+/* headings */
+h2{font-size:clamp(22px,6.2vw,27px);line-height:1.42;font-weight:900;letter-spacing:-.01em;margin-bottom:16px}
+h2 .hl{color:var(--teal)}
+h2 .hlb{color:var(--blue)}
+h3{font-size:18px;font-weight:700;line-height:1.5;margin-bottom:10px}
+.lead{color:var(--muted);font-size:15.5px;line-height:1.95}
+.lead + .lead{margin-top:14px}
+strong{color:var(--ink);font-weight:700}
+.mark{background:linear-gradient(transparent 62%, rgba(45,212,191,.28) 62%);color:var(--ink);font-weight:700;padding:0 1px}
+.note{font-size:11px;color:var(--muted-2);line-height:1.7;margin-top:12px}
+
+/* ============ HERO ============ */
+.hero{padding:34px 0 40px;text-align:left}
+.hero-target{display:inline-flex;align-items:center;gap:10px;margin-bottom:18px;
+  background:linear-gradient(135deg,rgba(45,212,191,.16),rgba(45,212,191,.04));
+  border:1px solid var(--teal-glow);border-radius:100px;padding:7px 16px 7px 8px;
+  box-shadow:0 0 0 4px rgba(45,212,191,.05)}
+.hero-target .ic{width:28px;height:28px;border-radius:9px;background:rgba(45,212,191,.18);
+  display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.hero-target .ic svg{width:16px;height:16px}
+.hero-target span{font-size:12.5px;font-weight:700;color:var(--ink);letter-spacing:.02em;line-height:1.3}
+.hero-target b{color:var(--teal);font-weight:800;font-size:13.5px}
+.hero h1{font-size:clamp(25px,7.2vw,33px);line-height:1.45;font-weight:900;letter-spacing:-.015em;margin-bottom:18px}
+.hero h1 .l2{display:block;margin-top:12px;font-size:clamp(17px,4.9vw,22px);font-weight:500;line-height:1.62;color:var(--muted)}
+.hero h1 .l2 b{color:var(--teal);font-weight:800}
+.hero h1 .um{background:linear-gradient(transparent 66%, rgba(245,196,81,.32) 66%);padding:0 2px}
+.hero .sub{color:var(--muted);font-size:15.5px;line-height:1.95;margin-bottom:16px}
+.hero .sub strong{color:var(--ink)}
+.hero .sub:last-of-type{margin-bottom:26px}
+
+/* CTA button */
+.cta{display:block;text-align:center;background:linear-gradient(135deg,var(--teal),var(--teal-2));
+  color:#052019;font-family:var(--jp);font-weight:900;font-size:16.5px;letter-spacing:.01em;
+  padding:19px 22px;border-radius:16px;text-decoration:none;position:relative;overflow:hidden;
+  box-shadow:0 10px 30px -8px var(--teal-glow),inset 0 1px 0 rgba(255,255,255,.35);
+  transition:transform .18s ease,box-shadow .18s ease;min-height:56px}
+.cta:active{transform:scale(.985)}
+.cta:hover{box-shadow:0 16px 40px -8px var(--teal-glow),inset 0 1px 0 rgba(255,255,255,.45)}
+.cta .arw{display:inline-block;margin-left:8px;transition:transform .2s}
+.cta:hover .arw{transform:translateX(4px)}
+.cta::after{content:"";position:absolute;top:0;left:-120%;width:60%;height:100%;
+  background:linear-gradient(100deg,transparent,rgba(255,255,255,.5),transparent);
+  transform:skewX(-18deg);animation:sheen 4.5s ease-in-out infinite}
+@keyframes sheen{0%,60%{left:-120%}80%,100%{left:150%}}
+.cta-note{text-align:center;color:var(--muted-2);font-size:12.5px;margin-top:12px;line-height:1.7}
+.cta-note b{color:var(--teal);font-weight:700}
+
+.trust{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px}
+.trust span{font-size:11.5px;color:var(--muted);background:var(--panel);border:1px solid var(--line);
+  border-radius:100px;padding:6px 12px;display:inline-flex;align-items:center;gap:6px}
+.trust span::before{content:"";width:5px;height:5px;border-radius:50%;background:var(--teal)}
+
+/* ============ A8 BANNER ============ */
+.a8banner{text-align:center;margin:6px 0}
+.a8banner .lab{display:inline-flex;align-items:center;gap:10px;font-size:13px;font-weight:700;
+  color:var(--teal);letter-spacing:.02em;margin-bottom:14px}
+.a8banner .lab::before,.a8banner .lab::after{content:"";width:20px;height:1px;background:var(--teal-glow)}
+.a8banner a.bnr-link{display:inline-block;line-height:0;border-radius:14px;overflow:hidden;
+  border:1px solid var(--teal-glow);max-width:100%;
+  box-shadow:0 22px 55px -26px rgba(45,212,191,.5),inset 0 1px 0 rgba(255,255,255,.06);
+  transition:transform .2s ease,box-shadow .2s ease}
+.a8banner a.bnr-link:hover{transform:translateY(-2px);box-shadow:0 30px 65px -24px rgba(45,212,191,.6)}
+.a8banner a.bnr-link:active{transform:scale(.99)}
+.a8banner img.bnr{width:300px;max-width:100%;height:auto;display:block}
+.a8banner .fine{font-size:11px;color:var(--muted-2);margin-top:11px;line-height:1.6}
+
+/* ============ TOC ============ */
+.toc{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius-lg);padding:24px 20px}
+.toc .cap{font-family:var(--en);font-size:11px;font-weight:700;letter-spacing:.12em;color:var(--teal);text-transform:uppercase;margin-bottom:16px}
+.toc ol{list-style:none;counter-reset:t;display:flex;flex-direction:column;gap:2px}
+.toc li{counter-increment:t;display:flex;gap:14px;align-items:flex-start;padding:11px 0;border-bottom:1px dashed var(--line)}
+.toc li:last-child{border-bottom:0;padding-bottom:0}
+.toc li::before{content:counter(t,decimal-leading-zero);font-family:var(--en);font-weight:700;font-size:12px;
+  color:var(--teal);background:rgba(45,212,191,.08);border:1px solid var(--teal-glow);
+  min-width:30px;height:30px;border-radius:9px;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px}
+.toc li span{font-size:14.5px;line-height:1.6;color:var(--ink);font-weight:500}
+
+/* ============ CHECKLIST ============ */
+.checks{display:flex;flex-direction:column;gap:10px;margin-top:6px}
+.check{display:flex;gap:13px;align-items:flex-start;background:var(--panel);
+  border:1px solid var(--line);border-radius:14px;padding:15px 16px;transition:border-color .2s,transform .2s}
+.check:hover{border-color:var(--teal-glow);transform:translateX(3px)}
+.check .ic{flex-shrink:0;width:22px;height:22px;border-radius:6px;background:rgba(45,212,191,.1);
+  border:1px solid var(--teal-glow);display:flex;align-items:center;justify-content:center;margin-top:2px}
+.check .ic svg{width:12px;height:12px}
+.check p{font-size:14.5px;line-height:1.65;color:var(--ink)}
+.checks-foot{margin-top:18px;background:linear-gradient(135deg,rgba(45,212,191,.08),rgba(45,212,191,.02));
+  border:1px solid var(--teal-glow);border-radius:14px;padding:16px 18px;font-size:14.5px;line-height:1.85;color:var(--ink)}
+
+/* ============ FIGURE ============ */
+figure{margin:22px 0 8px;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;
+  background:#0B1220;box-shadow:0 20px 50px -30px rgba(0,0,0,.9)}
+figure img{width:100%;height:auto}
+figcaption{font-size:11.5px;color:var(--muted-2);padding:12px 16px;border-top:1px solid var(--line);
+  line-height:1.65}
+figcaption b{font-family:var(--en);font-size:9px;font-weight:700;letter-spacing:.1em;
+  color:var(--teal);border:1px solid var(--teal-glow);border-radius:4px;padding:2px 6px;margin-right:8px;
+  display:inline-block;vertical-align:1px}
+
+/* data list（年収などの数値提示） */
+.data{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);padding:20px;margin-top:18px}
+.data .dt{font-size:13px;font-weight:700;color:var(--blue);margin-bottom:12px;letter-spacing:.02em}
+.data .dt + .row{margin-top:0}
+.row{display:flex;justify-content:space-between;align-items:baseline;gap:12px;
+  padding:10px 0;border-bottom:1px dashed var(--line);font-size:14.5px}
+.row:last-child{border-bottom:0;padding-bottom:0}
+.row .k{color:var(--muted);line-height:1.5}
+.row .v{font-family:var(--en);font-weight:800;font-size:17px;color:var(--ink);white-space:nowrap}
+.row.up .k{color:var(--ink);font-weight:700}
+.row.up .v{color:var(--teal)}
+.data + .data{margin-top:12px}
+
+/* pull quote / emphasis */
+.pull{position:relative;background:linear-gradient(135deg,var(--panel-2),var(--panel));
+  border:1px solid var(--line-strong);border-radius:var(--radius);padding:24px 22px;margin:22px 0;
+  border-left:3px solid var(--teal)}
+.pull .q{font-size:17px;font-weight:700;line-height:1.72;color:var(--ink)}
+.pull .q .hl{color:var(--teal)}
+.pull p + p{margin-top:12px}
+
+/* 事業者の声 */
+.voices{display:flex;flex-direction:column;gap:10px;margin-top:18px}
+.voice{background:var(--panel);border:1px solid var(--line);border-left:3px solid var(--muted-2);
+  border-radius:12px;padding:15px 17px;font-size:14px;line-height:1.8;color:var(--muted)}
+.voice-src{font-size:11.5px;color:var(--muted-2);margin-top:14px;text-align:right}
+
+/* ループ図（階層＝下向きの連鎖） */
+.loop{background:var(--panel);border:1px solid var(--line-strong);border-radius:var(--radius);padding:22px 20px;margin-top:18px}
+.loop .lp-t{font-size:14.5px;font-weight:700;color:var(--ink);margin-bottom:16px;line-height:1.6}
+.loop ul{list-style:none;display:flex;flex-direction:column;gap:0}
+.loop li{font-size:14.5px;line-height:1.6;color:var(--ink);padding:11px 14px;
+  background:rgba(91,141,239,.07);border:1px solid var(--blue-glow);border-radius:10px}
+.loop li + li{margin-top:26px;position:relative}
+.loop li + li::before{content:"";position:absolute;left:50%;top:-24px;width:1px;height:14px;background:var(--blue)}
+.loop li + li::after{content:"";position:absolute;left:50%;top:-12px;transform:translateX(-50%);
+  border-left:5px solid transparent;border-right:5px solid transparent;border-top:7px solid var(--blue)}
+.loop li:last-child{background:rgba(91,141,239,.14)}
+
+/* bullet list card */
+.list-card{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);padding:20px}
+.list-card ul{list-style:none;display:flex;flex-direction:column;gap:12px}
+.list-card li{display:flex;gap:12px;align-items:flex-start;font-size:14.5px;line-height:1.65;color:var(--ink)}
+.list-card li .b{flex-shrink:0;width:20px;height:20px;border-radius:6px;background:rgba(45,212,191,.1);
+  border:1px solid var(--teal-glow);color:var(--teal);display:flex;align-items:center;justify-content:center;
+  font-size:11px;font-weight:800;margin-top:2px}
+
+/* 経歴書の書き換え比較 */
+.compare{display:flex;flex-direction:column;gap:12px;margin-top:20px}
+.compare-row{background:var(--panel);border:1px solid var(--line);border-radius:14px;overflow:hidden}
+.compare-row .lab{font-size:11.5px;font-weight:700;letter-spacing:.04em;padding:10px 16px;
+  display:flex;align-items:center;gap:8px}
+.compare-row.a .lab{color:var(--muted);background:rgba(167,176,192,.06)}
+.compare-row.b .lab{color:var(--teal);background:rgba(45,212,191,.07)}
+.compare-row .lab::before{content:"";width:6px;height:6px;border-radius:50%;background:currentColor}
+.compare-row .val{padding:14px 16px}
+.compare-row .val ul{list-style:none;display:flex;flex-direction:column;gap:9px}
+.compare-row .val li{font-size:14px;line-height:1.68;color:var(--ink);padding-left:16px;position:relative}
+.compare-row .val li::before{content:"";position:absolute;left:0;top:.72em;width:6px;height:1px;background:var(--muted-2)}
+.compare-row.b .val li::before{background:var(--teal)}
+.compare-arrow{text-align:center;color:var(--teal);font-size:20px;line-height:1}
+
+/* ルート（階層を上がる） */
+.routes{display:flex;flex-direction:column;gap:12px;margin-top:8px}
+.route{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);padding:20px;
+  position:relative;overflow:hidden;transition:border-color .2s,transform .2s}
+.route:hover{border-color:var(--blue-glow);transform:translateY(-2px)}
+.route .no{font-family:var(--en);font-size:12px;font-weight:800;letter-spacing:.08em;color:var(--blue);
+  margin-bottom:8px;display:flex;align-items:center;gap:8px}
+.route .no::after{content:"";flex:1;height:1px;background:var(--line)}
+.route h3{font-size:16.5px;margin-bottom:8px}
+.route p{font-size:14px;line-height:1.8;color:var(--muted)}
+.route p + p{margin-top:10px}
+.route .badge{display:inline-block;margin-top:12px;font-size:12px;font-weight:700;color:var(--teal);
+  background:rgba(45,212,191,.09);border:1px solid var(--teal-glow);border-radius:8px;padding:7px 11px;line-height:1.55}
+
+/* 比較テーブル */
+.tblwrap{margin-top:20px;border:1px solid var(--line);border-radius:14px;overflow-x:auto;background:var(--panel)}
+table{border-collapse:collapse;width:100%;min-width:520px;font-size:13.5px}
+th,td{padding:12px 14px;text-align:left;border-bottom:1px solid var(--line);line-height:1.6;vertical-align:top}
+th{background:rgba(91,141,239,.09);color:var(--ink);font-weight:700;font-size:12.5px;white-space:nowrap}
+td{color:var(--muted)}
+td:first-child{color:var(--ink);font-weight:700;white-space:nowrap}
+tr:last-child td{border-bottom:0}
+
+/* 番号付き障壁リスト */
+.walls{display:flex;flex-direction:column;gap:14px;margin-top:8px}
+.wall{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);padding:18px 20px}
+.wall .wn{font-family:var(--en);font-size:11px;font-weight:800;letter-spacing:.1em;color:var(--blue);margin-bottom:8px}
+.wall h3{font-size:15.5px;margin-bottom:10px;line-height:1.6}
+.wall p{font-size:14px;line-height:1.78;color:var(--muted);padding-left:14px;border-left:2px solid var(--line-strong)}
+
+/* reasons */
+.reasons{display:flex;flex-direction:column;gap:12px;margin-top:8px}
+.reason{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);padding:20px;
+  transition:border-color .2s,transform .2s}
+.reason:hover{border-color:var(--teal-glow);transform:translateY(-2px)}
+.reason .no{font-family:var(--en);font-size:12px;font-weight:800;letter-spacing:.08em;color:var(--teal);
+  margin-bottom:8px;display:flex;align-items:center;gap:8px}
+.reason .no::after{content:"";flex:1;height:1px;background:var(--line)}
+.reason h3{font-size:16.5px;margin-bottom:8px}
+.reason p{font-size:14px;line-height:1.8;color:var(--muted)}
+.spec{margin-top:16px;background:linear-gradient(135deg,rgba(45,212,191,.08),rgba(45,212,191,.02));
+  border:1px solid var(--teal-glow);border-radius:14px;padding:16px 18px}
+.spec .row{border-bottom-style:dashed}
+.spec .row .v{font-size:14px;font-family:var(--jp)}
+
+/* steps */
+.steps{display:flex;flex-direction:column;gap:0;margin-top:8px}
+.step{position:relative;padding:0 0 26px 44px}
+.step:last-child{padding-bottom:0}
+.step::before{content:"";position:absolute;left:15px;top:32px;bottom:0;width:1px;background:var(--line-strong)}
+.step:last-child::before{display:none}
+.step .sn{position:absolute;left:0;top:0;width:31px;height:31px;border-radius:10px;
+  background:rgba(91,141,239,.12);border:1px solid var(--blue-glow);color:var(--blue);
+  font-family:var(--en);font-size:12px;font-weight:800;display:flex;align-items:center;justify-content:center}
+.step h3{font-size:15.5px;margin-bottom:7px;line-height:1.5}
+.step p{font-size:14px;line-height:1.78;color:var(--muted)}
+
+/* FAQ */
+.faq{display:flex;flex-direction:column;gap:10px;margin-top:8px}
+.faq details{background:var(--panel);border:1px solid var(--line);border-radius:14px;overflow:hidden}
+.faq summary{cursor:pointer;list-style:none;padding:16px 46px 16px 18px;position:relative;
+  font-size:14.5px;font-weight:700;line-height:1.6;color:var(--ink)}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::before{content:"Q";font-family:var(--en);font-weight:800;font-size:12px;color:var(--teal);margin-right:10px}
+.faq summary::after{content:"";position:absolute;right:20px;top:23px;width:8px;height:8px;
+  border-right:2px solid var(--muted);border-bottom:2px solid var(--muted);
+  transform:rotate(45deg);transition:transform .2s}
+.faq details[open] summary::after{transform:rotate(225deg);top:26px}
+.faq .a{padding:0 18px 18px;font-size:14px;line-height:1.85;color:var(--muted);border-top:1px solid var(--line);padding-top:15px}
+.faq .a .src{display:block;font-size:11px;color:var(--muted-2);margin-top:10px;line-height:1.6}
+
+/* final cta band */
+.final{background:
+    radial-gradient(80% 60% at 50% 0%,rgba(45,212,191,.14),transparent 70%),
+    linear-gradient(180deg,var(--panel),var(--bg-2));
+  border-top:1px solid var(--teal-glow);border-bottom:1px solid var(--line);padding:48px 0 52px;text-align:center}
+.final h2{margin-bottom:16px}
+.final .lead{margin-bottom:16px;text-align:left}
+.final .lead:last-of-type{margin-bottom:26px}
+
+/* mid cta band */
+.midcta{background:linear-gradient(180deg,rgba(45,212,191,.07),transparent);
+  border-top:1px solid var(--teal-glow);border-bottom:1px solid var(--line);padding:32px 0 34px}
+
+/* footer */
+footer{padding:30px 0 120px;color:var(--muted-2);font-size:12px;line-height:1.9}
+footer .pr{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:12px 14px;margin-bottom:18px;color:var(--muted)}
+footer .src{margin-bottom:16px}
+footer .src b{color:var(--muted);display:block;margin-bottom:8px;font-size:11px;letter-spacing:.06em}
+footer .src ul{list-style:none;display:flex;flex-direction:column;gap:9px}
+footer .src li{line-height:1.7}
+footer .src a{color:var(--muted);text-decoration:underline;text-underline-offset:2px;word-break:break-all}
+footer .copy{border-top:1px solid var(--line);padding-top:16px;color:var(--muted-2)}
+
+/* sticky bottom cta */
+#sticky{position:fixed;left:0;right:0;bottom:0;z-index:900;transform:translateY(120%);
+  transition:transform .35s cubic-bezier(.2,.8,.2,1);
+  background:rgba(11,18,32,.86);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);
+  border-top:1px solid var(--teal-glow);padding:11px 16px calc(11px + env(safe-area-inset-bottom))}
+#sticky.show{transform:translateY(0)}
+#sticky .in{max-width:var(--maxw);margin:0 auto;display:flex;align-items:center;gap:12px}
+#sticky .txt{flex:1;min-width:0}
+#sticky .txt b{display:block;font-size:12.5px;color:var(--ink);font-weight:700;line-height:1.4}
+#sticky .txt small{font-size:10.5px;color:var(--muted)}
+#sticky .cta{margin:0;flex-shrink:0;padding:13px 20px;font-size:14px;border-radius:12px;min-width:140px;min-height:46px}
+#sticky .cta::after{display:none}
+
+/* reveal animation */
+.rv{opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s cubic-bezier(.2,.8,.2,1)}
+.rv.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}.cta::after{animation:none}html{scroll-behavior:auto}}
+
+@media (min-width:640px){
+  body{font-size:16.5px}
+  .hero{padding:52px 0 48px}
+}
+</style>
+</head>
+<body>
+
+<div id="progress"></div>
+
+<!-- ============ HERO ============ -->
+<header class="hero block">
+  <div class="wrap">
+    <div class="hero-target">
+      <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#2DD4BF" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 20h5v-6H3z"/><path d="M9.5 20h5V9h-5z"/><path d="M16 20h5V4h-5z"/></svg></span>
+      <span>実務経験2年以上の<b>ITエンジニア</b>へ</span>
+    </div>
+    <h1>同じスキルでも、<span class="um">二次請け・三次請け</span>にいる間は、年収も裁量も上がりにくい。
+      <span class="l2">それは、あなたの能力の問題ではなく<b>「立ち位置」の問題</b>かもしれません。</span>
+    </h1>
+    <p class="sub">SES、客先常駐、二次請け・三次請け。現場では中心的に動いているのに、年収も、任される工程も、なぜか何年も同じところで止まっている ── そう感じていませんか。</p>
+    <p class="sub">厚生労働省の委託調査には、こんなデータがあります。同じITスキルレベルでも、「設計・構築」を担当する人と「企画立案・プロジェクト管理」を担当する人では、<strong>年収の中央値に200万円前後の開きがある</strong>。</p>
+    <p class="sub">スキルの高さではなく、担当する工程で相場が違う。だとすれば、次に変えるべきなのは、努力の量ではないのかもしれません。</p>
+    <a class="cta cta-link" href="#" data-pos="fv">上流に行けるかどうか、無料で相談する<span class="arw">→</span></a>
+    <p class="cta-note"><b>相談無料</b>／入力4項目・約30秒／在職中OK</p>
+    <p class="note">※厚生労働省「IT・デジタル人材の労働市場に関する研究調査事業」調査報告書（令和6年3月）。正社員の年収中央値、ITスキルレベル3の場合。</p>
+    <div class="trust">
+      <span>実務経験2年以上が対象</span>
+      <span>模擬面接 回数制限なし</span>
+      <span>土曜1Day選考会</span>
+    </div>
+  </div>
+</header>
+
+<!-- ============ A8 BANNER（FV直下） ============ -->
+<section class="block" style="padding-top:6px">
+  <div class="wrap rv">
+    <div class="a8banner">
+      <span class="lab">その経験、上流でどう読まれる？</span>
+      <a class="bnr-link" data-pos="banner_fv" href="https://px.a8.net/svt/ejp?a8mat=4B3N6R+DTQFA2+5B0Y+I0KRL" rel="nofollow sponsored noopener" target="_blank">
+        <img class="bnr" border="0" width="300" height="250" alt="TechGO｜実務経験2年以上のITエンジニア向け転職エージェント 無料相談" src="https://www27.a8.net/svt/bgt?aid=260510499836&wid=002&eno=01&mid=s00000024757003026000&mc=1"></a><img border="0" width="1" height="1" src="https://www10.a8.net/0.gif?a8mat=4B3N6R+DTQFA2+5B0Y+I0KRL" alt="" aria-hidden="true">
+      <p class="fine">本ページはプロモーションを含みます／相談は無料</p>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ============ 01 このページで分かること ============ -->
+<section class="block">
+  <div class="wrap rv">
+    <div class="toc">
+      <p class="cap">このページで分かること</p>
+      <ol>
+        <li><span>なぜ、同じスキルなのに年収の相場が違うのか</span></li>
+        <li><span>IT業界の多重下請け構造で、実際に何が起きているのか（公的調査データ）</span></li>
+        <li><span>下流にいると、上流の経験が「積めない」構造になっている理由</span></li>
+        <li><span>SESの経験のうち、上流転職で評価される部分・されない部分</span></li>
+        <li><span>要件定義の経験がなくても、上流を目指せる3つのルート</span></li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 02 共感（チェックリスト） ============ -->
+<section class="block">
+  <div class="wrap">
+    <div class="rv">
+      <span class="kicker">Check List</span>
+      <h2>要件定義の会議に、<br>あなたが呼ばれないのは<span class="hl">なぜですか？</span></h2>
+      <p class="lead">技術力が足りないから、ではないかもしれません。次のような引っかかりを、抱えたまま働いていませんか。</p>
+    </div>
+    <div class="checks rv" style="margin-top:20px">
+      <div class="check"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#2DD4BF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span><p>昇給は毎年あるが、年5,000〜10,000円程度で止まっている</p></div>
+      <div class="check"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#2DD4BF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span><p>現場は何度も変わったのに、任される工程はいつも同じ層のまま</p></div>
+      <div class="check"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#2DD4BF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span><p>自分がいくらの単価で契約されているのか、知らされたことがない</p></div>
+      <div class="check"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#2DD4BF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span><p>詳細設計より上の工程には、ほとんど関わったことがない</p></div>
+      <div class="check"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#2DD4BF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span><p>常駐先の社員と同じ仕事をしているのに、扱いと年収だけが違う</p></div>
+      <div class="check"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#2DD4BF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span><p>評価する人が、自分の実際の仕事を見ていない</p></div>
+      <div class="check"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#2DD4BF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span><p>転職サイトを開いても「必須：要件定義経験」で毎回止まる</p></div>
+    </div>
+    <p class="checks-foot rv">ひとつでも当てはまるなら、それはあなたの努力不足ではなく、<strong>仕事の割り当てられ方そのもの</strong>に理由がある可能性があります。<br>次から、そのデータを見ていきます。</p>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ============ 03 教育①（核心） ============ -->
+<section class="block">
+  <div class="wrap">
+    <div class="rv">
+      <span class="kicker">Data · 01</span>
+      <h2>同じスキルレベルでも、<br><span class="hl">「担当する工程」</span>で<br>年収の相場は変わります</h2>
+      <p class="lead">厚生労働省の委託調査「IT・デジタル人材の労働市場に関する研究調査事業」（令和6年3月）では、IT・デジタル人材の年収を、ITスキルレベル別・職種別に集計しています。</p>
+      <p class="lead">この調査で注目したいのは、<span class="mark">同じスキルレベル同士を比べても、職種によって年収水準が違う</span>、という点です。</p>
+    </div>
+
+    <figure class="rv">
+      <img src="assets/fig01_salary_by_role.svg" alt="ITスキルレベル別・職種別の年収中央値を比較したグラフ。レベル3では運用・保守550万円、設計・構築550万円に対し、企画立案・プロジェクト管理は750万円で200万円高い。レベル4では650万円・635万円に対し800万円。レベル5以上では850万円・700万円に対し900万円。厚生労働省の委託調査より。" loading="lazy" width="600" height="380">
+      <figcaption><b>SOURCE</b>厚生労働省「IT・デジタル人材の労働市場に関する研究調査事業」調査報告書（令和6年3月）／正社員の年収中央値。「企画立案・プロジェクト管理」にはレベル1〜2の該当データがないため除外。</figcaption>
+    </figure>
+
+    <div class="rv">
+      <p class="lead" style="margin-top:20px">正社員の年収中央値は、次のように報告されています。</p>
+      <div class="data">
+        <p class="dt">ITスキルレベル3の場合</p>
+        <div class="row"><span class="k">設計・構築</span><span class="v">550万円</span></div>
+        <div class="row"><span class="k">運用・保守</span><span class="v">550万円</span></div>
+        <div class="row up"><span class="k">企画立案・プロジェクト管理</span><span class="v">750万円</span></div>
+      </div>
+      <div class="data">
+        <p class="dt">ITスキルレベル4の場合</p>
+        <div class="row"><span class="k">設計・構築</span><span class="v">635万円</span></div>
+        <div class="row"><span class="k">運用・保守</span><span class="v">650万円</span></div>
+        <div class="row up"><span class="k">企画立案・プロジェクト管理</span><span class="v">800万円</span></div>
+      </div>
+      <p class="lead" style="margin-top:18px">同じレベル3でも、企画立案・プロジェクト管理の中央値は、設計・構築より<strong>200万円高い</strong>。報告書自身も「職種別に見ると、同じITスキルレベルでも、企画立案・プロジェクト管理の賃金水準が最も高い」と記しています。</p>
+    </div>
+
+    <div class="pull rv">
+      <p class="q">つまり ──<br>スキルを上げれば年収は上がる。<br>ただしそれ以上に、<span class="hl">「どの工程を担当しているか」</span>で相場そのものが変わる。</p>
+    </div>
+
+    <div class="rv">
+      <p class="lead">あなたが今、詳細設計から下の工程を中心に担当しているなら、どれだけコードの品質を上げても、届く相場には上限があるかもしれません。<strong>これは能力の話ではなく、相場の話です。</strong></p>
+      <p class="note">※出典：厚生労働省「IT・デジタル人材の労働市場に関する研究調査事業」調査報告書（令和6年3月）／個人アンケート2023年9月実施、正社員のみ集計。金額は年収の中央値。</p>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ============ 04 教育②（原因） ============ -->
+<section class="block">
+  <div class="wrap">
+    <div class="rv">
+      <span class="kicker b">Structure · 02</span>
+      <h2>なぜ、工程が「実力」ではなく<br><span class="hlb">「立ち位置」</span>で決まるのか</h2>
+      <p class="lead">ここからは、日本のIT業界の構造そのものの話です。</p>
+      <p class="lead">公正取引委員会が2022年6月に公表した「ソフトウェア業の下請取引等に関する実態調査報告書」は、ソフトウェア業の多重下請構造を、大規模なアンケートで調べたものです。（資本金3億円以下の事業者 約21,000社を対象に実施）</p>
+    </div>
+
+    <figure class="rv">
+      <img src="assets/fig02_subcontract_pyramid.svg" alt="多重下請け構造のピラミッド図。発注者を頂点に、元請40.4パーセント、中間下請38.2パーセント、最終下請21.3パーセントの4段構成。上に行くほどエンドユーザーとの距離が近く任される工程は要件定義・提案、下に行くほど遠く製造・テスト・運用となる。最終下請では中抜き事業者の存在を感じたことがある割合が33.5パーセント。公正取引委員会の実態調査より。" loading="lazy" width="600" height="445">
+      <figcaption><b>SOURCE</b>公正取引委員会「ソフトウェア業の下請取引等に関する実態調査報告書」（令和4年6月公表）。取引上の位置付けは資本金3億円以下の法人向けアンケート（回答数4,589）、「中抜き」事業者の実感は同アンケート（回答数4,346）。</figcaption>
+    </figure>
+
+    <div class="rv">
+      <p class="lead" style="margin-top:20px">この調査で、自社の取引上の位置づけを尋ねた結果は次のとおりです。</p>
+      <div class="data">
+        <div class="row"><span class="k">元請</span><span class="v">40.4%</span></div>
+        <div class="row"><span class="k">中間下請</span><span class="v">38.2%</span></div>
+        <div class="row"><span class="k">最終下請</span><span class="v">21.3%</span></div>
+      </div>
+      <p class="lead" style="margin-top:18px">つまり、<strong>およそ6割の事業者が、誰かの下請けとして仕事を受けています。</strong></p>
+      <p class="lead">さらに報告書には、こんな実態も記されています。</p>
+    </div>
+
+    <div class="list-card rv" style="margin-top:18px">
+      <ul>
+        <li><span class="b">1</span><span>「中抜き」事業者（商流上は形式的に関与するだけで実務を行わない事業者）の存在を感じたことがあると答えた割合は、<strong>最終下請で33.5％、中間下請で29.2％</strong></span></li>
+        <li><span class="b">2</span><span>最終下請の<strong>44.6％</strong>は、売上の90％以上を下請取引に依存している</span></li>
+        <li><span class="b">3</span><span>最終下請の<strong>19.2％</strong>は、取引先が1社だけ</span></li>
+      </ul>
+    </div>
+
+    <div class="voices rv">
+      <div class="voice">「エンジニアの準委任契約（SES）では最大5社が中間に入るケースがあり、間に入っている企業は何もしない。」</div>
+      <div class="voice">「客先常駐だと途中の商流で実質的に何もしない中抜き業者が何重にも存在することがあった。」</div>
+      <div class="voice">「4次下請として参加した案件で、エンドユーザーへの質問が途中の業者で止まっていた。」</div>
+      <p class="voice-src">── 公正取引委員会 実態調査報告書に寄せられた事業者の声より</p>
+    </div>
+
+    <div class="rv">
+      <p class="lead" style="margin-top:22px">階層が増えれば、その分だけ中間コストが積み上がります。そして階層が深いほど、エンドユーザーとの距離も遠くなる。</p>
+      <p class="lead"><strong>これは、誰か一人が悪いという話ではありません。</strong>必要な人員をピーク時だけ確保したい、という発注側の事情から長い時間をかけて出来上がった構造です。報告書も、中間事業者の介在が一概に問題となるものではない、と述べています。</p>
+      <p class="lead">ただ、その構造の中で、<span class="mark">どの工程が誰に割り当てられるかは、入る前からおおよそ決まってしまう。</span></p>
+      <p class="note">※出典：公正取引委員会「ソフトウェア業の下請取引等に関する実態調査報告書」（令和4年6月公表）。取引上の位置付けは資本金3億円以下の法人向けアンケート（回答数4,589）。</p>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ============ 05 教育③（ループ） ============ -->
+<section class="block">
+  <div class="wrap">
+    <div class="rv">
+      <span class="kicker b">Structure · 03</span>
+      <h2>下流にいると、上流の経験が<br><span class="hlb">「積めない」構造</span>になっています</h2>
+      <p class="lead">同じ調査で、下請事業者が「担当することの多い工程」も聞かれています。結果はこうでした。</p>
+    </div>
+
+    <figure class="rv">
+      <img src="assets/fig03_process_share.svg" alt="下請けが担当することの多い工程の横棒グラフ。開発（プログラミング）工程56.6パーセント、設計工程20.6パーセント、運用工程5.9パーセント、ユーザーへの提案・要件定義5.5パーセント、システムインテグレーション工程5.4パーセント、テスト工程1.3パーセント、その他4.6パーセント。上流にあたる提案・要件定義は5.5パーセントしかない。公正取引委員会の実態調査より。" loading="lazy" width="600" height="400">
+      <figcaption><b>SOURCE</b>公正取引委員会「ソフトウェア業の下請取引等に関する実態調査報告書」（令和4年6月公表）。「下請として担当することの多い工程」（1つ選択・回答数2,589）。</figcaption>
+    </figure>
+
+    <div class="rv">
+      <div class="data" style="margin-top:20px">
+        <div class="row"><span class="k">開発（プログラミング）工程</span><span class="v">56.6%</span></div>
+        <div class="row"><span class="k">設計工程（外部設計・内部設計）</span><span class="v">20.6%</span></div>
+        <div class="row"><span class="k">運用工程</span><span class="v">5.9%</span></div>
+        <div class="row up"><span class="k">ユーザーへの提案・要件定義</span><span class="v">5.5%</span></div>
+        <div class="row"><span class="k">システムインテグレーション工程</span><span class="v">5.4%</span></div>
+        <div class="row"><span class="k">テスト工程</span><span class="v">1.3%</span></div>
+      </div>
+      <p class="lead" style="margin-top:18px">下請けとして受注する仕事のうち、<strong>要件定義や提案にあたる工程は、わずか5.5％。</strong></p>
+    </div>
+
+    <div class="loop rv">
+      <p class="lp-t">ここに、多くのエンジニアが詰まっている「輪」があります。</p>
+      <ul>
+        <li>上流の求人に応募したい</li>
+        <li>でも応募要件は「要件定義・基本設計の経験」</li>
+        <li>今の立ち位置では、その工程がほとんど降りてこない</li>
+        <li>だから経験が積めない</li>
+        <li>だから応募できない</li>
+      </ul>
+    </div>
+
+    <div class="rv">
+      <p class="lead" style="margin-top:20px">これは、努力量では抜けにくい輪です。なぜなら、<strong>輪を作っているのが本人ではなく、仕事の流れ方だから</strong>です。</p>
+      <p class="lead">逆に言えば、この輪を抜ける方法はひとつしかありません。「経験を積んでから移る」のではなく、<span class="mark">「経験の見せ方を変えて、先に移る」</span>ことです。</p>
+      <p class="lead">その具体的なやり方は、このあと説明します。</p>
+      <p class="note">※出典：公正取引委員会「ソフトウェア業の下請取引等に関する実態調査報告書」（令和4年6月公表）。法人向けアンケート「下請として担当することの多い工程」（1つ選択・回答数2,589）。</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 中間CTA① ============ -->
+<section class="midcta">
+  <div class="wrap rv">
+    <a class="cta cta-link" href="#" data-pos="mid1">自分の経験で上流を狙えるか、無料で確認する<span class="arw">→</span></a>
+    <p class="cta-note">実務経験2年以上のITエンジニア対象／<b>相談無料</b></p>
+  </div>
+</section>
+
+<!-- ============ 06 問題提起 ============ -->
+<section class="block">
+  <div class="wrap">
+    <div class="rv">
+      <span class="kicker">Data · 04</span>
+      <h2>このループは、<br>放置するほど<span class="hl">抜けにくくなります</span></h2>
+      <p class="lead">前出の厚生労働省の委託調査には、転職後に賃金が上がった人の割合を年齢別に集計したデータがあります。</p>
+      <p class="lead">直近5年以内にIT・デジタル職種へ転職した人のうち、転職後に賃金が「増加した」と答えた割合は、次のとおりです。</p>
+      <div class="data">
+        <div class="row up"><span class="k">30〜34歳</span><span class="v">88%</span></div>
+        <div class="row"><span class="k">35〜39歳</span><span class="v">76%</span></div>
+        <div class="row"><span class="k">40〜44歳</span><span class="v">63%</span></div>
+        <div class="row"><span class="k">45〜49歳</span><span class="v">63%</span></div>
+        <div class="row"><span class="k">50〜54歳</span><span class="v">60%</span></div>
+      </div>
+    </div>
+
+    <div class="pull rv">
+      <p class="q">ここで、二つのことを同時に言っておきます。</p>
+      <p class="lead" style="color:var(--ink)">ひとつ。年齢が上がるほど、賃金が上がる転職の割合は下がっていく。30代前半と40代前半では、20ポイント以上の差があります。</p>
+      <p class="lead" style="color:var(--ink)">もうひとつ。<strong>それでも40〜54歳で6割前後が賃金上昇しており、報告書自身は「年齢は転職前後での賃金上昇に大きな制約にはならない」と結論づけています。</strong></p>
+      <p class="lead" style="color:var(--ink)">つまり、40代でも遅くはない。ただし、20代後半〜30代前半のほうが、選べる選択肢は明らかに多い。</p>
+    </div>
+
+    <div class="rv">
+      <p class="lead">そして、上流の経験がないまま年数だけが増えると、「経験年数のわりに担当工程が浅い」という見られ方をされやすくなります。</p>
+      <p class="lead"><strong>急いで転職する必要はありません。</strong>ただ、「自分の経験が今どう見えているか」を知るのは、早いほど有利です。</p>
+      <p class="note">※出典：厚生労働省「IT・デジタル人材の労働市場に関する研究調査事業」調査報告書（令和6年3月）。直近5年以内にIT・デジタル職種へ転職した人が対象（全体n=342）。年齢層ごとのサンプル数は26〜57件と限られるため、傾向として参照ください。</p>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ============ 07 解決の提示 ============ -->
+<section class="block">
+  <div class="wrap">
+    <div class="rv">
+      <span class="kicker b">Route</span>
+      <h2>抜け道は「もっと頑張ること」ではなく、<br><span class="hlb">「立ち位置を変えること」</span></h2>
+      <p class="lead">上流に近づくルートは、大きく3つあります。どれが正解ということはなく、何を取り戻したいかで変わります。</p>
+    </div>
+
+    <figure class="rv">
+      <img src="assets/fig04_three_routes.svg" alt="上流への3つのルートを示す概念図。現在地はSES・二次請け／三次請け・客先常駐で、主な担当は製造・テスト・運用・詳細設計。そこから、要件定義・基本設計を自社で持つ元請け・一次請けSIer、発注する側に回る事業会社の社内SE・情報システム部門、何を作るかを決めるITコンサルタントの3つに矢印が分岐する。下部に同一職種区分内の転職で賃金が上昇した人の割合として企画立案・PM 67パーセント、設計・構築54パーセント、運用・保守47パーセントを併記。" loading="lazy" width="600" height="480">
+      <figcaption><b>SOURCE</b>61%・67%・54%・47%＝厚生労働省「IT・デジタル人材の労働市場に関する研究調査事業」調査報告書（令和6年3月）。889万円＝厚生労働省 職業情報提供サイト job tag「ITコンサルタント」（令和7年賃金構造基本統計調査）。同サイトには「その職業が属する職業分類に対応する統計情報であり、必ずしもその職業のみのデータではない」旨の注記があります。</figcaption>
+    </figure>
+
+    <div class="routes rv" style="margin-top:24px">
+      <div class="route">
+        <p class="no">ROUTE 01</p>
+        <h3>元請け・上流工程を持つSIerへ移る</h3>
+        <p>要件定義や基本設計を自社で持つ元請けSIer、あるいは一次請けへ。今の技術スタックをそのまま活かしやすく、移行のギャップが最も小さいルートです。</p>
+        <p>「同じ仕事を、商流の上でやる」というイメージが近いです。</p>
+      </div>
+      <div class="route">
+        <p class="no">ROUTE 02</p>
+        <h3>事業会社の社内SE・情報システム部門へ移る</h3>
+        <p>発注側に回るルート。自社のシステムをどうするかを決める側になるため、要件定義・ベンダーコントロールの経験が積みやすくなります。</p>
+        <p>前出の厚生労働省の調査では、情報通信業から非情報通信業（＝事業会社側）へ転職した人の61％が転職後に賃金が上昇した、と報告されています。これは調査で比較された転職パターンの中で最も高い割合でした。</p>
+        <span class="badge">情報通信業→非情報通信業の転職で61%が賃金上昇<br><span style="font-weight:400;color:var(--muted-2);font-size:11px">※このパターンのサンプル数は23件と少なく、傾向としての参照に留めてください</span></span>
+      </div>
+      <div class="route">
+        <p class="no">ROUTE 03</p>
+        <h3>ITコンサルタントへ移る</h3>
+        <p>要件定義よりさらに手前、「何を作るか」を決める領域へ。厚生労働省の職業情報提供サイト job tag では、ITコンサルタントの平均年収は889万円と掲載されています。</p>
+        <p>近年、コンサルティングファーム側でもエンジニア出身者の採用が広がっているとされています。</p>
+        <span class="badge">job tag 平均年収 889万円<br><span style="font-weight:400;color:var(--muted-2);font-size:11px">※職業分類に対応する統計値であり、その職業のみのデータではないと同サイトに注記があります</span></span>
+      </div>
+    </div>
+
+    <div class="tblwrap rv">
+      <table>
+        <thead>
+          <tr><th>ルート</th><th>主に取り戻せるもの</th><th>移行のしやすさ</th><th>相性がいい人</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>元請けSIer<br>一次請け</td><td>上流工程の経験、単価の階層</td><td>◎ 技術がそのまま活きる</td><td>技術を続けたい人</td></tr>
+          <tr><td>社内SE<br>事業会社</td><td>決める側の立場、働き方の安定</td><td>○ 業務知識の学習が必要</td><td>常駐から離れたい人</td></tr>
+          <tr><td>ITコンサルタント</td><td>年収レンジ、経営に近い視点</td><td>△ 選考難度は高い</td><td>論理的な整理が得意な人</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="rv">
+      <p class="lead" style="margin-top:22px">なお、前出の厚生労働省の調査では、転職前後で同じ職種区分に移った人の賃金上昇者の割合が、職種区分によって違うことも示されています。</p>
+      <div class="data">
+        <p class="dt">同一職種区分内の転職で賃金が上昇した人の割合</p>
+        <div class="row up"><span class="k">企画立案・プロジェクト管理</span><span class="v">67%</span></div>
+        <div class="row"><span class="k">設計・構築</span><span class="v">54%</span></div>
+        <div class="row"><span class="k">運用・保守</span><span class="v">47%</span></div>
+      </div>
+      <p class="lead" style="margin-top:18px">上流の職種にいるほど、転職でも賃金が上がりやすい<strong>傾向</strong>がうかがえます。「立ち位置を変える」ことは、一度きりの年収アップではなく、その後の転職の効き方まで変える可能性がある、ということです。</p>
+      <p class="note">※job tag出典：厚生労働省 職業情報提供サイト job tag「ITコンサルタント」（令和7年賃金構造基本統計調査に基づく）。※賃金上昇者割合の出典：厚生労働省「IT・デジタル人材の労働市場に関する研究調査事業」調査報告書（令和6年3月）。企画立案・プロジェクト管理はn=43など各区分のサンプル数は限られるため、傾向として参照ください。</p>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ============ 08 不安の解除 ============ -->
+<section class="block">
+  <div class="wrap">
+    <div class="rv">
+      <span class="kicker">Misunderstanding</span>
+      <h2>「要件定義の経験がないと無理」は、<br><span class="hl">半分は誤解</span>です</h2>
+      <p class="lead">上流を目指すとき、多くの人がここで止まります。「要件定義をやったことがないから、応募できない」。</p>
+      <p class="lead">でも、<strong>職務経歴書に「要件定義」という単語がないことと、上流に必要な材料を持っていないことは、別の話です。</strong></p>
+    </div>
+
+    <div class="compare rv">
+      <div class="compare-row a">
+        <p class="lab">あなたが書いている職務経歴書</p>
+        <div class="val">
+          <ul>
+            <li>保守運用を担当</li>
+            <li>詳細設計〜製造〜単体テスト</li>
+            <li>障害対応</li>
+          </ul>
+        </div>
+      </div>
+      <p class="compare-arrow">↓</p>
+      <div class="compare-row b">
+        <p class="lab">同じ経験の、別の書き方</p>
+        <div class="val">
+          <ul>
+            <li>稼働中システムの仕様を、ドキュメントがない状態から読み解いた</li>
+            <li>障害の原因を切り分け、恒久対応の方針を提案した</li>
+            <li>常駐先の担当者と直接調整し、優先順位を決めた</li>
+            <li>後続工程で手戻りが出ないよう、設計の不備を事前に指摘した</li>
+            <li>後輩のレビューと、作業手順の標準化を担当した</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="rv">
+      <p class="lead" style="margin-top:22px">右側は、要件定義そのものではありません。ですが、<span class="mark">「業務を理解する」「課題を切り出す」「関係者と合意する」</span>という、上流工程で問われる動き方の一部です。</p>
+      <p class="lead">前出の厚生労働省の調査では、企業側へのヒアリングとして「履歴書に記載されたプロジェクトの規模やプロジェクト内での立ち位置などを面接時に掘り下げつつ、ITスキルのレベルを総合的に判断している」という声が紹介されています。</p>
+      <p class="lead"><strong>企業が見ているのは、工程名のラベルだけではありません。その案件の中で、あなたがどこに立っていたかです。</strong></p>
+    </div>
+
+    <div class="pull rv" style="border-left-color:var(--muted-2)">
+      <p class="q" style="font-size:15.5px;font-weight:500;line-height:1.85;color:var(--muted)">もちろん、これは万能ではありません。運用監視やテスト実行のみを長く担当してきた場合、上流にいきなり移るのは簡単ではないのも事実です。<br><br><strong>だからこそ、「今の経験でどこまで届くのか」を先に知る意味があります。</strong></p>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ============ 09 障壁の明示 ============ -->
+<section class="block">
+  <div class="wrap">
+    <div class="rv">
+      <span class="kicker b">Pitfall</span>
+      <h2>一人で進めると、<br>たいてい<span class="hlb">同じ場所で詰まります</span></h2>
+      <p class="lead">ここまで読んで「じゃあ転職サイトを見てみよう」と思った方に、先回りしてお伝えしておきたいことがあります。</p>
+      <p class="lead">自力で進めた場合、多くの人が次の3か所で止まります。</p>
+    </div>
+
+    <div class="walls rv">
+      <div class="wall">
+        <p class="wn">PITFALL 01</p>
+        <h3>求人票の「必須要件」で自己判断して、応募する前に諦めてしまう</h3>
+        <p>実際には、必須要件の一部を満たさなくても選考に進むケースはあります。ただしそれは、応募書類の書き方と推薦の有無で変わります。</p>
+      </div>
+      <div class="wall">
+        <p class="wn">PITFALL 02</p>
+        <h3>職務経歴書に「立ち位置」が書けない</h3>
+        <p>使用技術と担当工程は書けるのに、「そのプロジェクトで自分が何を決めていたか」が書けない。これは、常駐先では自分の裁量範囲が曖昧になりやすいためです。</p>
+      </div>
+      <div class="wall">
+        <p class="wn">PITFALL 03</p>
+        <h3>面接で「なぜSESから離れたいのか」に答えきれない</h3>
+        <p>現職の不満として答えると、印象が悪くなりやすい。構造の話として整理し、志望動機に接続する必要があります。</p>
+      </div>
+    </div>
+
+    <div class="rv">
+      <p class="lead" style="margin-top:22px">これらは、求人を眺めているだけでは解決しません。必要なのは「良い求人を見つけること」ではなく、<span class="mark">「あなたの経験を、上流の企業が読める形に翻訳すること」</span>です。</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 中間CTA② ============ -->
+<section class="midcta">
+  <div class="wrap rv">
+    <a class="cta cta-link" href="#" data-pos="mid2">自分の経歴が上流でどう見えるか、無料で相談する<span class="arw">→</span></a>
+    <p class="cta-note">職務経歴書なしでOK／<b>約30秒</b>で申し込み完了</p>
+  </div>
+</section>
+
+<!-- ============ 10 サービス紹介 ============ -->
+<section class="block">
+  <div class="wrap">
+    <div class="rv">
+      <span class="kicker">Why TechGO</span>
+      <h2>上流を目指すエンジニアと、<br><span class="hl">TechGO</span>の相性がいい理由</h2>
+      <p class="lead">TechGOは、実務経験2年以上のITエンジニアを対象とした転職エージェントです。求人の紹介だけでなく、「経験の棚卸し」から支援してくれる点が特徴です。</p>
+    </div>
+
+    <div class="reasons rv">
+      <div class="reason">
+        <p class="no">REASON 01</p>
+        <h3>IT業界に理解のあるアドバイザーが、経験の棚卸しから伴走する</h3>
+        <p>上流転職でいちばん時間がかかるのは、求人探しではなく「自分の経験のどこが評価されるのか」を見つける工程です。IT業界に理解のあるアドバイザーが、そこから一緒に整理してくれます。</p>
+      </div>
+      <div class="reason">
+        <p class="no">REASON 02</p>
+        <h3>模擬面接は回数制限なし</h3>
+        <p>SESからの転職では、「なぜ離れたいのか」「何を任されていたのか」を自分の言葉で説明できるかが分かれ目になります。納得いくまで練習できる環境は、ここに直接効きます。</p>
+      </div>
+      <div class="reason">
+        <p class="no">REASON 03</p>
+        <h3>ITコンサル・メガベンチャーなど、高年収ポジションと相性がいい</h3>
+        <p>TechGOは、ITコンサル・ハイクラス転職に強いMyVisionと同じ運営会社です。「上流に行きたい」という方向性と、扱っている領域が重なります。</p>
+      </div>
+      <div class="reason">
+        <p class="no">REASON 04</p>
+        <h3>土曜1Day選考会があり、在職中でも進めやすい</h3>
+        <p>常駐先の稼働が読めない、平日に動きにくい ── という状況でも、土曜日に選考を進められる機会があります。</p>
+      </div>
+    </div>
+
+    <div class="spec rv">
+      <div class="row"><span class="k">対象</span><span class="v">実務経験2年以上のITエンジニア</span></div>
+      <div class="row"><span class="k">支援実績</span><span class="v">20代後半〜30代が中心</span></div>
+      <div class="row"><span class="k">相談</span><span class="v">無料</span></div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ============ 11 相談から内定までの流れ ============ -->
+<section class="block">
+  <div class="wrap">
+    <div class="rv">
+      <span class="kicker b">Flow</span>
+      <h2>相談から内定までの<span class="hlb">流れ</span></h2>
+    </div>
+    <div class="steps rv" style="margin-top:22px">
+      <div class="step">
+        <span class="sn">01</span>
+        <h3>無料相談を申し込む（約30秒）</h3>
+        <p>入力するのは、名前・生年月日・メールアドレス・電話番号の4項目だけです。職務経歴書はこの時点では不要です。</p>
+      </div>
+      <div class="step">
+        <span class="sn">02</span>
+        <h3>経験の棚卸しと、方向性のすり合わせ</h3>
+        <p>今の担当工程、これまでの案件、行きたい方向を整理します。「そもそも上流に行けるのか」という段階の相談で構いません。</p>
+      </div>
+      <div class="step">
+        <span class="sn">03</span>
+        <h3>書類の作り込み・模擬面接・選考</h3>
+        <p>経験を上流企業に読める形に整えたうえで選考へ。模擬面接は回数制限なしなので、納得いくまで練習できます。</p>
+      </div>
+    </div>
+    <div class="list-card rv" style="margin-top:22px">
+      <ul>
+        <li><span class="b">✓</span><span>相談は無料です</span></li>
+        <li><span class="b">✓</span><span>在職中でも相談できます</span></li>
+        <li><span class="b">✓</span><span>今すぐ転職する意思がなくても構いません</span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ============ 12 FAQ ============ -->
+<section class="block">
+  <div class="wrap">
+    <div class="rv">
+      <span class="kicker">FAQ</span>
+      <h2>よくある質問</h2>
+    </div>
+    <div class="faq rv">
+      <details>
+        <summary>SES・客先常駐からでも、本当に上流に行けますか？</summary>
+        <div class="a">「必ず行ける」とは言えません。担当してきた工程、経験年数、業務知識によって難易度は大きく変わります。ただ、詳細設計や障害対応の経験の中に、上流で評価される材料が含まれているケースは少なくありません。まずは、その材料があるかどうかを確認するところからで構いません。</div>
+      </details>
+      <details>
+        <summary>在職中でも相談できますか？</summary>
+        <div class="a">できます。相談は無料で、土曜1Day選考会もあるため、平日に動きにくい方でも進めやすい環境です。</div>
+      </details>
+      <details>
+        <summary>30代でも間に合いますか？</summary>
+        <div class="a">厚生労働省の委託調査では、直近5年以内にIT・デジタル職種へ転職した人のうち、35〜39歳で76％、40〜44歳で63％が転職後に賃金が増加したと報告されています。同報告書は「年齢は転職前後での賃金上昇に大きな制約にはならない」としています。ただし年齢が上がるほど、選べる選択肢が絞られる傾向があるのも事実です。
+          <span class="src">※出典：厚生労働省「IT・デジタル人材の労働市場に関する研究調査事業」（令和6年3月）。年齢層ごとのサンプル数は限られるため、傾向として参照ください。</span></div>
+      </details>
+      <details>
+        <summary>要件定義の経験がまったくないのですが、相談していいですか？</summary>
+        <div class="a">問題ありません。TechGOはIT業界に理解のあるアドバイザーが経験の棚卸しから支援するため、「今の経験でどこまで届くのか」を整理する段階からの相談が可能です。</div>
+      </details>
+      <details>
+        <summary>無理に転職を勧められませんか？</summary>
+        <div class="a">相談は無料で、転職を決めていない段階でも利用できます。「今は情報収集の段階です」と最初に伝えておくと、話が進めやすくなります。</div>
+      </details>
+      <details>
+        <summary>未経験でも登録できますか？</summary>
+        <div class="a">TechGOは実務経験2年以上のITエンジニアが対象です。実務経験がない場合は対象外となります。</div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 13 クロージング（最終CTA） ============ -->
+<section class="final">
+  <div class="wrap rv">
+    <span class="kicker">Free Consultation</span>
+    <h2>転職するかどうかは、<br><span class="hl">構造を知ってから</span>決めても<br>遅くありません</h2>
+    <p class="lead">今の会社を辞めるべきだ、という話をしたいわけではありません。SESにも上流の案件はありますし、いい会社もあります。</p>
+    <p class="lead">ただ、ひとつだけ確かなことがあります。同じスキルレベルでも、担当する工程によって年収の相場は変わる。そして、どの工程を担当するかは、商流のどこにいるかで、かなりの部分が先に決まってしまう。</p>
+    <p class="lead"><strong>これは、あなたが変えられないことではありません。立ち位置は、変えられます。</strong></p>
+    <p class="lead">まずは、あなたの経験が上流の転職市場でどう読まれるのか、確認するところから始めてみませんか。</p>
+    <a class="cta cta-link" href="#" data-pos="final">上流に行けるかどうか、無料で相談してみる<span class="arw">→</span></a>
+    <p class="cta-note"><b>相談無料</b>／入力4項目・約30秒／在職中OK<br>実務経験2年以上のITエンジニア対象</p>
+
+    <div class="a8banner" style="margin-top:30px">
+      <span class="lab">まずは無料で相談してみる</span>
+      <a class="bnr-link" data-pos="banner_final" href="https://px.a8.net/svt/ejp?a8mat=4B3N6R+DTQFA2+5B0Y+I0KRL" rel="nofollow sponsored noopener" target="_blank">
+        <img class="bnr" border="0" width="300" height="250" alt="TechGO｜実務経験2年以上のITエンジニア向け転職エージェント 無料相談" src="https://www27.a8.net/svt/bgt?aid=260510499836&wid=002&eno=01&mid=s00000024757003026000&mc=1"></a><img border="0" width="1" height="1" src="https://www10.a8.net/0.gif?a8mat=4B3N6R+DTQFA2+5B0Y+I0KRL" alt="" aria-hidden="true">
+      <p class="fine">本ページはプロモーションを含みます</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer>
+  <div class="wrap">
+    <p class="pr">本ページはプロモーションを含みます。掲載しているサービスの利用は無料です。年収や評価の変化、転職の成否を保証するものではなく、<strong>結果には個人差があります</strong>。</p>
+    <div class="src">
+      <b>出典・参考</b>
+      <ul>
+        <li>厚生労働省「IT・デジタル人材の労働市場に関する研究調査事業」調査報告書（令和6年3月）<br>
+          <a href="https://www.mhlw.go.jp/content/11600000/001244078.pdf" target="_blank" rel="noopener">https://www.mhlw.go.jp/content/11600000/001244078.pdf</a></li>
+        <li>公正取引委員会「ソフトウェア業の下請取引等に関する実態調査報告書」（令和4年6月公表）<br>
+          <a href="https://www.jftc.go.jp/houdou/pressrelease/2022/jun/220629_software.html" target="_blank" rel="noopener">https://www.jftc.go.jp/houdou/pressrelease/2022/jun/220629_software.html</a></li>
+        <li>厚生労働省 職業情報提供サイト job tag「ITコンサルタント」（令和7年賃金構造基本統計調査に基づく）<br>
+          <a href="https://shigoto.mhlw.go.jp/User/Occupation/Detail/362" target="_blank" rel="noopener">https://shigoto.mhlw.go.jp/User/Occupation/Detail/362</a></li>
+      </ul>
+      <p style="margin-top:14px">※本ページに掲載した年収の中央値は厚生労働省の委託調査、平均年収は job tag によるものです。job tag の統計は「その職業が属する職業分類に対応する統計情報であり、必ずしもその職業のみのデータではない」と同サイトに注記があります。<br>
+      ※調査によってはサンプル数が限られるものがあり、本文中に該当箇所を明記しています。いずれも傾向を示すものであり、個々の転職結果を示すものではありません。</p>
+    </div>
+    <p class="copy">記事内の図表は公表資料の数値をもとに作成したものです。サービス内容・実施の有無は変更される場合があるため、最新情報は公式サイトでご確認ください。</p>
+  </div>
+</footer>
+
+<!-- ============ STICKY CTA ============ -->
+<div id="sticky">
+  <div class="in">
+    <div class="txt">
+      <b>SESから上流へ</b>
+      <small>30秒・無料 / 在職中OK</small>
+    </div>
+    <a class="cta cta-link" href="#" data-pos="sticky">無料で相談する<span class="arw">→</span></a>
+  </div>
+</div>
+
+<script>
+/* ===== 計測・アフィリエイト設定（差し替えはここだけ） ===== */
+var LP_ID  = "techgo-upstream";
+var AGENT  = "techgo";
+var ADS_CV = "AW-18146496318/--LXCP2mqsocEL6e9sxD";
+var TECHGO_AFFILIATE_URL = "https://px.a8.net/svt/ejp?a8mat=4B3N6R+DTQFA2+5B0Y+HV7V6";
+
+/* ===== 計測ヘルパー ===== */
+function trackAffiliateClick(pos, type){
+  // ① GA4：キーイベント（CVに設定する）
+  gtag('event','affiliate_click',{
+    lp_id: LP_ID, agent: AGENT, cta_position: pos, link_type: type || 'text_cta'
+  });
+  // ② 旧レポート互換（既存LPと横並びで見るため残す）
+  gtag('event','click',{event_category:'affiliate', event_label:AGENT, event_campaign:LP_ID+'-'+pos});
+  // ③ Google広告：コンバージョン
+  gtag('event','conversion',{'send_to': ADS_CV});
+}
+
+/* ===== テキストCTA ===== */
+document.querySelectorAll('.cta-link').forEach(function(a){
+  // JSが無効でも A8 のクリックCookieが発火するよう href を実URLで上書き
+  a.setAttribute('href', TECHGO_AFFILIATE_URL);
+  a.setAttribute('target','_blank');
+  a.setAttribute('rel','noopener sponsored nofollow');
+  a.addEventListener('click', function(e){
+    e.preventDefault();
+    trackAffiliateClick(a.getAttribute('data-pos') || 'unknown', 'text_cta');
+    // 現ページを生存させたまま新規タブで開く＝計測ビーコンを確実に送信
+    window.open(TECHGO_AFFILIATE_URL,'_blank','noopener');
+  });
+});
+
+/* ===== A8バナー（hrefはバナー用URLのまま。遷移は阻害しない） ===== */
+document.querySelectorAll('.bnr-link').forEach(function(a){
+  a.addEventListener('click', function(){
+    trackAffiliateClick(a.getAttribute('data-pos') || 'banner', 'banner');
+  });
+});
+
+/* ===== スクロール到達率 ===== */
+var depthHit = {};
+function onScroll(){
+  var h = document.documentElement;
+  var sc = h.scrollTop || document.body.scrollTop;
+  var max = h.scrollHeight - h.clientHeight;
+  var pct = max > 0 ? sc / max * 100 : 0;
+  document.getElementById('progress').style.width = pct + '%';
+  if(max <= 0) return;
+  var p = Math.round(pct);
+  [25,50,75,100].forEach(function(mark){
+    if(p >= mark && !depthHit[mark]){
+      depthHit[mark] = 1;
+      gtag('event','scroll_depth',{lp_id: LP_ID, percent: mark});
+    }
+  });
+}
+window.addEventListener('scroll', onScroll, {passive:true});
+onScroll();
+
+/* ===== CTA視認（CTR算出用） ===== */
+var ctaSeen = {};
+var ctaIO = new IntersectionObserver(function(es){
+  es.forEach(function(en){
+    if(!en.isIntersecting) return;
+    var pos = en.target.getAttribute('data-pos') || 'unknown';
+    if(ctaSeen[pos]) return;
+    ctaSeen[pos] = 1;
+    gtag('event','cta_view',{lp_id: LP_ID, cta_position: pos});
+  });
+},{threshold:.6});
+document.querySelectorAll('.cta-link, .bnr-link').forEach(function(el){ ctaIO.observe(el); });
+
+/* ===== 滞在時間 ===== */
+[10,30,60].forEach(function(s){
+  setTimeout(function(){ gtag('event','time_on_page',{lp_id: LP_ID, seconds: s}); }, s*1000);
+});
+
+/* ===== sticky cta：ヒーローを過ぎたら表示、最終CTAでは隠す ===== */
+var sticky = document.getElementById('sticky');
+var finalSec = document.querySelector('.final');
+window.addEventListener('scroll', function(){
+  var y = window.scrollY;
+  var finalTop = finalSec.getBoundingClientRect().top;
+  if(y > 520 && finalTop > window.innerHeight){ sticky.classList.add('show'); }
+  else { sticky.classList.remove('show'); }
+}, {passive:true});
+
+/* ===== reveal on scroll ===== */
+var io = new IntersectionObserver(function(entries){
+  entries.forEach(function(en){ if(en.isIntersecting){ en.target.classList.add('in'); io.unobserve(en.target); } });
+},{threshold:.12, rootMargin:'0px 0px -8% 0px'});
+document.querySelectorAll('.rv').forEach(function(el){ io.observe(el); });
+</script>
+
+<!-- A8.net メディアタグ -->
+<script src="//statics.a8.net/a8link/a8media-ad.js"></script>
+</body>
+</html>

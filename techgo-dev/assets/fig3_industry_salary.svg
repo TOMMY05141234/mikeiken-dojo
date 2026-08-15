@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 320" role="img" aria-labelledby="f3t f3d" font-family="'Noto Sans JP','Hiragino Sans','Yu Gothic',sans-serif">
+<title id="f3t">同じスキルでも、産業が違えば水準が違う</title>
+<desc id="f3d">国税庁の民間給与実態統計調査による平均給与。給与所得者全体478万円、情報通信業659.5万円、金融業・保険業702.3万円。全体平均478万円の水平基準線を示した縦棒グラフ。</desc>
+
+<rect width="360" height="320" fill="#0B1220"/>
+
+<text x="16" y="28" fill="#EAF0FF" font-size="15" font-weight="700">同じスキルでも、産業が違えば水準が違う</text>
+<text x="44" y="64" text-anchor="end" fill="#7F8AA3" font-size="12">万円</text>
+
+<!-- gridlines -->
+<g stroke="#1B2438" stroke-width="1">
+<line x1="50" y1="80" x2="344" y2="80"/>
+<line x1="50" y1="122.5" x2="344" y2="122.5"/>
+<line x1="50" y1="165" x2="344" y2="165"/>
+<line x1="50" y1="207.5" x2="344" y2="207.5"/>
+</g>
+<g fill="#7F8AA3" font-size="12" text-anchor="end">
+<text x="44" y="84">800</text>
+<text x="44" y="126.5">600</text>
+<text x="44" y="169">400</text>
+<text x="44" y="211.5">200</text>
+<text x="44" y="254">0</text>
+</g>
+
+<!-- bars -->
+<rect x="80" y="148.4" width="60" height="101.6" rx="4" fill="#7F8AA3"/>
+<rect x="167" y="109.9" width="60" height="140.1" rx="4" fill="#2DD4BF"/>
+<rect x="254" y="100.8" width="60" height="149.2" rx="4" fill="#5EEAD4"/>
+
+<!-- value labels -->
+<text x="110" y="140" text-anchor="middle" fill="#C9D3E6" font-size="12" font-weight="700">478万円</text>
+<text x="197" y="101" text-anchor="middle" fill="#5EEAD4" font-size="12" font-weight="700">659.5万円</text>
+<text x="284" y="92" text-anchor="middle" fill="#5EEAD4" font-size="12" font-weight="700">702.3万円</text>
+
+<!-- average baseline -->
+<line x1="50" y1="148.4" x2="344" y2="148.4" stroke="#F5C451" stroke-width="1.4" stroke-dasharray="4 4" opacity=".9"/>
+
+<!-- axis -->
+<line x1="50" y1="250" x2="344" y2="250" stroke="#344055" stroke-width="1.5"/>
+<g fill="#C9D3E6" font-size="12" text-anchor="middle">
+<text x="110" y="270">給与所得者全体</text>
+<text x="197" y="270">情報通信業</text>
+<text x="284" y="270">金融業・保険業</text>
+</g>
+
+<!-- legend -->
+<line x1="50" y1="292" x2="76" y2="292" stroke="#F5C451" stroke-width="1.4" stroke-dasharray="4 4"/>
+<text x="82" y="296" fill="#F5C451" font-size="12" font-weight="700">全体平均 478万円</text>
+</svg>

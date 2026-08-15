@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 445" role="img" aria-labelledby="f2t f2d" preserveAspectRatio="xMidYMid meet">
+<title id="f2t">多重下請け構造と取引上の位置付けの分布</title>
+<desc id="f2d">発注者を頂点とする4段のピラミッド図。上から発注者（エンドユーザー）、元請40.4パーセント、中間下請38.2パーセント、最終下請21.3パーセント。上の階層ほど要件定義・提案・企画を担当し、下の階層ほど製造・テスト・運用を担当する。「中抜き」事業者の存在を感じたことがある割合は最終下請33.5パーセント、中間下請29.2パーセント。</desc>
+<style>
+  .ttl{font:700 17px 'Hiragino Kaku Gothic ProN','Noto Sans JP','Yu Gothic',sans-serif;fill:#EAF0FF}
+  .sub{font:400 13px 'Hiragino Kaku Gothic ProN','Noto Sans JP','Yu Gothic',sans-serif;fill:#A7B0C0}
+  .nm{font:700 15px 'Hiragino Kaku Gothic ProN','Noto Sans JP','Yu Gothic',sans-serif}
+  .nm2{font:700 14px 'Hiragino Kaku Gothic ProN','Noto Sans JP','Yu Gothic',sans-serif}
+  .sd{font:500 13px 'Hiragino Kaku Gothic ProN','Noto Sans JP','Yu Gothic',sans-serif}
+  .mut{font:400 13px 'Hiragino Kaku Gothic ProN','Noto Sans JP','Yu Gothic',sans-serif;fill:#8D97AB}
+  .cal{font:700 13px 'Hiragino Kaku Gothic ProN','Noto Sans JP','Yu Gothic',sans-serif;fill:#EAF0FF}
+</style>
+<rect width="600" height="445" fill="#0B1220"/>
+
+<text class="ttl" x="20" y="32">多重下請け構造と、取引上の位置付け</text>
+<text class="sub" x="20" y="56">階層が深いほど、任される工程は下流に寄っていく</text>
+
+<text class="mut" x="20" y="84">↑ エンドユーザーに近い</text>
+
+<!-- L0 発注者 -->
+<polygon points="145,96 285,96 310,142 120,142" fill="none" stroke="#7F8AA3" stroke-width="1.4" stroke-dasharray="5 4"/>
+<text class="sd" x="215" y="124" text-anchor="middle" fill="#C9D2E2">発注者（エンドユーザー）</text>
+
+<!-- L1 元請 -->
+<polygon points="115,148 315,148 345,206 85,206" fill="#2F4F86" stroke="#5B8DEF" stroke-width="1.4"/>
+<text class="nm" x="215" y="176" text-anchor="middle" fill="#DCE8FF">元請　40.4%</text>
+<rect x="154.5" y="184" width="121" height="7" rx="3.5" fill="#5B8DEF"/>
+
+<!-- L2 中間下請 -->
+<polygon points="80,212 350,212 380,270 50,270" fill="#39435A" stroke="#7F8AA3" stroke-width="1.4"/>
+<text class="nm2" x="215" y="240" text-anchor="middle" fill="#D5DCE9">中間下請（一次・二次…）　38.2%</text>
+<rect x="157.5" y="248" width="115" height="7" rx="3.5" fill="#9AA0A6"/>
+
+<!-- L3 最終下請 -->
+<polygon points="45,276 385,276 410,334 20,334" fill="#2A3142" stroke="#6B7688" stroke-width="1.4"/>
+<text class="nm" x="215" y="304" text-anchor="middle" fill="#C0C7D4">最終下請　21.3%</text>
+<rect x="183" y="312" width="64" height="7" rx="3.5" fill="#9AA0A6"/>
+
+<text class="mut" x="20" y="352">↓ エンドユーザーから遠い</text>
+
+<!-- right axis -->
+<text class="mut" x="440" y="140">任される工程</text>
+<line x1="428" y1="152" x2="428" y2="324" stroke="#48566F" stroke-width="1.4"/>
+<polygon points="428,332 423.5,322 432.5,322" fill="#48566F"/>
+<text class="sd" x="442" y="182" fill="#9FC0FF">要件定義・提案・企画</text>
+<text class="sd" x="442" y="245" fill="#C9D2E2">設計・開発</text>
+<text class="sd" x="442" y="308" fill="#9AA0A6">製造・テスト・運用</text>
+
+<!-- callout -->
+<rect x="20" y="364" width="560" height="48" rx="10" fill="#151E2F" stroke="#48566F"/>
+<text class="cal" x="36" y="384">「中抜き」事業者の存在を感じたことがある</text>
+<text class="cal" x="36" y="403" fill="#9FC0FF">最終下請 33.5%　／　中間下請 29.2%</text>
+
+<text x="20" y="432" font-family="'Hiragino Kaku Gothic ProN','Noto Sans JP','Yu Gothic',sans-serif" font-size="13" fill="#7F8AA3">※構成比は資本金3億円以下の事業者が回答した自社の取引上の位置付け</text>
+</svg>

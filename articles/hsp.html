@@ -781,5 +781,8 @@
     (function() { var els = document.querySelectorAll('.reveal'); var obs = new IntersectionObserver(function(entries) { entries.forEach(function(e) { if (e.isIntersecting) { e.target.classList.add('in'); obs.unobserve(e.target); } }); }, { threshold: 0.05 }); els.forEach(function(el) { obs.observe(el); }); })();
     (function() { var s = document.getElementById('stickyCta'); window.addEventListener('scroll', function() { s.classList.toggle('visible', window.scrollY > 600); }, { passive: true }); })();
   </script>
+
+<!-- A8.net メディアタグ -->
+<script src="//statics.a8.net/a8link/a8media-ad.js"></script>
 </body>
 </html>
